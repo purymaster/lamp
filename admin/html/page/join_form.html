@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=1280">
+<title>LAMP :: Sign In for Teacher</title>
+<link rel="stylesheet" href="../css/common.css">
+<link rel="stylesheet" href="../css/mainUI.css">
+<script src="../js/jquery-1.12.1.min.js"></script>
+<script src="../js/mainUI.js"></script>
+<!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins"> -->
+</head>
+<body>
+
+<!-- 하위 브라우저 접속시 화면 -->
+<div class="update_browser">
+	<p>
+		Sorry, We don't support this browser.<br>
+		You need to update your web browser or use a different one.
+	</p>
+	<a href="https://www.microsoft.com/en-us/download/internet-explorer-11-for-windows-7-details.aspx">Update Internet Explorer</a>
+	<a href="https://www.google.com/chrome">Google Chrome</a>
+	<a href="https://www.mozilla.org/firefox/">Mozilla Firefox</a>
+</div>
+<!-- //하위 브라우저 접속시 화면 -->
+
+<!-- 로딩 화면 -->
+<div class="loading">
+	<img src="../img/img/img_loading.gif" alt="Loading, Please wait.">
+</div>
+<!-- //로딩 화면 -->
+
+<!-- 회원가입 폼 -->
+<div class="join_wrap">
+	<div class="header_wrap">
+		<h1><img src="../img/img/img_loginlogo.png" alt="LAMP Education Korea Inc."></h1>
+	</div>
+	<div class="join_form">
+		<h2>Registeration for Teachers</h2>
+		<table class="board_view modify nolnb">
+			<caption>Registeration for Teachers</caption>
+			<colgroup>
+				<col style="width:130px;">
+				<col style="width:200px;">
+				<col style="width:150px;">
+				<col>
+				<col style="width:150px;">
+				<col>
+			</colgroup>
+			<tbody>
+				<tr>
+					<th scope="row" rowspan="7">Picture</th>
+					<td rowspan="7" class="photo_up">
+						<div class="photo_upload other">
+							<div class="photo"><img src="../img/bg/bg_registphoto.png" alt="" style="width:80px; height:107px; border:0"></div>
+							<input type="file" id="photo" class="search_photo hidden">
+							<div class="photo_edit">
+								<p>( 3cm * 4cm ) <em>Only Jpg</em></p>
+								<div class="photo_btn">
+									<label for="photo">Search</label>
+								</div>
+							</div>
+						</div>
+					</td>
+					<th scope="row"><label for="select_tribe1">Country</label></th>
+					<td>
+						<div class="select_box">
+							<label for="select_tribe1">Select</label>
+							<select id="select_tribe1" title="Select Country">
+								<option>Select</option>
+								<option>Korea</option>
+								<option>Canada</option>
+							</select>
+						</div>
+					</td>
+					<th scope="row"><label for="select_tribe2">Band</label></th>
+					<td>
+						<div class="select_box">
+							<label for="select_tribe2">Select</label>
+							<select id="select_tribe2" title="Select Band">
+								<option>Select</option>
+								<option>Band A</option>
+								<option>Band B</option>
+							</select>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row"><label for="test001">Sign In ID</label></th>
+					<td colspan="3">
+						<div class="input_wrap">
+							<input type="text" id="test001" maxlength="16" placeholder="8 to 16 combinations of English / numbers">
+							<button type="button">Check</button>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row"><label for="test002">Password</label></th>
+					<td colspan="3">
+						<div class="input_wrap">
+							<input type="password" id="test002" maxlength="20" placeholder="*English / Special characters 9 to 20">
+							<a href="#none" class="guide show_modal" data-n="modal_01">Guide</a>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row"><label for="test003">Confirm Password</label></th>
+					<td colspan="3"><input type="password" id="test003" maxlength="20"></td>
+				</tr>
+				<tr>
+					<th scope="row"><label for="test004">First name</label></th>
+					<td><input type="text" id="test004"></td>
+					<th scope="row"><label for="test005">Last name</label></th>
+					<td><input type="text" id="test005"></td>
+				</tr>
+				<tr>
+					<th scope="row"><label for="test006">Born date</label></th>
+					<td><input type="text" id="test006" placeholder="mm/dd/yyyy"></td>
+					<th scope="row"><label for="select_gender">Gender</label></th>
+					<td>
+						<div class="select_box">
+							<label for="select_gender">Select</label>
+							<select id="select_gender" title="Select Gender">
+								<option>Select</option>
+								<option>Band A</option>
+								<option>Band B</option>
+							</select>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row"><label for="test007">Telephone(Home)</label></th>
+					<td><input type="text" id="test007"></td>
+					<th scope="row"><label for="test008">Cell phone</label></th>
+					<td><input type="text" id="test008"></td>
+				</tr>
+				<tr>
+					<th scope="row"><label for="test009">E-mail</label></th>
+					<td colspan="5"><input type="text" id="test009"></td>
+				</tr>
+				<tr>
+					<th scope="row"><label for="test010">Address</label></th>
+					<td colspan="3"><input type="text" id="test010"></td>
+					<th scope="row"><label for="test011">Postal code</label></th>
+					<td><input type="text" id="test011"></td>
+				</tr>
+				<tr>
+					<th scope="row" class="top"><label for="select_question">Identification<br>Plus</label></th>
+					<td colspan="5" class="qna">
+						<div class="select_box">
+							<label for="select_question">Your security questions</label>
+							<select id="select_question" title="Select Question">
+								<option>Your security questions</option>
+								<option>Question A</option>
+								<option>Question B</option>
+							</select>
+						</div>
+						<input type="text" placeholder="Answer">
+					</td>
+				</tr>
+				<tr>
+					<th scope="row"><label for="test012">Certification</label></th>
+					<td colspan="5">
+						<div class="upload">
+							<input class="upload_name" placeholder="Relational certificate file" disabled> <!-- 크로스브라우징을 위한 더미 -->
+							<input type="file" id="test012">
+							<label for="test012">SEARCH</label>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row" class="top"><label for="test013">Educational<br>background</label></th>
+					<td colspan="5" class="text">
+						<textarea id="test013" class="h95" cols="30" rows="5"></textarea>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row" class="top"><label for="test014">Work<br>Experience</label></th>
+					<td colspan="5" class="text">
+						<textarea id="test014" class="h95" cols="30" rows="5"></textarea>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<div class="btn_wrap">
+			<button type="submit" class="orange">OK</button>
+			<a href="#none" class="grey">Cancel</a>
+		</div>
+	</div>
+</div>
+<!-- //회원가입 폼 -->
+
+<!-- 모달 레이어 -->
+<div class="modal">
+	<div class="modal_wrap modal_01 w650">
+		<p class="modal_tit">Password Guide</p>
+		<div class="modal_content">
+			<p class="msg">Guides Password Secure-Level Check Program for managing customer's safe Password.</p>
+			<div class="guide_wrap">
+				<p class="guide_tit">Password Secure Level</p>
+				<table>
+					<caption>Password Secure Level</caption>
+					<colgroup>
+						<col style="width:170px;">
+						<col>
+					</colgroup>
+					<thead>
+						<tr>
+							<th scope="col">Secure Level</th>
+							<th scope="col">Description</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Unusable</td>
+							<td>Password does not meet the requirements</td>
+						</tr>
+						<tr>
+							<td>Weak</td>
+							<td>Password is not secure enough</td>
+						</tr>
+						<tr>
+							<td>Fair</td>
+							<td>Password is fairly secure</td>
+						</tr>
+						<tr>
+							<td>Strong</td>
+							<td>Password is very secure</td>
+						</tr>
+					</tbody>
+				</table>
+				<p class="guide_tit">Password Requirements</p>
+				<ul>
+					<li>Password must be a combination of 6~15 (uppercase/lowercase) letters, numbers and symbols without any spaces.</li>
+					<li>At least 3 more combinations required.</li>
+					<li>Usable symbols.</li>
+				</ul>
+				<p class="symbol">!?$%&*()@&#35;&#123;[|]&#125;^_~</p>
+				<p class="guide_tit">Not allowed to use as a Password</p>
+				<ul>
+					<li>Blank(space) cannot be allowed for Password.</li>
+					<li>No more than 4 same or consecutive letters and numbers for Password.</li>
+					<li>Your ID, telephone number, and registration number cannot be used as your Password.</li>
+					<li>Account Password cannot be the same as your sign-in password.</li>
+				</ul>
+			</div>
+		</div>
+		<a href="#none" class="close hide_modal" data-n="modal_01">Hide Modal</a>
+	</div>
+	<div class="modal_back"></div>
+</div>
+<!-- //모달 레이어 -->

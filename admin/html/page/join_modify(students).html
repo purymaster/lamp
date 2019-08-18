@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=1280">
+<title>LAMP :: My Information</title>
+<link rel="stylesheet" href="../css/common.css">
+<link rel="stylesheet" href="../css/mainUI.css">
+<script src="../js/jquery-1.12.1.min.js"></script>
+<script src="../js/mainUI.js"></script>
+</head>
+<body>
+
+<!-- 하위 브라우저 접속시 화면 -->
+<div class="update_browser">
+	<p>
+		Sorry, We don't support this browser.<br>
+		You need to update your web browser or use a different one.
+	</p>
+	<a href="https://www.microsoft.com/en-us/download/internet-explorer-11-for-windows-7-details.aspx">Update Internet Explorer</a>
+	<a href="https://www.google.com/chrome">Google Chrome</a>
+	<a href="https://www.mozilla.org/firefox/">Mozilla Firefox</a>
+</div>
+<!-- //하위 브라우저 접속시 화면 -->
+
+<!-- 로딩 화면 -->
+<div class="loading">
+	<img src="../img/img/img_loading.gif" alt="Loading, Please wait.">
+</div>
+<!-- //로딩 화면 -->
+
+<!-- 스킵 네비게이션 -->
+<div class="skip">
+	<a href="#content">Jump to main content</a>
+</div>
+<!-- //스킵 네비게이션 -->
+
+<div id="wrap">
+	
+	<!-- 머리글 영역 -->
+	<button type="button" class="show mobile">Show Menu</button>
+	<header>
+		<a href="#none">
+			<h1>
+				<img src="../img/img/img_headerlogo.png" alt="LAMP Education Korea Inc.">
+				<span>Contents Admin<small>Portal Management System</small></span>
+			</h1>
+		</a>
+		<div class="member">
+			<div class="member_wrap">
+				<div class="member_photo">
+					<img src="../img/sample/sample_headerphoto.png" alt="XXX's Photo"> <!-- [D]이미지에 맞는 alt값 부여 -->
+				</div>
+				<div class="member_info">
+					<span class="rank">Super Admin</span>
+					<span class="name">First Name<br>Last Name</span>
+					<div class="btn">
+						<a href="#none">Sign out</a>
+						<a href="#none">Modify</a>
+					</div>
+				</div>
+			</div>
+			<p>Final Connect Day<span>99/99/9999</span></p>
+		</div>
+		<div class="menu">
+			<nav>
+				<ul>
+					<li>
+						<a href="#none">Information</a>
+						<ul>
+							<li><a href="#none">Notice</a></li>
+							<li><a href="#none">News</a></li>
+							<li><a href="#none">Faq</a></li>
+							<li><a href="#none">QnA</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#none">Management</a>
+						<ul>
+							<li><a href="#none">Admin Manager</a></li>
+							<li><a href="#none">Class Manager</a></li>
+							<li><a href="#none">Teachers Manager</a></li>
+							<li><a href="#none">Device Manager</a></li>
+							<li><a href="#none">Students Manager</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#none">Teachers</a>
+						<ul>
+							<li><a href="#none">My Information</a></li>
+							<li><a href="#none">Notice for Students</a></li>
+							<li><a href="#none">Homework Notice</a></li>
+							<li><a href="#none">My Classes</a></li>
+							<li><a href="#none">My Students</a></li>
+						</ul>
+					</li>
+					<li class="on">
+						<a href="#none">Students</a>
+						<ul>
+							<li class="on"><a href="#none">My Information</a></li>
+							<li><a href="#none">Notice for Students</a></li>
+							<li><a href="#none">Homework Notice</a></li>
+							<li><a href="#none">My Classes</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#none">Resources</a>
+						<ul>
+							<li><a href="#none">Category Manager</a></li>
+							<li><a href="#none">Object Manager</a></li>
+						</ul>
+					</li>
+					<li class="no_depth"><a href="#none">Authoring Tool</a></li>
+				</ul>
+			</nav>
+			<!-- Superadmin 전용메뉴 -->
+			<!--
+			<ul class="menu_admin">
+				<li><a href="#none">Add Country/Band</a></li>
+				<li><a href="#none">Add Super Admin</a></li>
+				<li><a href="#none">App Management</a></li>
+			</ul>
+			-->
+			<!-- //Superadmin 전용메뉴 -->
+			<dl class="analysis">
+				<dt>All Teachers</dt>
+				<dd>99,999</dd>
+				<dt>Standby approval</dt>
+				<dd>99,999</dd>
+				<dt>Students</dt>
+				<dd>99,999</dd>
+			</dl>
+			<a href="#" class="withdraw">Withdrawal<br>from membership</a>
+		</div>
+		<button type="button" class="hide mobile">Hide Menu</button>
+	</header>
+	<div class="nav_modal mobile"></div> <!-- 네비게이션 모달 -->
+	<!-- //머리글 영역 -->
+
+	<!-- 컨텐츠 영역 -->
+	<div id="content">
+		<h2 class="hidden">My Information</h2>
+		<ul class="breadcrumb">
+			<li>Home</li>
+			<li>Students</li>
+			<li>My Information</li>
+		</ul>
+
+		<!-- 게시판 뷰 -->
+		<table class="board_view">
+			<caption>Student View</caption>
+			<colgroup>
+				<col style="width:160px;">
+				<col style="width:160px;">
+				<col style="width:160px;">
+				<col style="width:160px;">
+				<col style="width:150px;">
+				<col style="width:170px;">
+			</colgroup>
+			<tbody>
+				<tr>
+					<th scope="row" rowspan="6">Picture</th>
+					<td rowspan="6" class="photo_up large">
+						<div class="photo_upload other">
+							<div class="photo">
+								<!-- <img src="../img/bg/bg_profilephoto.png" alt="" style="width:100px; height:134px; border:0"> -->
+								<img src="../img/sample/sample_profilephoto.png" alt="XXX's Photo">
+							</div>
+							<input type="file" id="photo" class="search_photo hidden">
+							<div class="photo_edit">
+								<p>( 3cm * 4cm ) <em>Only Jpg</em></p>
+								<div class="photo_btn">
+									<label for="photo">Search</label>
+								</div>
+							</div>
+						</div>
+					</td>
+					<th scope="row">Country</th>
+					<td>Canada</td>
+					<th scope="row">Band</th>
+					<td>Band</td>
+				</tr>
+				<tr>
+					<th scope="row">Sign in ID</th>
+					<td colspan="3">Sarah</td>
+				</tr>
+				<tr>
+					<th scope="row">Password</th>
+					<td colspan="3">
+						<button type="button" class="single fix show_modal" data-n="modal_01">Change Password</button>
+						<button type="button" class="single fix reset">Reset Password</button>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">First Name</th>
+					<td>Sarah</td>
+					<th scope="row">Last Name</th>
+					<td>Lee</td>
+				</tr>
+				<tr>
+					<th scope="row"><label for="test001">Born date</label></th>
+					<td><input type="text" id="test001" placeholder="mm/dd/yyyy" title="Input your birthday"></td>
+					<th scope="row">Gender</th>
+					<td>Female</td>
+				</tr>
+				<tr>
+					<th scope="row"><label for="test002">Telephone(Home)</label></th>
+					<td><input type="text" id="test002"></td>
+					<th scope="row"><label for="test003">E-mail</label></th>
+					<td><input type="text" id="test003"></td>
+				</tr>
+				<tr>
+					<th scope="row"><label for="test004">Address</label></th>
+					<td colspan="3"><input type="text" id="test004"></td>
+					<th scope="row"><label for="test005">Postal code</label></th>
+					<td><input type="text" id="test005"></td>
+				</tr>
+				<tr>
+					<th scope="row" class="top">Guardian</th>
+					<td colspan="5">
+						<table class="inner">
+							<caption>Student's Guardian View</caption>
+							<colgroup>
+								<col style="width:130px;">
+								<col>
+								<col style="width:130px;">
+								<col style="width:160px;">
+								<col style="width:45px;">
+							</colgroup>
+							<tbody>
+								<tr>
+									<th scope="row"><label for="test006">Name</label></th>
+									<td>
+										<div class="input_wrap div_2to2">
+											<input type="text" id="test006" placeholder="First Name">
+											<input type="text" placeholder="Last Name">
+										</div>
+									</td>
+									<th scope="row"><label for="test007">Relationship</label></th>
+									<td colspan="2"><input type="text" id="test007"></td>
+								</tr>
+								<tr>
+									<th scope="row"><label for="test008">Cell Phone</label></th>
+									<td><input type="text" id="test008"></td>
+									<th scope="row"><label for="test009">E-mail</label></th>
+									<td colspan="2"><input type="text" id="test009"></td>
+								</tr>
+								<tr>
+									<th scope="row"><label for="test010">Address</label></th>
+									<td><input type="text" id="test010"></td>
+									<th scope="row"><label for="test011">Postal code</label></th>
+									<td colspan="2"><input type="text" id="test011"></td>
+								</tr>
+								<tr>
+									<th rowspan="2" scope="row" rowspan="2"><label for="select_question">Identification<br>Plus</label></th>
+									<td colspan="4">
+										<div class="select_box">
+											<label for="select_question">Your security questions</label>
+											<select id="select_question" title="Select Question">
+												<option>Your security questions</option>
+												<option>Question A</option>
+												<option>Question B</option>
+											</select>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td colspan="4">
+										<input type="text" placeholder="Answer">
+									</td>
+								</tr>
+								<tr>
+									<th rowspan="2" scope="row" rowspan="2"><label for="test012">File</label></th>
+									<td colspan="3">
+										<div class="upload">
+											<input class="upload_name" disabled> <!-- 크로스브라우징을 위한 더미 -->
+											<input type="file" id="test012">
+											<label for="test012">SEARCH</label>
+										</div>
+									</td>
+									<td class="btn"><button type="button" class="del">Delete</button></td>
+								</tr>
+								<tr>
+									<td colspan="3">
+										<div class="upload">
+											<input class="upload_name" disabled> <!-- 크로스브라우징을 위한 더미 -->
+											<input type="file" id="test013">
+											<label for="test013">SEARCH</label>
+										</div>
+									</td>
+									<td class="btn"><button type="button" class="del">Delete</button></td>
+								</tr>
+							</tbody>
+						</table>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row" class="top">An elective course</th>
+					<td colspan="5">
+						<!-- 강의 내역이 없을 경우 -->
+						<!-- NO APPLICATION APPLIED -->
+						<!-- //강의 내역이 없을 경우 -->
+						<ul class="thumb">
+							<li>
+								<a href="#none">
+									<img src="../img/sample/sample_textbook.png" alt="대체텍스트">
+									<span>Too much long Too much long Too much long Too much long .zip</span>
+								</a>
+								<button type="button">Revocation of Class</button>
+							</li>
+							<li>
+								<a href="#none">
+									<span>filename.zip</span>
+								</a>
+								<button type="button">Revocation of Class</button>
+							</li>
+							<li>
+								<a href="#none">
+									<span>filename.zip</span>
+								</a>
+								<button type="button">Revocation of Class</button>
+							</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row" class="top">Finished Class</th>
+					<td colspan="5">
+						<!-- 강의 내역이 없을 경우 -->
+						<!-- NO APPLICATION APPLIED -->
+						<!-- //강의 내역이 없을 경우 -->
+						15. Class Name(Teacher), 15. Class Name(Teacher), 15. Class Name(Teacher), 15. Class Name(Teacher), 15. Class Name(Teacher), 15. Class Name(Teacher),
+					</td>
+				</tr>
+				<tr>
+					<th scope="row" class="top">UUID</th>
+					<td>Auto</td>
+				</tr>
+				<tr>
+					<th scope="row">Device assign</th>
+					<td class="assign" colspan="5">
+						<ul class="device view">
+							<li>Too much long Too much long Too much long Too much long Too much long </li>
+							<li>Too much long Too much long Too much long Too much long Too much long </li>
+						</ul>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<!-- //게시판 뷰 -->
+
+		<!-- 게시물 제어버튼 영역 -->
+		<div class="btn_wrap">
+			<a href="#none" class="fr grey">Cancel</a>
+			<button type="submit" class="fr orange">Modify</button>
+		</div>
+		<!-- //게시물 제어버튼 영역 -->
+
+		<!-- 모달 레이어 -->
+		<div class="modal">
+			<div class="modal_wrap modal_01 w650">
+				<p class="modal_tit">Change Password</p>
+				<div class="modal_content">
+					<p class="msg">Hi&nbsp;<em>Carakim</em>,<br>Please enter a new password below.<a href="#none" class="guide show_modal modal_2nd" data-n="modal_02">Password Guide</a></p>
+					<div class="set_pw">
+						<label for="test999">New Password<span>(at least 9~20 characters in English / Special characters)</span></label>
+						<input type="password" id="test999" maxlength="20">
+						<p class="alert">Please enter information above.</p>
+						<label for="test998">Re-type new Password</label>
+						<input type="password" id="test998" maxlength="20">
+						<p class="alert">Please enter information above.</p>
+						<label for="test997">IdentificationPlus</label>
+						<div class="select_box">
+							<label for="test997">Your security questions</label>
+							<select id="test997" title="Select Your Question">
+								<option>Your security questions</option>
+								<option>What is your favorite bakery?</option>
+								<option>What is your oldest sibling's nickname?</option>
+								<option>What is your nickname?</option>
+								<option>What was the name of your high school?</option>
+								<option>What is the first name of your spouse's/Partner's youngest sibling?</option>
+							</select>
+						</div>
+						<input type="text" title="Security Answer" placeholder="Answer">
+					</div>
+					<div class="modal_btn">
+						<button type="submit" class="orange">Send E-mail</button>
+					</div>
+				</div>
+				<a href="#none" class="close hide_modal" data-n="modal_01">Hide Modal</a>
+			</div>
+			<div class="modal_back"></div>
+		</div>
+
+		<div class="modal">
+			<div class="modal_wrap modal_02 w650">
+				<p class="modal_tit">Password Guide</p>
+				<div class="modal_content">
+					<p class="msg">Guides Password Secure-Level Check Program for managing customer's safe Password.</p>
+					<div class="guide_wrap">
+						<p class="guide_tit">Password Secure Level</p>
+						<table>
+							<caption>Password Secure Level</caption>
+							<colgroup>
+								<col style="width:170px;">
+								<col>
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col">Secure Level</th>
+									<th scope="col">Description</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>Unusable</td>
+									<td>Password does not meet the requirements</td>
+								</tr>
+								<tr>
+									<td>Weak</td>
+									<td>Password is not secure enough</td>
+								</tr>
+								<tr>
+									<td>Fair</td>
+									<td>Password is fairly secure</td>
+								</tr>
+								<tr>
+									<td>Strong</td>
+									<td>Password is very secure</td>
+								</tr>
+							</tbody>
+						</table>
+						<p class="guide_tit">Password Requirements</p>
+						<ul>
+							<li>Password must be a combination of 6~15 (uppercase/lowercase) letters, numbers and symbols without any spaces.</li>
+							<li>At least 3 more combinations required.</li>
+							<li>Usable symbols.</li>
+						</ul>
+						<p class="symbol">!?$%&*()@&#35;&#123;[|]&#125;^_~</p>
+						<p class="guide_tit">Not allowed to use as a Password</p>
+						<ul>
+							<li>Blank(space) cannot be allowed for Password.</li>
+							<li>No more than 4 same or consecutive letters and numbers for Password.</li>
+							<li>Your ID, telephone number, and registration number cannot be used as your Password.</li>
+							<li>Account Password cannot be the same as your sign-in password.</li>
+						</ul>
+					</div>
+				</div>
+				<a href="#none" class="close hide_modal" data-n="modal_02">Hide Modal</a>
+			</div>
+			<div class="modal_back"></div>
+		</div>
+		<!-- //모달 레이어 -->
+
+	</div>
+	<!-- //컨텐츠 영역 -->
+</div>
+</body>
+</html>

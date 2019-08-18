@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=1280">
+<title>500 Error</title>
+<link rel="stylesheet" href="../css/common.css">
+<link rel="stylesheet" href="../css/mainUI.css">
+<script src="../js/jquery-1.12.1.min.js"></script>
+<script src="../js/mainUI.js"></script>
+<!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins"> -->
+</head>
+<body>
+
+<!-- 하위 브라우저 접속시 화면 -->
+<div class="update_browser">
+	<p>
+		Sorry, We don't support this browser.<br>
+		You need to update your web browser or use a different one.
+	</p>
+	<a href="https://www.microsoft.com/en-us/download/internet-explorer-11-for-windows-7-details.aspx">Update Internet Explorer</a>
+	<a href="https://www.google.com/chrome">Google Chrome</a>
+	<a href="https://www.mozilla.org/firefox/">Mozilla Firefox</a>
+</div>
+<!-- //하위 브라우저 접속시 화면 -->
+
+<div class="error_wrap">
+	<div class="error">
+		<a href="#none"><img src="../img/img/img_loginlogo.png" alt="Lamp Education Logo"></a>
+		<h1>
+			<em class="tit">Oops!</em>
+			<span class="msg">Page not Found</span>
+			<span>Error code : <em>500</em></span>
+		</h1>
+		<p>We can't seem to find the page you're looking for.</p>
+		<div class="btn_wrap center">
+			<a href="#none" class="orange">Home</a>
+			<a href="#none" class="blue show_modal" data-n="modal_01">Contact</a>
+		</div>
+	</div>
+</div>
+
+<!-- 모달 레이어 -->
+<div class="modal">
+	<div class="modal_wrap modal_01 w460">
+		<p class="modal_tit">Contact</p>
+		<div class="modal_content">
+			<table class="regist">
+				<caption>Contact Us Message Form</caption>
+				<colgroup>
+					<col style="width:100px;">
+					<col style="width:260px;">
+				</colgroup>
+				<tbody>
+					<tr>
+						<th scope="row"><label for="test001">Title</label></th>
+						<td><input type="text" id="test001"></td>
+					</tr>
+					<tr>
+						<th scope="row"><label for="test002">Name</label></th>
+						<td>
+							<div class="input_wrap div_2to2">
+								<input type="text" id="test002" title="First Name" placeholder="First Name">
+								<input type="text" title="Last Name" placeholder="Last Name">
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row"><label for="test003">E-mail</label></th>
+						<td><input type="text" id="test003"></td>
+					</tr>
+					<tr>
+						<th scope="row" class="top"><label for="test004">Contents</label></th>
+						<td><textarea id="test004" cols="30" rows="6"></textarea></td>
+					</tr>
+				</tbody>
+			</table>
+			<div class="modal_btn">
+				<button type="submit" class="orange">Ok</button>
+			</div>
+		</div>
+		<a href="#none" class="close hide_modal" data-n="modal_01">Hide Modal</a>
+	</div>
+	<div class="modal_back"></div>
+</div>
+<!-- //모달 레이어 -->

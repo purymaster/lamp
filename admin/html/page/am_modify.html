@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=1280">
+<title>LAMP :: Admin Manager</title>
+<link rel="stylesheet" href="../css/common.css">
+<link rel="stylesheet" href="../css/mainUI.css">
+<script src="../js/jquery-1.12.1.min.js"></script>
+<script src="../js/mainUI.js"></script>
+</head>
+<body>
+
+<!-- 하위 브라우저 접속시 화면 -->
+<div class="update_browser">
+	<p>
+		Sorry, We don't support this browser.<br>
+		You need to update your web browser or use a different one.
+	</p>
+	<a href="https://www.microsoft.com/en-us/download/internet-explorer-11-for-windows-7-details.aspx">Update Internet Explorer</a>
+	<a href="https://www.google.com/chrome">Google Chrome</a>
+	<a href="https://www.mozilla.org/firefox/">Mozilla Firefox</a>
+</div>
+<!-- //하위 브라우저 접속시 화면 -->
+
+<!-- 로딩 화면 -->
+<div class="loading">
+	<img src="../img/img/img_loading.gif" alt="Loading, Please wait.">
+</div>
+<!-- //로딩 화면 -->
+
+<!-- 스킵 네비게이션 -->
+<div class="skip">
+	<a href="#content">Jump to main content</a>
+</div>
+<!-- //스킵 네비게이션 -->
+
+<div id="wrap">
+	
+	<!-- 머리글 영역 -->
+	<button type="button" class="show mobile">Show Menu</button>
+	<header>
+		<a href="#none">
+			<h1>
+				<img src="../img/img/img_headerlogo.png" alt="LAMP Education Korea Inc.">
+				<span>Contents Admin<small>Portal Management System</small></span>
+			</h1>
+		</a>
+		<div class="member">
+			<div class="member_wrap">
+				<div class="member_photo">
+					<img src="../img/sample/sample_headerphoto.png" alt="XXX's Photo"> <!-- [D]이미지에 맞는 alt값 부여 -->
+				</div>
+				<div class="member_info">
+					<span class="rank">Super Admin</span>
+					<span class="name">First Name<br>Last Name</span>
+					<div class="btn">
+						<a href="#none">Sign out</a>
+						<a href="#none">Modify</a>
+					</div>
+				</div>
+			</div>
+			<p>Final Connect Day<span>99/99/9999</span></p>
+		</div>
+		<div class="menu">
+			<nav>
+				<ul>
+					<li>
+						<a href="#none">Information</a>
+						<ul>
+							<li><a href="#none">Notice</a></li>
+							<li><a href="#none">News</a></li>
+							<li><a href="#none">Faq</a></li>
+							<li><a href="#none">QnA</a></li>
+						</ul>
+					</li>
+					<li class="on">
+						<a href="#none">Management</a>
+						<ul>
+							<li class="on"><a href="#none">Admin Manager</a></li>
+							<li><a href="#none">Class Manager</a></li>
+							<li><a href="#none">Teachers Manager</a></li>
+							<li><a href="#none">Device Manager</a></li>
+							<li><a href="#none">Students Manager</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#none">Teachers</a>
+						<ul>
+							<li><a href="#none">My Information</a></li>
+							<li><a href="#none">Notice for Students</a></li>
+							<li><a href="#none">Homework Notice</a></li>
+							<li><a href="#none">My Classes</a></li>
+							<li><a href="#none">My Students</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#none">Students</a>
+						<ul>
+							<li><a href="#none">My Information</a></li>
+							<li><a href="#none">Notice for Students</a></li>
+							<li><a href="#none">Homework Notice</a></li>
+							<li><a href="#none">My Classes</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#none">Resources</a>
+						<ul>
+							<li><a href="#none">Category Manager</a></li>
+							<li><a href="#none">Object Manager</a></li>
+						</ul>
+					</li>
+					<li class="no_depth"><a href="#none">Authoring Tool</a></li>
+				</ul>
+			</nav>
+			<!-- Superadmin 전용메뉴 -->
+			<!--
+			<ul class="menu_admin">
+				<li><a href="#none">Add Country/Band</a></li>
+				<li><a href="#none">Add Super Admin</a></li>
+				<li><a href="#none">App Management</a></li>
+			</ul>
+			-->
+			<!-- //Superadmin 전용메뉴 -->
+			<dl class="analysis">
+				<dt>All Teachers</dt>
+				<dd>99,999</dd>
+				<dt>Standby approval</dt>
+				<dd>99,999</dd>
+				<dt>Students</dt>
+				<dd>99,999</dd>
+			</dl>
+		</div>
+		<button type="button" class="hide mobile">Hide Menu</button>
+	</header>
+	<div class="nav_modal mobile"></div> <!-- 네비게이션 모달 -->
+	<!-- //머리글 영역 -->
+
+	<!-- 컨텐츠 영역 -->
+	<div id="content">
+		<h2 class="hidden">Admin Manager</h2>
+		<ul class="breadcrumb">
+			<li>Home</li>
+			<li>Management</li>
+			<li>Admin Manager</li>
+		</ul>
+
+		<!-- 게시판 뷰 -->
+		<table class="board_view">
+			<caption>Admin manger Board View</caption>
+			<colgroup>
+				<col style="width:170px;">
+				<col>
+				<col style="width:170px;">
+				<col>
+			</colgroup>
+			<tbody>
+				<tr>
+					<th scope="row">Serial No.</th>
+					<td colspan="3">auto admin code</td>
+				</tr>
+				<tr>
+					<th scope="row"><label for="test006">First Name</label></th>
+					<td><input type="text" id="test006" title="User Name"></td>
+					<th scope="row" class="other"><label for="test007">Last Name</label></th>
+					<td><input type="text" id="test007" title="User Name"></td>
+				</tr>
+				<tr>
+					<th scope="row"><label for="test010">ID</label></th>
+					<td colspan="3">
+						<div class="input_wrap">
+							<input type="text" id="test010" title="User ID" class="w290">
+							<button type="button">Duplication Check</button>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">PW</th>
+					<td colspan="3"><button type="button" class="single">RESET PASSWORD</button></td>
+				</tr>
+				<tr>
+					<th scope="row"><label for="test012">Code No.</label></th>
+					<td colspan="3"><input type="text" id="test012" title="User Code Number" class="w460"></td>
+				</tr>
+				<tr>
+					<th scope="row"><label for="test013">E-mail</label></th>
+					<td colspan="3"><input type="text" id="test013" title="User E-mail Address" class="w460"></td>
+				</tr>
+				<tr>
+					<th scope="row">Authority Check</th>
+					<td class="authority" colspan="3">
+						<!-- 2017-09-04 체크폼 수정 -->
+						<fieldset>
+							<legend>Authority List</legend>
+							<ul>
+								<li>
+									<div class="check category">
+										<input type="checkbox" id="author1" name="author1" class="all">
+										<label for="author1">All Authority</label>
+									</div>
+								</li>
+								<li>
+									<div class="check category">
+										<input type="checkbox" id="author2" name="author2">
+										<label for="author2">Management</label>
+									</div>
+									<div class="check">
+										<input type="checkbox" id="author2_1" name="author2">
+										<label for="author2_1">Admin Manager</label>
+										<input type="checkbox" id="author2_2" name="author2">
+										<label for="author2_2">Class Manager</label>
+										<input type="checkbox" id="author2_3" name="author2">
+										<label for="author2_3">Teachers Manager</label>
+										<input type="checkbox" id="author2_4" name="author2">
+										<label for="author2_4">Device Manager</label>
+										<input type="checkbox" id="author2_5" name="author2">
+										<label for="author2_5">Students Manager</label>
+									</div>
+								</li>
+								<li>
+									<div class="check category">
+										<input type="checkbox" id="author3" name="author3">
+										<label for="author3">Teachers</label>
+									</div>
+									<div class="check">
+										<input type="checkbox" id="author3_1" name="author3">
+										<label for="author3_1">My Information</label>
+										<input type="checkbox" id="author3_2" name="author3">
+										<label for="author3_2">Notice for Students</label>
+										<input type="checkbox" id="author3_3" name="author3">
+										<label for="author3_3">Homework Notice</label>
+										<input type="checkbox" id="author3_4" name="author3">
+										<label for="author3_4">My Classes</label>
+										<input type="checkbox" id="author3_5" name="author3">
+										<label for="author3_4">My Students</label>
+									</div>
+								</li>
+								<li>
+									<div class="check category">
+										<input type="checkbox" id="author4" name="author4">
+										<label for="author4">Resources</label>
+									</div>
+									<div class="check">
+										<input type="checkbox" id="author4_1" name="author4">
+										<label for="author4_1">Category Manager</label>
+										<input type="checkbox" id="author4_2" name="author4">
+										<label for="author4_2">Object Manager</label>
+									</div>
+								</li>
+								<li>
+									<div class="check category">
+										<input type="checkbox" id="author5" name="author5">
+										<label for="author5">Information</label>
+									</div>
+									<div class="check">
+										<input type="checkbox" id="author5_1" name="author5">
+										<label for="author5_1">Notice</label>
+										<input type="checkbox" id="author5_2" name="author5">
+										<label for="author5_2">News</label>
+										<input type="checkbox" id="author5_3" name="author5">
+										<label for="author5_3">FaQ</label>
+										<input type="checkbox" id="author5_4" name="author5">
+										<label for="author5_4">QnA</label>
+									</div>
+								</li>
+								<li>
+									<div class="check category">
+										<input type="checkbox" id="author6" name="author6">
+										<label for="author6">Authoring tool</label>
+									</div>
+								</li>
+							</ul>
+							<p>Other privileges can be checked by the exception of the super administrator</p>
+						</fieldset>
+						<!-- //2017-09-04 체크폼 수정 -->
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<!-- //게시판 뷰 -->
+
+		<!-- 게시물 제어버튼 영역 -->
+		<div class="btn_wrap">
+			<a href="#none" class="fl blue">List</a>
+			<a href="#none" class="fr grey">Cancel</a>
+			<button type="submit" class="fr orange">Modify</button>
+		</div>
+		<!-- //게시물 제어버튼 영역 -->
+
+	</div>
+	<!-- //컨텐츠 영역 -->
+</div>
+</body>
+</html>

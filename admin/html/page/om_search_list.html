@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=1280">
+<title>LAMP :: Object Manager</title>
+<link rel="stylesheet" href="../css/common.css">
+<link rel="stylesheet" href="../css/mainUI.css">
+<script src="../js/jquery-1.12.1.min.js"></script>
+<script src="../js/mainUI.js"></script>
+</head>
+<body>
+
+<!-- 하위 브라우저 접속시 화면 -->
+<div class="update_browser">
+	<p>
+		Sorry, We don't support this browser.<br>
+		You need to update your web browser or use a different one.
+	</p>
+	<a href="https://www.microsoft.com/en-us/download/internet-explorer-11-for-windows-7-details.aspx">Update Internet Explorer</a>
+	<a href="https://www.google.com/chrome">Google Chrome</a>
+	<a href="https://www.mozilla.org/firefox/">Mozilla Firefox</a>
+</div>
+<!-- //하위 브라우저 접속시 화면 -->
+
+<!-- 로딩 화면 -->
+<div class="loading">
+	<img src="../img/img/img_loading.gif" alt="Loading, Please wait.">
+</div>
+<!-- //로딩 화면 -->
+
+<!-- 스킵 네비게이션 -->
+<div class="skip">
+	<a href="#content">Jump to main content</a>
+</div>
+<!-- //스킵 네비게이션 -->
+
+<div id="wrap">
+	
+	<!-- 머리글 영역 -->
+	<button type="button" class="show mobile">Show Menu</button>
+	<header>
+		<a href="#none">
+			<h1>
+				<img src="../img/img/img_headerlogo.png" alt="LAMP Education Korea Inc.">
+				<span>Contents Admin<small>Portal Management System</small></span>
+			</h1>
+		</a>
+		<div class="member">
+			<div class="member_wrap">
+				<div class="member_photo">
+					<img src="../img/sample/sample_headerphoto.png" alt="XXX's Photo"> <!-- [D]이미지에 맞는 alt값 부여 -->
+				</div>
+				<div class="member_info">
+					<span class="rank">Super Admin</span>
+					<span class="name">First Name<br>Last Name</span>
+					<div class="btn">
+						<a href="#none">Sign out</a>
+						<a href="#none">Modify</a>
+					</div>
+				</div>
+			</div>
+			<p>Final Connect Day<span>99/99/9999</span></p>
+		</div>
+		<div class="menu">
+			<nav>
+				<ul>
+					<li>
+						<a href="#none">Information</a>
+						<ul>
+							<li><a href="#none">Notice</a></li>
+							<li><a href="#none">News</a></li>
+							<li><a href="#none">Faq</a></li>
+							<li><a href="#none">QnA</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#none">Management</a>
+						<ul>
+							<li><a href="#none">Admin Manager</a></li>
+							<li><a href="#none">Class Manager</a></li>
+							<li><a href="#none">Teachers Manager</a></li>
+							<li><a href="#none">Device Manager</a></li>
+							<li><a href="#none">Students Manager</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#none">Teachers</a>
+						<ul>
+							<li><a href="#none">My Information</a></li>
+							<li><a href="#none">Notice for Students</a></li>
+							<li><a href="#none">Homework Notice</a></li>
+							<li><a href="#none">My Classes</a></li>
+							<li><a href="#none">My Students</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#none">Students</a>
+						<ul>
+							<li><a href="#none">My Information</a></li>
+							<li><a href="#none">Notice for Students</a></li>
+							<li><a href="#none">Homework Notice</a></li>
+							<li><a href="#none">My Classes</a></li>
+							<li><a href="#none">Students Manager</a></li>
+						</ul>
+					</li>
+					<li class="on">
+						<a href="#none">Resource</a>
+						<ul>
+							<li><a href="#none">Category Manager</a></li>
+							<li class="on"><a href="#none">Object Manager</a></li>
+						</ul>
+					</li>
+					<li class="no_depth"><a href="#none">Authoring Tool</a></li>
+				</ul>
+			</nav>
+			<!-- Superadmin 전용메뉴 -->
+			<!--
+			<ul class="menu_admin">
+				<li><a href="#none">Add Country/Band</a></li>
+				<li><a href="#none">Add Super Admin</a></li>
+				<li><a href="#none">App Management</a></li>
+			</ul>
+			-->
+			<!-- //Superadmin 전용메뉴 -->
+			<dl class="analysis">
+				<dt>All Teachers</dt>
+				<dd>99,999</dd>
+				<dt>Standby approval</dt>
+				<dd>99,999</dd>
+				<dt>Students</dt>
+				<dd>99,999</dd>
+			</dl>
+		</div>
+		<button type="button" class="hide mobile">Hide Menu</button>
+	</header>
+	<div class="nav_modal mobile"></div> <!-- 네비게이션 모달 -->
+	<!-- //머리글 영역 -->
+
+	<!-- 컨텐츠 영역 -->
+	<div id="content">
+		<h2 class="hidden">Object Manager</h2>
+		<ul class="breadcrumb">
+			<li>Home</li>
+			<li>Resources</li>
+			<li>Object manager</li>
+		</ul>
+
+		<!-- 게시물 검색창 -->
+		<div class="search_wrap depth">
+			<fieldset>
+				<legend>Depth Search</legend>
+				<div class="tribe_select">
+					<div class="select_box">
+						<label for="select_depth1">1Depth</label>
+						<select id="select_depth1" title="Select First Depth">
+							<option>1Depth</option>
+							<option>A</option>
+							<option>B</option>
+						</select>
+					</div>
+					<div class="select_box">
+						<label for="select_depth2">2Depth</label>
+						<select id="select_depth2" title="Select Second Depth">
+							<option>2Depth</option>
+							<option>A</option>
+							<option>B</option>
+						</select>
+					</div>
+					<div class="select_box">
+						<label for="select_depth3">3Depth</label>
+						<select id="select_depth3" title="Select Third Depth">
+							<option>3Depth</option>
+							<option>A</option>
+							<option>B</option>
+						</select>
+					</div>
+				</div>
+				<input type="text" title="search keyword input" placeholder="Keyword">
+				<button type="submit">Search</button>
+			</fieldset>
+		</div>
+		<!-- //게시물 검색창 -->
+
+		<ul class="breadcrumb object">
+			<li>1Depth</li>
+			<li>2Depth</li>
+			<li>3Depth</li>
+			<li>Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long </li>
+		</ul>
+
+		<!-- 오브젝트 리스트 -->
+		<div class="object_wrap">
+			<p class="tit">Images(Recently uploaded images)</p>
+			<ul class="object_list">
+				<li>
+					<a href="#none">
+						<img src="../img/sample/sample_textbook.png" alt="대체텍스트">
+						<ul class="depth">
+							<li>1depth</li>
+							<li>2depth</li>
+							<li>3depth</li>
+						</ul>
+						<span class="name">Too much long Too much long </span>
+						<span class="writer">Too much long Too much long </span>
+					</a>
+				</li>
+				<li>
+					<a href="#none">
+						<ul class="depth">
+							<li>1depth</li>
+							<li>2depth</li>
+							<li>3depth</li>
+						</ul>
+						<span class="name">Too much long Too much long </span>
+						<span class="writer">Too much long Too much long </span>
+					</a>
+				</li>
+				<li>
+					<a href="#none">
+						<ul class="depth">
+							<li>1depth</li>
+							<li>2depth</li>
+							<li>3depth</li>
+						</ul>
+						<span class="name">Too much long Too much long </span>
+						<span class="writer">Too much long Too much long </span>
+					</a>
+				</li>
+				<li>
+					<a href="#none">
+						<ul class="depth">
+							<li>1depth</li>
+							<li>2depth</li>
+							<li>3depth</li>
+						</ul>
+						<span class="name">Too much long Too much long </span>
+						<span class="writer">Too much long Too much long </span>
+					</a>
+				</li>
+				<li>
+					<a href="#none">
+						<ul class="depth">
+							<li>1depth</li>
+							<li>2depth</li>
+							<li>3depth</li>
+						</ul>
+						<span class="name">Too much long Too much long </span>
+						<span class="writer">Too much long Too much long </span>
+					</a>
+				</li>
+				<li>
+					<a href="#none">
+						<ul class="depth">
+							<li>1depth</li>
+							<li>2depth</li>
+							<li>3depth</li>
+						</ul>
+						<span class="name">Too much long Too much long </span>
+						<span class="writer">Too much long Too much long </span>
+					</a>
+				</li>
+			</ul>
+			<a href="#none">More</a>
+		</div>
+		<div class="object_wrap">
+			<p class="tit">Documents(Recently uploaded documents)</p>
+			<ul class="object_list">
+				<li>
+					<a href="#none">
+						<ul class="depth">
+							<li>1depth</li>
+							<li>2depth</li>
+							<li>3depth</li>
+						</ul>
+						<span class="name">Too much long Too much long </span>
+						<span class="writer">Too much long Too much long </span>
+					</a>
+				</li>
+				<li>
+					<a href="#none">
+						<ul class="depth">
+							<li>1depth</li>
+							<li>2depth</li>
+							<li>3depth</li>
+						</ul>
+						<span class="name">Too much long Too much long </span>
+						<span class="writer">Too much long Too much long </span>
+					</a>
+				</li>
+				<li>
+					<a href="#none">
+						<ul class="depth">
+							<li>1depth</li>
+							<li>2depth</li>
+							<li>3depth</li>
+						</ul>
+						<span class="name">Too much long Too much long </span>
+						<span class="writer">Too much long Too much long </span>
+					</a>
+				</li>
+				<li>
+					<a href="#none">
+						<ul class="depth">
+							<li>1depth</li>
+							<li>2depth</li>
+							<li>3depth</li>
+						</ul>
+						<span class="name">Too much long Too much long </span>
+						<span class="writer">Too much long Too much long </span>
+					</a>
+				</li>
+				<li>
+					<a href="#none">
+						<ul class="depth">
+							<li>1depth</li>
+							<li>2depth</li>
+							<li>3depth</li>
+						</ul>
+						<span class="name">Too much long Too much long </span>
+						<span class="writer">Too much long Too much long </span>
+					</a>
+				</li>
+				<li>
+					<a href="#none">
+						<ul class="depth">
+							<li>1depth</li>
+							<li>2depth</li>
+							<li>3depth</li>
+						</ul>
+						<span class="name">Too much long Too much long </span>
+						<span class="writer">Too much long Too much long </span>
+					</a>
+				</li>
+			</ul>
+			<a href="#none">More</a>
+		</div>
+		<div class="object_wrap">
+			<p class="tit">Media(Recently uploaded media)</p>
+			<ul class="object_list media">
+				<li>
+					<a href="#none">
+						<img src="../img/sample/sample_media.png" alt="대체텍스트">
+						<ul class="depth">
+							<li>1depth</li>
+							<li>2depth</li>
+							<li>3depth</li>
+						</ul>
+						<span class="name">Too much long Too much long </span>
+						<span class="writer">Too much long Too much long </span>
+					</a>
+				</li>
+				<li>
+					<a href="#none">
+						<ul class="depth">
+							<li>1depth</li>
+							<li>2depth</li>
+							<li>3depth</li>
+						</ul>
+						<span class="name">Too much long Too much long </span>
+						<span class="writer">Too much long Too much long </span>
+					</a>
+				</li>
+				<li>
+					<a href="#none">
+						<ul class="depth">
+							<li>1depth</li>
+							<li>2depth</li>
+							<li>3depth</li>
+						</ul>
+						<span class="name">Too much long Too much long </span>
+						<span class="writer">Too much long Too much long </span>
+					</a>
+				</li>
+				<li>
+					<a href="#none">
+						<ul class="depth">
+							<li>1depth</li>
+							<li>2depth</li>
+							<li>3depth</li>
+						</ul>
+						<span class="name">Too much long Too much long </span>
+						<span class="writer">Too much long Too much long </span>
+					</a>
+				</li>
+				<li>
+					<a href="#none">
+						<ul class="depth">
+							<li>1depth</li>
+							<li>2depth</li>
+							<li>3depth</li>
+						</ul>
+						<span class="name">Too much long Too much long </span>
+						<span class="writer">Too much long Too much long </span>
+					</a>
+				</li>
+				<li>
+					<a href="#none">
+						<ul class="depth">
+							<li>1depth</li>
+							<li>2depth</li>
+							<li>3depth</li>
+						</ul>
+						<span class="name">Too much long Too much long </span>
+						<span class="writer">Too much long Too much long </span>
+					</a>
+				</li>
+			</ul>
+			<a href="#none">More</a>
+		</div>
+		<!-- //오브젝트 리스트 -->
+
+	</div>
+	<!-- //컨텐츠 영역 -->
+</div>
+</body>
+</html>

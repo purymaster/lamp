@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=1280">
+<title>LAMP :: Student Manager</title>
+<link rel="stylesheet" href="../css/common.css">
+<link rel="stylesheet" href="../css/mainUI.css">
+<script src="../js/jquery-1.12.1.min.js"></script>
+<script src="../js/mainUI.js"></script>
+</head>
+<body>
+
+<!-- 하위 브라우저 접속시 화면 -->
+<div class="update_browser">
+	<p>
+		Sorry, We don't support this browser.<br>
+		You need to update your web browser or use a different one.
+	</p>
+	<a href="https://www.microsoft.com/en-us/download/internet-explorer-11-for-windows-7-details.aspx">Update Internet Explorer</a>
+	<a href="https://www.google.com/chrome">Google Chrome</a>
+	<a href="https://www.mozilla.org/firefox/">Mozilla Firefox</a>
+</div>
+<!-- //하위 브라우저 접속시 화면 -->
+
+<!-- 로딩 화면 -->
+<div class="loading">
+	<img src="../img/img/img_loading.gif" alt="Loading, Please wait.">
+</div>
+<!-- //로딩 화면 -->
+
+<!-- 스킵 네비게이션 -->
+<div class="skip">
+	<a href="#content">Jump to main content</a>
+</div>
+<!-- //스킵 네비게이션 -->
+
+<div id="wrap">
+	
+	<!-- 머리글 영역 -->
+	<button type="button" class="show mobile">Show Menu</button>
+	<header>
+		<a href="#none">
+			<h1>
+				<img src="../img/img/img_headerlogo.png" alt="LAMP Education Korea Inc.">
+				<span>Contents Admin<small>Portal Management System</small></span>
+			</h1>
+		</a>
+		<div class="member">
+			<div class="member_wrap">
+				<div class="member_photo">
+					<img src="../img/sample/sample_headerphoto.png" alt="XXX's Photo"> <!-- [D]이미지에 맞는 alt값 부여 -->
+				</div>
+				<div class="member_info">
+					<span class="rank">Super Admin</span>
+					<span class="name">First Name<br>Last Name</span>
+					<div class="btn">
+						<a href="#none">Sign out</a>
+						<a href="#none">Modify</a>
+					</div>
+				</div>
+			</div>
+			<p>Final Connect Day<span>99/99/9999</span></p>
+		</div>
+		<div class="menu">
+			<nav>
+				<ul>
+					<li>
+						<a href="#none">Information</a>
+						<ul>
+							<li><a href="#none">Notice</a></li>
+							<li><a href="#none">News</a></li>
+							<li><a href="#none">Faq</a></li>
+							<li><a href="#none">QnA</a></li>
+						</ul>
+					</li>
+					<li class="on">
+						<a href="#none">Management</a>
+						<ul>
+							<li><a href="#none">Admin Manager</a></li>
+							<li><a href="#none">Class Manager</a></li>
+							<li><a href="#none">Teachers Manager</a></li>
+							<li><a href="#none">Device Manager</a></li>
+							<li class="on"><a href="#none">Students Manager</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#none">Teachers</a>
+						<ul>
+							<li><a href="#none">My Information</a></li>
+							<li><a href="#none">Notice for Students</a></li>
+							<li><a href="#none">Homework Notice</a></li>
+							<li><a href="#none">My Classes</a></li>
+							<li><a href="#none">My Students</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#none">Students</a>
+						<ul>
+							<li><a href="#none">My Information</a></li>
+							<li><a href="#none">Notice for Students</a></li>
+							<li><a href="#none">Homework Notice</a></li>
+							<li><a href="#none">My Classes</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#none">Resources</a>
+						<ul>
+							<li><a href="#none">Category Manager</a></li>
+							<li><a href="#none">Object Manager</a></li>
+						</ul>
+					</li>
+					<li class="no_depth"><a href="#none">Authoring Tool</a></li>
+				</ul>
+			</nav>
+			<!-- Superadmin 전용메뉴 -->
+			<!--
+			<ul class="menu_admin">
+				<li><a href="#none">Add Country/Band</a></li>
+				<li><a href="#none">Add Super Admin</a></li>
+				<li><a href="#none">App Management</a></li>
+			</ul>
+			-->
+			<!-- //Superadmin 전용메뉴 -->
+			<dl class="analysis">
+				<dt>All Teachers</dt>
+				<dd>99,999</dd>
+				<dt>Standby approval</dt>
+				<dd>99,999</dd>
+				<dt>Students</dt>
+				<dd>99,999</dd>
+			</dl>
+		</div>
+		<button type="button" class="hide mobile">Hide Menu</button>
+	</header>
+	<div class="nav_modal mobile"></div> <!-- 네비게이션 모달 -->
+	<!-- //머리글 영역 -->
+
+	<!-- 컨텐츠 영역 -->
+	<div id="content">
+		<h2 class="hidden">Students Manager</h2>
+		<ul class="breadcrumb">
+			<li>Home</li>
+			<li>Management</li>
+			<li>Students Manager(Registration)</li>
+		</ul>
+
+		<!-- 게시판 뷰 -->
+		<table class="board_view">
+			<caption>Student Join</caption>
+			<colgroup>
+				<col style="width:160px;">
+				<col style="width:160px;">
+				<col style="width:160px;">
+				<col style="width:160px;">
+				<col style="width:150px;">
+				<col style="width:170px;">
+			</colgroup>
+			<tbody>
+				<tr>
+					<th scope="row" rowspan="6">Picture</th>
+					<td rowspan="6" class="photo_up large">
+						<div class="photo_upload other">
+							<div class="photo"><img src="../img/bg/bg_profilephoto.png" alt="" style="width:100px; height:134px; border:0"></div>
+							<input type="file" id="photo" class="search_photo hidden">
+							<div class="photo_edit">
+								<p>( 3cm * 4cm ) <em>Only Jpg</em></p>
+								<div class="photo_btn">
+									<label for="photo">Search</label>
+								</div>
+							</div>
+						</div>
+					</td>
+					<th scope="row">Country</th>
+					<td>Auto</td>
+					<th scope="row">Band</th>
+					<td>Auto</td>
+				</tr>
+				<tr>
+					<th scope="row"><label for="test498">Sign in ID</label></th>
+					<td colspan="3">
+						<div class="input_wrap">
+							<input type="text" id="test498" title="User ID" class="w290" maxlength="16">
+							<button type="button" class="w150">Check</button>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">Password</th>
+					<td colspan="3">
+						**********
+						<!-- <button type="button" class="single">Reset Password</button> -->
+					</td>
+				</tr>
+				<tr>
+					<th scope="row"><label for="test499">First Name</label></th>
+					<td><input type="text" id="test499"></td>
+					<th scope="row"><label for="test500">Last Name</label></th>
+					<td><input type="text" id="test500"></td>
+				</tr>
+				<tr>
+					<th scope="row"><label for="test001">Born date</label></th>
+					<td><input type="text" id="test001" placeholder="mm/dd/yyyy" title="Input your birthday"></td>
+					<th scope="row"><label for="select_gender">Gender</label></th>
+					<td>
+						<div class="select_box">
+							<label for="select_gender">Select</label>
+							<select id="select_gender" title="Select Gender">
+								<option>Select</option>
+								<option>Male</option>
+								<option>Female</option>
+							</select>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row"><label for="test002">Telephone(Home)</label></th>
+					<td><input type="text" id="test002"></td>
+					<th scope="row"><label for="test003">E-mail</label></th>
+					<td><input type="text" id="test003"></td>
+				</tr>
+				<tr>
+					<th scope="row"><label for="test004">Address</label></th>
+					<td colspan="3"><input type="text" id="test004"></td>
+					<th scope="row"><label for="test005">Postal code</label></th>
+					<td><input type="text" id="test005"></td>
+				</tr>
+				<tr>
+					<th scope="row" class="top">Guardian</th>
+					<td colspan="5">
+						<table class="inner">
+							<caption>Student's Guardian View</caption>
+							<colgroup>
+								<col style="width:130px;">
+								<col>
+								<col style="width:130px;">
+								<col style="width:160px;">
+								<col style="width:45px;">
+							</colgroup>
+							<tbody>
+								<tr>
+									<th scope="row"><label for="test006">Name</label></th>
+									<td>
+										<div class="input_wrap div_2to2">
+											<input type="text" id="test006" placeholder="First Name">
+											<input type="text" placeholder="Last Name">
+										</div>
+									</td>
+									<th scope="row"><label for="test007">Relationship</label></th>
+									<td colspan="2"><input type="text" id="test007"></td>
+								</tr>
+								<tr>
+									<th scope="row"><label for="test008">Cell Phone</label></th>
+									<td><input type="text" id="test008"></td>
+									<th scope="row"><label for="test009">E-mail</label></th>
+									<td colspan="2"><input type="text" id="test009"></td>
+								</tr>
+								<tr>
+									<th scope="row"><label for="test010">Address</label></th>
+									<td><input type="text" id="test010"></td>
+									<th scope="row"><label for="test011">Postal code</label></th>
+									<td colspan="2"><input type="text" id="test011"></td>
+								</tr>
+								<!-- <tr>
+									<th rowspan="2" scope="row" rowspan="2"><label for="select_question">Identification<br>Plus</label></th>
+									<td colspan="4">
+										<div class="select_box">
+											<label for="select_question">Your security questions</label>
+											<select id="select_question" title="Select Question">
+												<option>Your security questions</option>
+												<option>Question A</option>
+												<option>Question B</option>
+											</select>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td colspan="4">
+										<input type="text" placeholder="Answer">
+									</td>
+								</tr> -->
+								<tr>
+									<th rowspan="2" scope="row" rowspan="2"><label for="test012">File</label></th>
+									<td colspan="3">
+										<div class="upload">
+											<input class="upload_name" disabled> <!-- 크로스브라우징을 위한 더미 -->
+											<input type="file" id="test012">
+											<label for="test012">SEARCH</label>
+										</div>
+									</td>
+									<td class="btn"><button type="button" class="del">Delete</button></td>
+								</tr>
+								<tr>
+									<td colspan="3">
+										<div class="upload">
+											<input class="upload_name" disabled> <!-- 크로스브라우징을 위한 더미 -->
+											<input type="file" id="test013">
+											<label for="test013">SEARCH</label>
+										</div>
+									</td>
+									<td class="btn"><button type="button" class="del">Delete</button></td>
+								</tr>
+							</tbody>
+						</table>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row" class="top">An elective course</th>
+					<td colspan="5">
+						NO APPLICATION APPLIED
+						<a href="#" class="signup">Sign up for class</a>
+						<!-- 강의 내역이 있을 경우 -->
+						<!--
+						<ul class="thumb">
+							<li>
+								<a href="#none">
+									<img src="../img/sample/sample_textbook.png" alt="대체텍스트">
+									<span>Too much long Too much long Too much long Too much long .zip</span>
+								</a>
+							</li>
+							<li>
+								<a href="#none">
+									<span>filename.zip</span>
+								</a>
+							</li>
+							<li>
+								<a href="#none">
+									<span>filename.zip</span>
+								</a>
+							</li>
+						</ul>
+						-->
+						<!-- //강의 내역이 있을 경우 -->
+					</td>
+				</tr>
+				<tr>
+					<th scope="row" class="top">Finished Class</th>
+					<td colspan="5">
+						NO APPLICATION APPLIED
+						<!-- 강의 내역이 있을 경우 -->
+						<!-- 15. Class Name(Teacher), 15. Class Name(Teacher), 15. Class Name(Teacher), 15. Class Name(Teacher), 15. Class Name(Teacher), 15. Class Name(Teacher), -->
+						<!-- //강의 내역이 있을 경우 -->
+					</td>
+				</tr>
+				<tr>
+					<th scope="row" class="top">UUID</th>
+					<td>Auto</td>
+				</tr>
+				<tr>
+					<th scope="row">Device assign</th>
+					<td class="assign" colspan="5">
+						<ul class="device input">
+							<li><input type="text" placeholder="Device Name"></li>
+							<li><input type="text" placeholder="Device Code"></li>
+						</ul>
+						<button type="button" class="del">Delete</button>
+						<button type="button" class="search show_modal" data-n="modal_01">Search</button>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<!-- //게시판 뷰 -->
+
+		<!-- 게시물 제어버튼 영역 -->
+		<div class="btn_wrap">
+			<a href="#none" class="fr grey">Cancel</a>
+			<button type="submit" class="fr orange">Ok</button>
+		</div>
+		<!-- //게시물 제어버튼 영역 -->
+
+		<!-- 모달 레이어 -->
+		<div class="modal">
+			<div class="modal_wrap modal_01 w460">
+				<p class="modal_tit">Device Information</p>
+				<div class="modal_content">
+					<div class="device_wrap">
+						<table class="board device_list">
+							<caption>Device Information List</caption>
+							<colgroup>
+								<col style="width:65px;">
+								<col style="width:110px;">
+								<col>
+							</colgroup>
+							<thead>
+								<tr>
+									<th><span class="hidden">Select Device</span></th>
+									<th>Name</th>
+									<th>Code</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>
+										<div class="radio_single">
+											<input type="radio" id="device_01" name="article">
+											<label for="device_01"><span class="hidden">Select Article Number 99999</span></label>
+										</div>
+									</td>
+									<td>Carakim</td>
+									<td>Too much long Too much long Too much long Too much long Too much long </td>
+								</tr>
+								<tr>
+									<td>
+										<div class="radio_single">
+											<input type="radio" id="device_02" name="article">
+											<label for="device_02"><span class="hidden">Select Article Number 99999</span></label>
+										</div>
+									</td>
+									<td>Carakim</td>
+									<td>Too much long Too much long Too much long Too much long Too much long </td>
+								</tr>
+								<tr>
+									<td>
+										<div class="radio_single">
+											<input type="radio" id="device_03" name="article">
+											<label for="device_03"><span class="hidden">Select Article Number 99999</span></label>
+										</div>
+									</td>
+									<td>Carakim</td>
+									<td>Too much long Too much long Too much long Too much long Too much long </td>
+								</tr>
+								<tr>
+									<td>
+										<div class="radio_single">
+											<input type="radio" id="device_04" name="article">
+											<label for="device_04"><span class="hidden">Select Article Number 99999</span></label>
+										</div>
+									</td>
+									<td>Carakim</td>
+									<td>Too much long Too much long Too much long Too much long Too much long </td>
+								</tr>
+								<tr>
+									<td>
+										<div class="radio_single">
+											<input type="radio" id="device_05" name="article">
+											<label for="device_05"><span class="hidden">Select Article Number 99999</span></label>
+										</div>
+									</td>
+									<td>Carakim</td>
+									<td>Too much long Too much long Too much long Too much long Too much long </td>
+								</tr>
+								<tr>
+									<td>
+										<div class="radio_single">
+											<input type="radio" id="device_06" name="article">
+											<label for="device_06"><span class="hidden">Select Article Number 99999</span></label>
+										</div>
+									</td>
+									<td>Carakim</td>
+									<td>Too much long Too much long Too much long Too much long Too much long </td>
+								</tr>
+								<tr>
+									<td>
+										<div class="radio_single">
+											<input type="radio" id="device_07" name="article">
+											<label for="device_07"><span class="hidden">Select Article Number 99999</span></label>
+										</div>
+									</td>
+									<td>Carakim</td>
+									<td>Too much long Too much long Too much long Too much long Too much long </td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="modal_btn">
+						<a href="#none" class="orange">Ok</a>
+					</div>
+				</div>
+				<a href="#none" class="close hide_modal" data-n="modal_01">Hide Modal</a>
+			</div>
+			<div class="modal_back"></div>
+		</div>
+		<!-- //모달 레이어 -->
+
+	</div>
+	<!-- //컨텐츠 영역 -->
+</div>
+</body>
+</html>

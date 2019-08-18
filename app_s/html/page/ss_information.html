@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=1024">
+<title>LAMP :: My Information</title>
+<link rel="stylesheet" href="../css/ui.css">
+<script src="../js/jquery-1.12.1.min.js"></script>
+<script src="../js/ui.js"></script>
+</head>
+<body>
+<!-- 로딩 화면 -->
+<div class="loading">		
+	<img src="../img/img/img_logo.png" class="logo" alt="Lamp Education">
+	<img src="../img/img/img_loading.png" class="ing" alt="Loading...Please wait">
+</div>
+<!-- //로딩 화면 -->
+
+<div id="top" class="wrap sub">
+
+	<!-- 헤더 -->
+	<header>
+		<h1>My Information</h1>
+		<span class="name">Student ID</span>
+		<a href="#none" class="home">Home</a>
+		<button type="button" class="show">Show Menu</button>
+
+		<!-- 네비게이션 -->
+		<nav>
+			<div class="user_wrap">
+				<div class="img">
+					<img src="../img/sample/sample_student_photo.png" alt="학생이름's Photo">
+				</div>
+				<div class="user_info">
+					<p class="name">Hermione Jean Granger</p>
+					<a href="#none" class="info">My Information</a>
+					<a href="#none" class="sign_out">Sign out</a>
+				</div>
+			</div>
+			<ul>
+				<li><a href="#none">Notice for Students</a></li>
+				<li><a href="#none">My Class</a></li>
+				<li><a href="#none">HomeWork</a></li>
+				<li><a href="#none">Device Configration</a></li>
+			</ul>
+			<dl>
+				<dt>Latest version.</dt>
+				<dd>LAMP V1.0</dd>
+			</dl>
+			<!-- <a href="#none" class="btn orange go upg">Click Upgrade</a> --> <!-- 버전 업그레이드 필요시 생성 -->
+			<a href="#none" class="btn black go end">End of APP</a>
+			<button type="button" class="hide">Hide Menu</button>
+		</nav>
+		<!-- //네비게이션 -->
+
+		<div class="nav_bg"></div> <!-- 모달 배경 -->
+	</header>
+	<!-- //헤더 -->
+
+	<!-- 본문 -->
+	<div class="content_wrap">
+
+		<!-- 프로필 -->
+		<div class="content">
+			<img src="../img/img/img_sub_myinfo.png" alt="" class="img_sub">
+			<div class="profile">
+				<ul>
+					<li class="tbl prof">
+						<span class="tit">Profile</span>
+						<table>
+							<caption>My Profile</caption>
+							<colgroup>
+								<col style="width:143px;">
+								<col style="width:92px;">
+								<col>
+								<col style="width:92px;">
+								<col>
+							</colgroup>
+							<tbody>
+								<tr>
+									<td rowspan=5 class="img"><img src="../img/sample/sample_student_photo.png" alt="학생이름's Photo"></td>
+									<th scope="row">Country</th>
+									<td>Canada</td>
+									<th scope="row">Band</th>
+									<td>Band</td>
+								</tr>
+								<tr>
+									<th scope="row">Sign ID</th>
+									<td>Carakim</td>
+									<th scope="row">PW</th>
+									<td>*********</td>
+								</tr>
+								<tr>
+									<th scope="row">First Name</th>
+									<td>Sarah</td>
+									<th scope="row">Last Name</th>
+									<td>Lee</td>
+								</tr>
+								<tr>
+									<th scope="row">Age</th>
+									<td>99/99/9999</td>
+									<th scope="row">Gender</th>
+									<td>Female</td>
+								</tr>
+								<tr>
+									<th scope="row">Telephone</th>
+									<td>1-999-999-9999</td>
+									<th scope="row">E-mail</th>
+									<td>student@mail.com</td>
+								</tr>
+								<tr>
+									<td colspan="3"></td>
+									<th scope="row">Postal code</th>
+									<td>L8V219</td>
+								</tr>
+							</tbody>
+						</table>
+					</li>
+					<li class="adr">
+						<span class="tit">Address</span>
+						<span class="address">583 Fennell Ave. E. Hamilton. ON.</span>
+					</li>
+					<li class="guard">
+						<span class="tit line">Guardian</span>
+						<div class="info">
+							<table>
+								<caption>Guardian Info</caption>
+								<colgroup>
+									<col style="width:340px">
+									<col style="width:340px">
+									<col>
+								</colgroup>
+								<tbody>
+									<tr>
+										<td><span class="hidden">Guardian First Name</span>Guardian First Name</td>
+										<td><span class="hidden">Guardian Last Name</span>Guardian Last Name</td>
+										<td><span class="hidden">Relationship</span>Father</td>
+									</tr>
+									<tr>
+										<td><span class="hidden">Telephone(Home)</span>Telephone(Home)</td>
+										<td colspan="2"><span class="hidden">E-mail</span>E-mail</td>
+									</tr>
+									<tr>
+										<td colspan="2"><span class="hidden">Address</span>Address</td>
+										<td><span class="hidden">Postal Code</span>Postal Code</td>
+									</tr>
+								</tbody>
+							</table>
+							<dl class="question">
+								<dt>Your security questions</dt>
+								<dd>Answer</dd>
+							</dl>
+							<ul class="file">
+								<li><a href="#none">Relationship_app.pdf</a></li>
+								<li><a href="#none">Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long .pdf</a></li>
+							</ul>
+						</div>
+					</li>
+					<li class="course">
+						<span class="tit line">An elective course</span>
+						<ul class="course">
+							<li>
+								<img src="../img/sample/sample_course.png" alt="Class Summary">
+								<p class="class">Class Name Class Name</p>
+								<p class="teacher">(Teacher Teacher)</p>
+							</li>
+							<li>
+								<p class="class">Class Name</p>
+								<p class="teacher">(Teacher)</p>
+							</li>
+							<li>
+								<p class="class">Class Name</p>
+								<p class="teacher">(Teacher)</p>
+							</li>
+							<li>
+								<p class="class">Class Name</p>
+								<p class="teacher">(Teacher)</p>
+							</li>
+						</ul>
+					</li>
+					<li class="work">
+						<span class="tit line">Finished Class</span>
+						<ul class="history">
+							<li><span>99</span>Class Name(Teacher)</li>
+							<li><span>7</span>Class Name(Teacher)</li>
+							<li><span>6</span>Class Name(Teacher)</li>
+							<li><span>5</span>Class Name(Teacher)</li>
+							<li><span>4</span>Class Name(Teacher)</li>
+							<li><span>3</span>Class Name(Teacher)</li>
+							<li><span>2</span>Class Name(Teacher)</li>
+							<li><span>1</span>Class Name(Teacher)</li>
+						</ul>
+					</li>
+					<li class="uuid">
+						<span class="tit">UUID</span>
+						<span class="uuid">123e4567-e89b-12d3-a456-426655440000</span>
+					</li>
+					<li class="device">
+						<span class="tit">Device assign</span>
+						<span class="device">Device Name</span>
+						<span class="device">Device Code</span>
+					</li>
+				</ul>
+			</div>
+
+			<!-- 하단 버튼 영역 -->
+			<div class="btn_wrap">
+				<a href="#none" class="orange">Modify</a>
+			</div>
+			<!-- //하단 버튼 영역 -->
+
+			
+		</div>
+		<!-- //프로필 -->
+
+		<a href="#top" class="top">Go to page top</a> <!-- 엘레베이터 -->
+	</div>
+	<!-- //본문 -->
+
+	<!-- 푸터 -->
+	<footer class="white">Copyright 2017. Lamp Education. All rights reserved.</footer>
+	<!-- //푸터 -->
+</div>
+</div>
+</body>
+</html>
+

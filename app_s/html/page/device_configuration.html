@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=1024">
+<title>LAMP :: Device Configuration</title>
+<link rel="stylesheet" href="../css/ui.css">
+<script src="../js/jquery-1.12.1.min.js"></script>
+<script src="../js/jquery-ui.js"></script>
+<script src="../js/jquery.ui.touch-punch.min.js"></script>
+<script src="../js/ui.js"></script>
+<script>
+	$(function(){
+		$(".slider").slider({
+			value:50,
+			orientation:"horizontal",
+			range:"min",
+			create:function(){
+				$(this).next(".status").find("span").text($(this).slider("value"));
+			},
+			slide:function(event,ui){
+				$(this).next(".status").find("span").text(ui.value);
+			}
+		});
+	});
+</script>
+</head>
+<body>
+<!-- 로딩 화면 -->
+<div class="loading">		
+	<img src="../img/img/img_logo.png" class="logo" alt="Lamp Education">
+	<img src="../img/img/img_loading.png" class="ing" alt="Loading...Please wait">
+</div>
+<!-- //로딩 화면 -->
+
+<div id="top" class="wrap sub">
+
+	<!-- 헤더 -->
+	<header>
+		<h1>Device Configuration</h1>
+		<span class="name">Student ID</span>
+		<a href="#none" class="back">Back</a>
+		<button type="button" class="show">Show Menu</button>
+
+		<!-- 네비게이션 -->
+		<nav>
+			<div class="user_wrap">
+				<div class="img">
+					<img src="../img/sample/sample_student_photo.png" alt="학생이름's Photo">
+				</div>
+				<div class="user_info">
+					<p class="name">Hermione Jean Granger</p>
+					<a href="#none" class="info">My Information</a>
+					<a href="#none" class="sign_out">Sign out</a>
+				</div>
+			</div>
+			<ul>
+				<li><a href="#none">Notice for Students</a></li>
+				<li><a href="#none">My Class</a></li>
+				<li><a href="#none">HomeWork</a></li>
+				<li><a href="#none">Device Configration</a></li>
+			</ul>
+			<dl>
+				<dt>Latest version.</dt>
+				<dd>LAMP V1.0</dd>
+			</dl>
+			<a href="#none" class="btn black go">End of APP</a>
+			<button type="button" class="hide">Hide Menu</button>
+		</nav>
+		<!-- //네비게이션 -->
+
+		<div class="nav_bg"></div> <!-- 모달 배경 -->
+	</header>
+	<!-- //헤더 -->
+
+	<!-- 본문 -->
+	<div class="content_wrap">
+		<div class="config">
+			<ul>
+				<li>
+					<p class="tit">Screen</p>
+					<a href="#none" onclick="show_modal('modal_1');">Brightness <em>100%</em></a>
+				</li>
+				<li>
+					<p class="tit vol">Sound</p>
+					<a href="#none" onclick="show_modal('modal_2');">Volume <em>100%</em></a>
+					<button type="button" class="effect on">Sound Effect <em>On</em></button>
+				</li>
+				<li>
+					<p class="tit">Device Information</p>
+					<a href="#none" class="btn_check" onclick="show_modal('modal_3');">
+						<span>UUID <em>WMBR8B161411114000027</em></span><br>
+						99-99-9999 at 99:99:99 Certified.
+					</a>
+				</li>
+				<li>
+					<p class="tit">Version</p>
+					<a href="#none" class="btn_check ver" onclick="show_modal('modal_4');">
+						<span>
+							Information
+							<br><em>V 1.1.0.022 / LAMP-00</em>
+						</span>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- //본문 -->
+
+	<!-- 모달 팝업 -->
+	<div id="modal_1" class="modal_wrap">
+		<div class="modal">
+			<p class="tit">Brightness Control</p>
+			<div class="control bright">
+				<div class="slider"></div> <!-- Jquery Slider -->
+				<p class="status">Brightness <em><span class="value">100</span>%</em></p>
+			</div>
+			<div class="btn_wrap">
+				<a href="#none" class="blue">Ok</a>
+				<a href="#none" class="grey close">Cancel</a>
+			</div>
+			<a href="#none" class="close">Close Popup</a>
+		</div>
+	</div>
+
+	<div id="modal_2" class="modal_wrap">
+		<div class="modal">
+			<p class="tit">Volume Control</p>
+			<div class="control volume">
+				<div class="slider"></div> <!-- Jquery Slider -->
+				<p class="status">Volume <em><span class="value">100</span>%</em></p>
+			</div>
+			<div class="btn_wrap">
+				<a href="#none" class="blue">Ok</a>
+				<a href="#none" class="grey close">Cancel</a>
+			</div>
+			<a href="#none" class="close">Close Popup</a>
+		</div>
+	</div>
+
+	<div id="modal_3" class="modal_wrap">
+		<div class="modal">
+			<p class="tit">Version Information</p>
+			<p class="txt">Do you want to check for update information?</p>
+			<div class="btn_wrap">
+				<a href="#none" class="blue">Ok</a>
+				<a href="#none" class="grey close">Cancel</a>
+			</div>
+			<a href="#none" class="close">Close Popup</a>
+		</div>
+	</div>
+
+	<div id="modal_4" class="modal_wrap">
+		<div class="modal">
+			<p class="tit">Device Information</p>
+			<p class="txt">Do you want to check for device information?</p>
+			<div class="btn_wrap">
+				<a href="#none" class="blue">Ok</a>
+				<a href="#none" class="grey close">Cancel</a>
+			</div>
+			<a href="#none" class="close">Close Popup</a>
+		</div>
+	</div>
+	<!-- //모달 팝업 -->
+
+	<!-- 푸터 -->
+	<footer class="white">Copyright 2017. Lamp Education. All rights reserved.</footer>
+	<!-- //푸터 -->
+</div>
+</div>
+</body>
+</html>

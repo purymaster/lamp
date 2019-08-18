@@ -1,0 +1,423 @@
+@charset "utf-8";
+
+/* Reset */
+body, p, h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd, table, th, td, form, fieldset, legend, input, textarea, button, select {margin:0; padding:0;}
+/* body, input, textarea, select, button, table {font-family:'돋움', Dotum, AppleGothic, sansserif; font-size:16px;} */
+html,
+body {height:100%;}
+img, fieldset {border:0;}
+ul, ol {list-style:none;}
+em, address {font-style:normal;}
+a {text-decoration:none;}
+a:hover, a:active, a:focus {text-decoration:none;}
+table {width:100%; table-layout:fixed; border-collapse:collapse;}
+
+/* Font - Poppins */
+@font-face {
+  font-family:'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  src: url('fonts/poppins_regular.eot'); /* IE9 Compat Modes */
+  src: local('Poppins Regular'), local('Poppins-Regular'),
+       url('fonts/poppins_regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('fonts/poppins_regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('fonts/poppins_regular.woff') format('woff'), /* Modern Browsers */
+       url('fonts/poppins_regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('fonts/poppins_regular.svg#Poppins') format('svg'); /* Legacy iOS */
+}
+
+@font-face {
+  font-family:'Poppins Bold';
+  font-style: normal;
+  font-weight: 400;
+  src: url('fonts/poppins_bold.eot'); /* IE9 Compat Modes */
+  src: local('Poppins Bold'), local('Poppins-Bold'),
+       url('fonts/poppins_bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('fonts/poppins_bold.woff') format('woff'), /* Modern Browsers */
+       url('fonts/poppins_bold.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('fonts/poppins_bold.svg#Poppins') format('svg'); /* Legacy iOS */
+}
+* {font-family:'Poppins', 'AppleSDGothicNeo', 'DroidSansFallback', '돋움', Dotum, arial, sans-serif, helvetica; line-height:1; letter-spacing:-0.025em; color:#333; max-height:1000000px;}
+
+/**************************************************************************** Common ****************************************************************************/
+label,
+button {cursor:pointer;}
+textarea {display:block; width:100%; line-height:20px; padding:8px 16px; border:1px solid #ffcc00; border-radius:15px; background:#fff; font-size:15px; resize:none; box-sizing:border-box;}
+legend,
+caption,
+.hidden {overflow:hidden !important; position:absolute !important; top:-1px !important; left:-1px !important; width:1px !important; height:1px !important; z-index:-1 !important;}
+input[type=text],
+input[type=password],
+input[type=file] {width:100%; height:30px; line-height:30px; margin:0; padding:0 13px; border:1px solid #ffcc00; border-radius:15px; background:#fff; font-size:15px; -webkit-appearance:none; box-sizing:border-box;}
+input::placeholder {color:#919296;}
+input[type=text]:focus,
+input[type=password]:focus,
+input[type=file]:focus,
+textarea:focus,
+a:focus,
+button:focus,
+label:focus {outline:0;}
+input[type=text]:read-only,
+input[type=text]:disabled,
+input[type=password]:read-only,
+input[type=password]:disabled {border:1px solid #eeeeef; background:#fbfbfc; color:#c5c6c6; cursor:not-allowed;}
+
+/* 필수공지 체크박스 */
+.check {display:inline-block; padding-right:37px; background:url(../img/bl/bl_notice_fix.png) no-repeat right center; background-size:29px 24px; vertical-align:middle;}
+.check input[type=checkbox] {position:absolute; width:0; height:0; line-height:0; margin:0; margin-left:8px; padding:0; font-size:0; opacity:0;}
+.check input[type=checkbox] + label {display:inline-block; float:left; position:relative; line-height:35px; padding-left:46px; font-size:20px; color:#333; cursor:pointer;}
+.check input[type=checkbox] + label:before {content:""; display:inline-block; position:absolute; left:0; bottom:0; width:35px; height:35px; background-image:url(../img/btn/btn_checkbox.png); background-size:35px;}
+.check input[type=checkbox]:checked + label:before {background-image:url(../img/btn/btn_checkbox_on.png);}
+
+/* 셀렉트박스 커스터마이징(No select tag) */
+.select {font-size:0;}
+.select > li {display:inline-block; position:relative; width:100%; margin-left:9px;}
+.select > li:first-child {margin-left:0;}
+.select > li a {display:inline-block; overflow:hidden; width:100%; background:url(../img/bl/bl_select_off.png) no-repeat right 13px center; background-size:18px 9px; font-size:20px; box-sizing:border-box; text-overflow:ellipsis; white-space:nowrap; letter-spacing:0; text-align:left;}
+.select > li.on > a {border:1px solid #f08b00; background:#fff url(../img/bl/bl_select_on.png) no-repeat right 13px center; background-size:18px 9px; color:#f08b00;}
+.select > li > a {line-height:48px; padding:0 39px 0 14px; border:1px solid #fff; color:#fff;}
+.select > li > ul {display:none; overflow-x:hidden; overflow-y:auto; position:absolute; left:0; top:39px; width:100%; max-height:327px; border:1px solid #f08b00; box-sizing:border-box;}
+.select > li.on > ul {display:block;}
+.select > li > ul li {height:48px; border-top:1px solid #f08b00;}
+.select > li > ul li:first-child {border:0;}
+.select > li > ul li a {line-height:48px; padding:0 14px 0 14px; background:#fff; color:#f08b00;}
+.select + button {margin-top:65px;}
+
+.select.cont > li a {padding-left:25px; padding-right:20px; background-color:#e3f0f0; font-weight:700; color:#0eb4cd; letter-spacing:0;}
+.select.cont > li > a {padding-right:68px; border-radius:24px; border:0; background-image:url(../img/bl/bl_selectcont_off.png); background-repeat:no-repeat; background-position:right 25px center; background-size:22px 14px;}
+.select.cont > li.on > a {border-radius:24px 24px 0 0; background-image:url(../img/bl/bl_select_on.png);}
+.select.cont > li > ul {top:48px; max-height:490px; border:0; border-top:1px solid #a3dee5; z-index:5;}
+.select.cont > li > ul li {border-top:1px solid #a3dee5;}
+.select.cont > li > ul li:first-child {border:0;}
+.select.cont > li > ul li:last-child a {border-radius:0 0 24px 24px;}
+
+/* 입력폼 사이즈 커스터마이징 */
+textarea.h137 {height:137px !important;}
+
+/* 버튼 커스터마이징 */
+.btn {display:inline-block; min-width:150px; height:45px; line-height:45px; padding:0 10px; border:0; font-family:'Poppins Bold'; font-size:18px; vertical-align:middle; text-align:center; box-sizing:border-box; letter-spacing:0;}
+.btn.black {background:#333; color:#fff;}
+.btn.orange {border:1px solid #333; background:#f0a42d; color:#333;}
+.btn.go:after {content:""; display:inline-block; width:10px; height:10px; margin-left:5px; background:url(../img/bl/bl_btn_go.png); background-size:10px 10px; vertical-align:middle;}
+.btn.orange:after {background:url(../img/bl/bl_btnorange_go.png); background-size:10px 10px;}
+
+/**************************************************************************** Layout ****************************************************************************/
+
+.loading {display:none; position:fixed; left:0; top:0; width:100%; height:100%; background:#def5f5; z-index:1000;}
+.loading img {position:absolute;}
+.loading .logo {left:47px; top:28px; width:102px; height:50px;}
+.loading .ing {left:50%; top:50%; width:295px; height:220px; margin-left:-147px; margin-top:-110px;}
+
+.wrap {position:fixed; left:0; bottom:0; width:100%; min-width:1024px; height:100%; background-color:#fff;}
+
+/* Sponsor */
+.sponsor {position:absolute; bottom:9.77%; width:100%; text-align:center; font-size:0;}
+.sponsor li {display:inline-block; width:150px; border-left:1px solid #e7e9ec; box-sizing:border-box;}
+.sponsor li:first-child {border-left:0;}
+.sponsor li img {width:150px; height:42px;}
+
+/* Start & Login */
+.start .top {position:relative; height:28.9%; text-align:center;}
+.start .top h1 > img {position:absolute; left:50%; bottom:35px; width:132px; height:72px; margin-left:-66px;}
+.start .bottom {line-height:15px; margin-top:43px; font-family:'Poppins Bold'; font-size:15px; color:#787673; text-align:center; letter-spacing:0;}
+.start .bottom em {font-family:'Poppins Bold'; color:#f08b00;}
+.login .top {position:relative; height:32.2%; font-size:0;}
+.login .top h1 {position:absolute; right:48px; bottom:35px;}
+.login .top h1 span {font-size:13px; color:#787673;}
+.login .top h1 img {width:87px; height:42px; margin-left:16px;}
+.start_wrap {position:relative; height:45%; background:#f0a42d url(../img/bg/bg_logo_sunorange.png) no-repeat calc(50% + 265px) 0; background-size:397px 280px; text-align:center;}
+.start_wrap .img {position:absolute; left:48px; top:-159px; width:321px; height:217px;}
+.start_wrap .login_form {overflow:hidden; width:656px; margin:0 auto; padding-top:107px;}
+.start_wrap .login_form > img {float:left; max-width:150px; max-height:105px; margin-right:12px;}
+.start_wrap .login_form fieldset {float:right; position:relative; width:494px; height:105px;}
+.start_wrap .login_form fieldset label {display:inline-block; position:absolute; left:0; width:43px; line-height:47px; font-size:18px; font-weight:700; color:#fff; letter-spacing:0; text-align:left;}
+.start_wrap .login_form fieldset input {position:absolute; width:317px; height:47px; left:43px; line-height:47px; border:0; border-radius:0; font-size:18px; font-weight:700; color:#333; letter-spacing:0; text-align:center;}
+.start_wrap .login_form fieldset label:first-of-type,
+.start_wrap .login_form fieldset input:first-of-type {top:0;}
+.start_wrap .login_form fieldset label:last-of-type,
+.start_wrap .login_form fieldset input:last-of-type {bottom:0;}
+.start_wrap .login_form fieldset button {position:absolute; top:0; right:0; width:120px; height:105px; line-height:34px; padding-right:18px; border:1px solid #fff; background:none; font-size:36px; font-weight:700; color:#fff; letter-spacing:0; text-align:right; box-sizing:border-box; text-transform:uppercase;}
+.start_wrap .tit {line-height:24px; padding:75px 0 24px 0; font-family:'Poppins Bold'; font-size:33px; color:#fff;}
+.start_wrap .select li {width:172px; height:40px;}
+.start_wrap .select li a {line-height:40px;}
+
+/* Splash */
+.splash .sp_wrap {position:absolute; left:calc(50% - 295px); top:17.3%; width:650px; height:376px; padding-top:12px; background-image:url(../img/bg/bg_splash.png); background-repeat:no-repeat; background-position:right 0px top 20px; background-size:383px 305px;}
+.splash .sp_wrap img {width:197px; height:96px;}
+.splash .sp_wrap h1 {line-height:35px; font-family:'Poppins Bold'; font-size:36px; color:#787673;}
+.splash .sp_wrap h1 em {margin-left:10px; font-family:'Poppins Bold'; color:#f08b00;}
+.splash .sp_wrap .progress {position:relative; margin-top:57px; letter-spacing:0;}
+.splash .sp_wrap .progress p {line-height:32px; font-size:13px;}
+.splash .sp_wrap .progress em {display:inline-block; width:200px; line-height:35px; margin-top:8px; margin-right:7px; font-family:'Poppins Bold'; font-size:21px; color:#f08b00; text-align:right;}
+.splash .sp_wrap .progress em span {font-family:'Poppins Bold'; font-size:21px; color:#f08b00;}
+.splash .sp_wrap .progress .bar {display:inline-block; position:absolute; left:0; top:32px; min-width:8px; max-width:198px; height:8px; border-radius:4px; text-indent:-9999px;}
+.splash .sp_wrap .progress .bar_current {width:0; background:#f08b00;}
+.splash .sp_wrap .progress .bar_max {width:198px; background:#8d8c8b;}
+
+/* Header */
+header {position:fixed; left:0; top:0; width:100%; z-index:20;}
+header > .name {overflow:hidden; position:absolute; line-height:56px; padding-left:55px; background:url(../img/bl/bl_student_name.png) no-repeat left center; background-size:53px 53px; text-overflow:ellipsis; white-space:nowrap;}
+.main header {height:100px; border-bottom:3px solid #787673; background:#fff;}
+.main header h1 {overflow:hidden; position:absolute; left:48px; top:27px;}
+.main header h1 img {float:left; width:102px; height:50px;}
+.main header h1 span {float:left; line-height:50px; margin-left:22px; font-size:15px; color:#787673; letter-spacing:0; box-sizing:border-box; text-overflow:ellipsis; white-space:nowrap;}
+.main header > .name {right:119px; top:20px; max-width:480px; line-height:64px; padding-left:76px; background-size:64px; font-size:23px; color:#777673;}
+.main header > .show {display:inline-block; position:absolute; right:48px; top:37px; width:43px; height:33px; border:0; background:url(../img/btn/btn_nav_show.png); background-size:43px 33px; text-indent:-9999px;}
+.sub header {height:75px; background:#26c5dd; box-shadow:0 2px rgba(0,0,0,0.15);}
+.sub header h1 {line-height:75px; font-family:'Poppins Bold'; font-size:30px; color:#fff; text-align:center;}
+.sub header > a {display:inline-block; position:absolute; left:49px; top:22px; width:30px; height:30px; background-position:left center; background-repeat:no-repeat; text-indent:-9999px;}
+.sub header .back {background-image:url(../img/btn/btn_header_back.png); background-size:17px 28px;}
+.sub header .home {background-image:url(../img/btn/btn_header_home.png); background-size:30px 28px;}
+.sub header > .name {right:96px; top:9px; max-width:200px; font-size:17px; color:#333;}
+.sub header > .show {display:inline-block; position:absolute; right:48px; top:25px; width:34px; height:25px; border:0; background:url(../img/btn/btn_navsub_show.png); background-size:34px 25px; text-indent:-9999px;}
+
+/* Navigator */
+nav {position:fixed; right:-424px; top:0; width:424px; height:100%; padding:100px 40px 50px 40px; background:#f0a42d url(../img/bg/bg_logo_sunorange.png) no-repeat center top; background-size:294px 208px; box-sizing:border-box; transition:right .5s; transition-timing-function:ease-in-out; -webkit-transition:right .5s; -webkit-transition-timing-function:ease-in-out; z-index:25;}
+nav.on {right:0;}
+nav + .nav_bg {display:none; position:fixed; left:0; top:0; width:100%; height:100%;}
+nav.on + .nav_bg {display:block; background:rgba(0,0,0,0.3);}
+nav button.hide {display:inline-block; position:absolute; top:20px; right:15px; width:47px; height:47px; border:0; background:url(../img/btn/btn_nav_hide.png); background-size:47px; text-indent:-9999px;}
+nav .user_wrap {overflow:hidden;}
+nav .user_wrap .img {display:inline-block; float:left; width:96px; height:128px; background:url(../img/bg/bg_student_default.png); background-size:96px 128px;}
+nav .user_wrap .img img {width:92px; height:124px; border:2px solid #fff;}
+nav .user_wrap .user_info {float:right; position:relative; width:224px; height:128px; margin-left:24px;}
+nav .user_wrap .user_info .name {display:block; display:-webkit-box; overflow:hidden; max-height:52px; line-height:26px; font-family:'Poppins Bold'; font-size:24px; letter-spacing:-0.05em; text-overflow:ellipsis; -webkit-line-clamp:2; -webkit-box-orient:vertical; word-wrap:break-word;}
+nav .user_wrap .user_info .info {display:inline-block; line-height:20px; margin-top:5px; border-bottom:1px solid #fff; font-family:'Poppins Bold'; font-size:18px; color:#fff;}
+nav .user_wrap .user_info .info:before {content:""; display:inline-block; position:relative; top:1px; width:26px; height:20px; border-bottom:1px solid #f0a42d; background:url(../img/bl/bl_btn_myinfo.png) no-repeat left center; background-size:18px 20px; vertical-align:bottom;}
+nav .user_wrap .user_info .sign_out {display:inline-block; position:absolute; left:0; bottom:0; width:128px; line-height:34px; border:2px solid #333; border-radius:19px; font-family:'Poppins Bold'; font-size:17px; text-align:center; text-transform:uppercase;}
+nav ul {margin-top:55px;}
+nav ul li {margin-top:10px;}
+nav ul li:first-child {margin-top:0;}
+nav ul li a {display:block; line-height:65px; border-radius:32px; font-family:'Poppins Bold'; font-size:26px; color:#fff; letter-spacing:0; text-align:center;}
+nav ul li:nth-child(1) a {background:#f08b00;}
+nav ul li:nth-child(2) a {background:#f08200;}
+nav ul li:nth-child(3) a {background:#f07700;}
+nav ul li:nth-child(4) a {background:#f07100;}
+nav dl {position:absolute; left:40px; bottom:50px; padding:5px 0;}
+nav dl dt,
+nav dl dd {line-height:20px; }
+nav dl dt {font-size:13px; color:#fff;}
+nav dl dd {font-size:15px; font-weight:700;}
+nav .btn {position:absolute; right:40px; bottom:50px;}
+
+/* Content */
+.content_wrap {overflow-y:auto; height:100%;}
+.content_wrap > a.top {position:fixed; right:48px; bottom:40px; width:66px; height:66px; background:url(../img/btn/btn_move_top.png); background-size:66px; text-indent:-9999px;}
+.content_wrap > a.top.on {background:url(../img/btn/btn_move_top2.png); background-size:66px;}
+.content {padding:0 48px 40px 48px; box-sizing:border-box;}
+
+.main .content {padding-top:173px;}
+.main .content .student_menu {margin-top:24px; font-size:0; text-align:center;}
+.main .content .student_menu li {display:inline; margin-left:30px;}
+.main .content .student_menu li:first-child {margin-left:0;}
+.main .content .student_menu li a {display:inline-block; width:288px; height:288px; padding-top:207px; border-radius:50%; background-size:288px; box-sizing:border-box; vertical-align:top;}
+.main .content .student_menu li:nth-child(1) a {background-image:url(../img/bg/bg_main_01.png);}
+.main .content .student_menu li:nth-child(1) a em {color:#fff;}
+.main .content .student_menu li:nth-child(2) a {background-image:url(../img/bg/bg_main_02.png);}
+.main .content .student_menu li:nth-child(3) a {background-image:url(../img/bg/bg_main_03.png);}
+.main .content .student_menu li p {line-height:24px; font-size:25px;}
+.main .content .student_menu li p em {font-family:'Poppins Bold';}
+
+.sub .content {padding:133px 0 100px; background:url(../img/img/img_logo.png) no-repeat right -179px top -98px; background-size:475px 235px;}
+.sub .content.inner {padding:133px 48px 100px;}
+.sub .content.nobottom {padding-bottom:0;}
+.sub .content.nobottom .select.cont > li > ul {max-height:450px;}
+.sub .content .img_sub {float:left; width:253px; height:191px; margin-top:23px; margin-left:48px;}
+.sub .content.inner .img_sub {margin-left:0;}
+.sub .content .select.top {float:left; margin-top:25px;}
+.sub .content.student .img_sub {margin-right:67px;}
+.sub .content.student .select.top {width:calc(100% - 320px);}
+.sub .content.board .img_sub {margin-right:25px;}
+.sub .content.board .select.top {width:calc(100% - 374px);}
+.sub .content.write .img_sub {margin-right:25px;}
+.sub .content.write .select.top {width:calc(100% - 278px);}
+
+/* Profile */
+.profile > ul > li {overflow:hidden; padding:17px 48px; font-size:15px;}
+.profile > ul > li:nth-child(even) {background:#f3f4f5;}
+.profile > ul > li:last-child {border-bottom:1px solid #e7e9ec;}
+.profile > ul > li.tbl {padding-left:25px;}
+.profile > ul > li > span,
+.profile > ul > li > label span {display:inline-block; float:left; line-height:35px;}
+.profile > ul > li > a {overflow:hidden; font-weight:700; text-decoration:underline; text-overflow:ellipsis; white-space:nowrap;}
+.profile > ul > li.cert a {max-width:calc(100% - 240px); }
+.profile > ul > li small {height:35px; line-height:37px; padding:0 15px 0 35px; font-family:'Poppins Bold';}
+.profile > ul > li .address {line-height:21px; padding:7px 0;}
+.profile > ul > li .uuid {line-height:21px; padding:7px 0; font-weight:700;}
+.profile > ul > li .device {overflow:hidden; width:calc(50% - 130px); line-height:21px; padding:7px 0; font-weight:700; text-overflow:ellipsis; white-space:nowrap;}
+.profile > ul > li > p {line-height:20px; margin-top:10px;}
+.profile > ul > li .tit {height:35px; line-height:39px; margin-right:15px; padding-left:45px; background-repeat:no-repeat; background-size:35px 35px; font-family:'Poppins Bold'; font-size:27px; color:#f08b00;}
+.profile > ul > li .tit.line {display:block; float:none;}
+.profile > ul > li textarea {width:calc(100% - 15px); margin-top:12px;}
+.profile > ul > li table {float:right; word-break:break-word;}
+.profile > ul > li table th,
+.profile > ul > li table td {height:35px; line-height:22px; font-size:15px;}
+.profile > ul > li table th,
+.profile > ul > li table th label {font-family:'Poppins Bold'; color:#4a4640;}
+.profile > ul > li table td {padding-right:15px;}
+.profile > ul > li table tr td:last-child {padding-right:0;}
+.profile > ul > li table td.img {padding:0; background:url(../img/bg/bg_student_default.png) no-repeat left center; background-size:119px 159px;}
+.profile > ul > li table td.img img {width:117px; height:157px; border:1px solid #dbd4cc; vertical-align:middle;}
+.profile > ul > li input {float:left; margin:2px 0 3px 0;}
+.profile > ul > li.prof .tit {background-image:url(../img/bl/bl_tit_prof.png);}
+.profile > ul > li.mail input {width:calc(100% - 168px);}
+.profile > ul > li.mail .tit {background-image:url(../img/bl/bl_tit_mail.png);}
+.profile > ul > li.adr input {width:calc(100% - 171px);}
+.profile > ul > li.adr .tit {background-image:url(../img/bl/bl_tit_adr.png);}
+.profile > ul > li.cert .tit {background-image:url(../img/bl/bl_tit_cert.png);}
+.profile > ul > li.edu .tit {background-image:url(../img/bl/bl_tit_edu.png);}
+.profile > ul > li.work .tit {background-image:url(../img/bl/bl_tit_work.png);}
+.profile > ul > li.class .tit {background-image:url(../img/bl/bl_tit_class.png);}
+.profile > ul > li.uuid .tit {background-image:url(../img/bl/bl_tit_uuid.png);}
+.profile > ul > li.course .tit {background-image:url(../img/bl/bl_tit_course.png);}
+.profile > ul > li.device .tit {background-image:url(../img/bl/bl_tit_device.png);}
+.profile > ul > li.guard {overflow:visible;}
+.profile > ul > li.guard table a {width:100%;}
+.profile > ul > li.guard .tit {background-image:url(../img/bl/bl_tit_guard.png);}
+.profile > ul > li.guard .select {margin-top:6px;}
+.profile .course {margin-top:20px; padding-left:45px;}
+.profile .course:after {content:""; display:block; clear:both;}
+.profile .course li {display:inline-block; float:left; position:relative; width:173px; margin-right:35px; padding-top:97px; background:url(../img/bg/bg_course.png) no-repeat; background-size:173px 97px;}
+.profile .course li img {position:absolute; left:0; top:0; width:171px; height:95px; border:1px solid #dbd4ca;}
+.profile .course li p {overflow:hidden; line-height:20px; font-size:15px; text-align:center; text-overflow:ellipsis; white-space:nowrap;}
+.profile .course li .class {margin-top:13px;}
+.profile .course li .teacher {margin-bottom:13px;}
+.profile .course li button {display:inline-block; position:absolute; top:-10px; right:-10px; width:20px; height:20px; border:0; border-radius:50%; background:#0b7895 url(../img/btn/btn_delete.png) no-repeat center; background-size:12px; text-indent:-9999px;}
+.profile .history {overflow:hidden; margin-top:6px; padding-left:45px;}
+.profile .history li {display:inline-block; float:left; width:calc(50% - 24px); line-height:24px; margin-right:48px; font-size:15px;}
+.profile .history li:nth-child(even) {margin-right:0;}
+.profile .history span {display:inline-block; width:19px; line-height:19px; margin:2px 6px 3px 0; background:#a79d8e; border-radius:50%; font-weight:700; font-size:12px; color:#fff; text-align:center;}
+.profile .info {padding-left:45px;}
+.profile .info table {margin:8px 0; margin-left:0 !important;}
+.profile .info table td {overflow:hidden; max-width:0; height:37px; font-weight:700; text-overflow:ellipsis; white-space:nowrap;}
+.profile .info table tr td:last-child {padding-right:0;}
+.profile .info .select + .answer {overflow:hidden; float:none; height:48px; line-height:48px; margin:0; margin-top:10px; padding:0 25px; border:0; border-radius:24px; background:#e3f0f0; font-size:20px; font-weight:700; color:#0eb4cd; letter-spacing:0; text-overflow:ellipsis; white-space:nowrap;}
+.profile .question dt,
+.profile .question dd {overflow:hidden; line-height:48px; margin-top:10px; padding:0 25px; border-radius:24px; background:#e3f0f0; font-size:20px; font-weight:700; color:#0eb4cd; letter-spacing:0; text-overflow:ellipsis; white-space:nowrap;}
+.profile .file {margin-top:18px;}
+.profile .file li a {display:inline-block; overflow:hidden; max-width:calc(100% - 48px); line-height:25px; padding-left:20px; background:url(../img/bl/bl_attach.png) no-repeat left center; background-size:15px 17px; font-size:15px; font-weight:700; text-decoration:underline; text-overflow:ellipsis; white-space:nowrap;}
+.profile .file li button {display:inline-block; width:20px; height:20px; margin-left:8px; border:0; border-radius:4px; background:#0b7895 url(../img/btn/btn_delete.png) no-repeat center; background-size:14px; text-indent:-9999px; vertical-align:super;}
+
+/* Student List */
+.stu_list {margin-left:-38px; font-size:0;}
+.stu_list li {display:inline; margin-left:38px;}
+.stu_list li:first-child {margin-left:0;}
+.stu_list li a {display:inline-block; position:relative; width:123px; height:187px; margin-top:37px; background:url(../img/bg/bg_student_default.png) no-repeat; background-size:123px 165px; vertical-align:top;}
+.stu_list li a img {width:121px; height:163px; border:1px solid #dbd4cc;}
+.stu_list li a span {display:inline-block; overflow:hidden; position:absolute; left:0; bottom:0; width:100%; line-height:40px; font-size:15px; line-height:20px; text-overflow:ellipsis; white-space:nowrap; text-align:center;}
+
+/* Board List */
+.teacher_prof:after {content:""; display:block; clear:both;}
+.teacher_prof .img {float:left; width:101px; height:135px; background:url(../img/bg/bg_teacher_default.png); background-size:101px 135px;}
+.teacher_prof .img img {width:99px; height:133px; border:1px solid #dbd4cc;}
+.teacher_prof .info {padding-left:123px; font-size:0;}
+.teacher_prof .info .tit {display:inline-block; overflow:hidden; max-width:100%; line-height:56px; margin-top:31px; font-size:24px; letter-spacing:0; text-overflow:ellipsis; white-space:nowrap;}
+.teacher_prof .info .tit em {font-family:'Poppins Bold'; font-size:30px; letter-spacing:-0.05em;}
+.teacher_prof + .board_list_tit {margin-top:52px;}
+
+.board_wrap {position:relative;}
+.board_wrap .tit {font-family:'Poppins Bold'; line-height:30px; margin-bottom:20px; padding-left:21px; font-size:27px; color:#f08b00;}
+.board_wrap .more {display:inline-block; width:25px; height:25px; background:url(../img/btn/btn_more.png); background-size:25px; text-indent:-9999px;}
+.board_list_tit {font-size:0;}
+.board_list_tit li {margin-top:18px;}
+.board_list_tit li:first-child {margin-top:0;}
+.board_list_tit li a {display:inline-block; width:100%; line-height:26px; padding:0 20px 0 53px; border-radius:21px; background:url(../img/bl/bl_notice.png) no-repeat 21px center; background-size:18px; font-size:18px; text-overflow:ellipsis; white-space:nowrap; box-sizing:border-box;}
+.board_list_tit li a p {display:inline-block; overflow:hidden; width:calc(100% - 100px); line-height:26px; text-overflow:ellipsis; white-space:nowrap; vertical-align:middle; text-decoration:underline;}
+.board_list_tit li a span {display:inline-block; float:right; width:100px; line-height:26px; font-size:17px; text-align:right;}
+.board_list_tit li.fix a {line-height:42px; background:#ece7e1 url(../img/bl/bl_notice_fix.png) no-repeat 21px center; background-size:21px 17px; font-weight:700; letter-spacing:0;}
+.board_list_tit li.fix a p {text-decoration:none;}
+.board_list_tit li.fix a span {line-height:42px;}
+.board_list_tit.no_date li a p {width:100%;}
+
+/* Homework */
+.homework_wrap {overflow:hidden; margin-top:70px;}
+.homework_wrap .homework {float:left; position:relative; width:370px; height:355px; background:url(../img/bg/bg_homework.png) no-repeat left bottom; background-size:370px 305px; box-sizing:border-box;}
+.homework_wrap .board_wrap {float:right; width:calc(100% - 393px);}
+.homework_wrap .homework .tit {line-height:30px; margin-bottom:20px; padding-left:34px; font-size:27px; color:#f08b00;}
+.homework_wrap .homework .tit em {font-family:'Poppins Bold'; color:#f08b00;}
+.homework_wrap .homework ul {padding:78px 35px 0 55px;}
+.homework_wrap .homework ul li {line-height:25px; font-size:16px; font-weight:700;}
+.homework_wrap .homework .no {display:inline-block; position:absolute; left:35px; top:195px; width:236px; line-height:34px; padding-left:37px; border-radius:17px; background:#26c5dd url(../img/bl/bl_nohomework.png) no-repeat 5px center; background-size:22px; font-size:18px; color:#fff; box-sizing:border-box;}
+
+/* Board View */
+.board_view {margin-top:20px; padding:0 48px;}
+.board_view:after {content:""; display:block; clear:both;}
+.board_view .tit {float:left; width:calc(100% - 278px); margin-bottom:41px; border-bottom:2px solid #e7e9ec;}
+.board_view .tit p {line-height:35px; font-size:28px; font-weight:700;}
+.board_view .tit small {display:block; line-height:28px; font-size:15px; color:#666; text-align:right;}
+.board_view img {float:right; max-width:458px; height:auto; margin-left:25px;}
+.board_view .txt {position:relative; top:-11px; line-height:35px; font-size:16px;}
+.select + .board_view {padding-top:78px;}
+.download {position:relative; padding:22px 48px 35px; background:#f3f4f5;}
+.download p {line-height:56px; padding-left:43px; background:url(../img/bl/bl_attach.png) no-repeat left center; background-size:23px 26px; font-size:22px; font-weight:700; letter-spacing:0;}
+.download p em {color:#f08b00;}
+.download ul {padding-left:26px;}
+.download ul li {height:27px; margin-top:11px;}
+.download ul li:first-child {margin-top:0;}
+.download ul li a {display:inline-block; overflow:hidden; max-width:100%; background:url(../img/bl/bl_upload_list.png) no-repeat left center; background-size:27px; font-size:19px; line-height:27px; padding-left:37px; text-overflow:ellipsis; white-space:nowrap; box-sizing:border-box;}
+.download .save_all {position:absolute; display:inline-block; right:48px; top:28px; width:167px; height:42px; line-height:45px; padding-left:45px; border-radius:21px; background:#f08b00 url(../img/bl/bl_btn_save.png) no-repeat 15px center; background-size:22px; font-family:'Poppins Bold'; font-size:21px; color:#fff; text-transform:uppercase; box-sizing:border-box;}
+
+/* Board Write */
+.write_tit {float:right; width:calc(100% - 278px); margin-top:37px; text-align:right;}
+.write_tit input[type=text] {height:48px; line-height:48px; margin-top:15px; margin-bottom:25px; padding:0 21px; border:0; border-radius:24px; background:#f3f4f5; font-size:20px; color:#333;}
+.write_tit + textarea {height:206px; line-height:30px; padding:12px 29px; border:0; border-radius:20px; background:#f3f4f5; font-size:20px; color:#333; box-sizing:border-box;}
+
+/* Config */
+.config {height:100%; padding:75px 0 40px; background:#ece7e1 url(../img/bg/bg_config.png) no-repeat right -245px top 75px; background-size:760px 537px; box-sizing:border-box;}
+.config ul {overflow:hidden; width:802px; margin:10px auto 0; text-align:center;}
+.config ul li {display:inline-block; float:left; width:354px; margin-top:12.37%; margin-right:94px;}
+.config ul li:nth-child(even) {margin-right:0;}
+.config ul li .tit {height:38px; line-height:38px; margin-left:-38px; margin-bottom:20px; font-family:'Poppins Bold'; font-size:25px; color:#63605b;}
+.config ul li .tit:before {content:""; display:inline-block; width:38px; height:38px; background-size:38px; vertical-align:middle;}
+.config ul li:nth-child(1) .tit:before {background-image:url(../img/bl/bl_config_screen.png);}
+.config ul li:nth-child(2) .tit:before {background-image:url(../img/bl/bl_config_sound.png);}
+.config ul li:nth-child(3) .tit:before {background-image:url(../img/bl/bl_config_device.png);}
+.config ul li:nth-child(4) .tit:before {background-image:url(../img/bl/bl_config_version.png);}
+.config ul li a,
+.config ul li button {display:inline-block; width:100%; height:54px; line-height:54px; border:0; border-radius:27px; font-size:18px; color:#fff;}
+.config ul li a + a,
+.config ul li a + button,
+.config ul li button + a,
+.config ul li button + button {margin-top:11px;}
+.config ul li a em,
+.config ul li button em {font-family:'Poppins Bold'; color:#fff; text-transform:uppercase;}
+.config ul li:nth-child(4) em {font-size:15px;}
+.config ul li a {background:#5464c4 url(../img/bl/bl_btn_slider.png) no-repeat right 6px center; background-size:43px;}
+.config ul li .effect {background:#9b9997;}
+.config ul li .effect.on {background:#26c5dd url(../img/bl/bl_btn_check.png) no-repeat right 6px center; background-size:43px;}
+.config ul li .btn_check {display:table-cell; width:354px; height:108px; line-height:26px; border:1px solid #f08b00; border-radius:54px; background:#fff; font-size:15px; color:#333; vertical-align:middle;}
+.config ul li .btn_check span {font-family:'Poppins Bold'; font-size:18px;}
+.config ul li .btn_check span em {color:#f08b00;}
+.config ul li .btn_check.ver {text-align:left; padding-left:38px; background:#fff url(../img/bl/bl_btn_refresh.png) no-repeat right 7px center; background-size:92px;}
+
+/* Btn_wrap */
+.btn_wrap {margin-top:30px; font-size:0; text-align:center;}
+.btn_wrap a,
+.btn_wrap button {display:inline-block; min-width:225px; line-height:62px; margin-left:15px; padding:0 10px; border:1px solid #f08e0b; background:#fff; font-family:'Poppins Bold'; font-size:25px; color:#f08e0b; text-align:center; box-sizing:border-box; text-transform:uppercase;}
+.btn_wrap a:first-child,
+.btn_wrap button:first-child {margin-left:0;}
+.btn_wrap .blue {line-height:64px; border:0; background:#02b9d5; color:#fff;}
+.btn_wrap .orange {line-height:64px; border:0; background:#f08b00; color:#fff;}
+.btn_wrap .grey {line-height:64px; border:0; background:#707070; color:#fff;}
+
+/* Modal */
+.modal_wrap {display:none; position:fixed; left:0; top:0; width:100%; height:100%; background:rgba(0,0,0,0.3); z-index:900;}
+.modal {position:relative; width:450px; margin:0 auto; padding:50px; padding-top:0; border-radius:25px; background:#fff; box-sizing:border-box; text-align:center;}
+.modal .tit {overflow:hidden; width:100%; line-height:76px; border-bottom:1px solid #787673; font-family:'Poppins Bold'; font-size:22px; color:#63605b; text-transform:uppercase; letter-spacing:0; text-overflow:ellipsis; white-space:nowrap;}
+.modal .txt {line-height:22px; padding:58px 0 46px; font-size:18px; color:#63605b;}
+.modal > a.close {display:inline-block; position:absolute; right:-20px; top:-20px; width:47px; height:47px; border:0; background:url(../img/btn/btn_nav_hide.png); background-size:47px; text-indent:-9999px;}
+.modal .btn_wrap {margin-top:11px;}
+.modal .btn_wrap a,
+.modal .btn_wrap button {min-width:118px; line-height:38px; border-radius:19px; font-size:16px;}
+.modal .control {margin-top:12px; padding:50px; padding-bottom:0;}
+.modal .control.bright {background:url(../img/bl/bl_bright.png) no-repeat right 43px; background-size:37px;}
+.modal .control.volume {background:url(../img/bl/bl_notice_fix.png) no-repeat right 51px; background-size:27px 22px;}
+.modal .control .ui-slider {position:relative; height:8px; margin:8px 0; border:0; border-radius:4px; background:#8d8c8b; z-index:1;}
+.modal .control .ui-slider-range {position:absolute; left:0; top:0; height:8px; border-radius:4px; background:#f08b00;}
+.modal .control .ui-slider-handle {display:inline-block; position:absolute; top:0; width:24px; height:24px; margin-left:-12px; margin-top:-8px; border:0; border-radius:50%; background:#f08b00; z-index:2; outline:0;}
+.modal .control .status {line-height:20px; margin:25px 0 50px; font-size:18px; color:#63605b;}
+.modal .control .status em,
+.modal .control .status em span {font-family:'Poppins Bold'; color:#f08b00;}
+
+/* Footer */
+footer {position:fixed; left:0; bottom:0; width:100%; line-height:40px; background:#fff; font-size:11px; color:#777672; text-align:center; z-index:10;}

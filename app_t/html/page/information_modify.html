@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=1024">
+<title>LAMP :: My Information</title>
+<link rel="stylesheet" href="../css/ui.css">
+<script src="../js/jquery-1.12.1.min.js"></script>
+<script src="../js/ui.js"></script>
+</head>
+<body>
+<!-- 로딩 화면 -->
+<div class="loading">		
+	<img src="../img/img/img_logo.png" class="logo" alt="Lamp Education">
+	<img src="../img/img/img_loading.png" class="ing" alt="Loading...Please wait">
+</div>
+<!-- //로딩 화면 -->
+
+<div id="top" class="wrap sub">
+
+	<!-- 헤더 -->
+	<header>
+		<h1>My Information</h1>
+		<span class="name">Teacher ID</span>
+		<a href="#none" class="home">Home</a>
+		<button type="button" class="show">Show Menu</button>
+
+		<!-- 네비게이션 -->
+		<nav>
+			<div class="user_wrap">
+				<div class="img">
+					<img src="../img/sample/sample_teacher_photo.png" alt="선생이름's Photo">
+				</div>
+				<div class="user_info">
+					<p class="name">Emma Charlotte Duerre Watson</p>
+					<a href="#none" class="info">My Information</a>
+					<a href="#none" class="sign_out">Sign out</a>
+				</div>
+			</div>
+			<ul>
+				<li><a href="#none">Notice</a></li>
+				<li><a href="#none">Notice For Students</a></li>
+				<li><a href="#none">Class</a></li>
+				<li><a href="#none">HomeWork</a></li>
+				<li><a href="#none">Students List</a></li>
+				<li><a href="#none">Device Configration</a></li>
+			</ul>
+			<dl>
+				<dt>Latest version.</dt>
+				<dd>LAMP V1.0</dd>
+			</dl>
+			<!-- <a href="#none" class="btn orange go upg">Click Upgrade</a> --> <!-- 버전 업그레이드 필요시 생성 -->
+			<a href="#none" class="btn black go end">End of APP</a>
+			<button type="button" class="hide">Hide Menu</button>
+		</nav>
+		<!-- //네비게이션 -->
+
+		<div class="nav_bg"></div> <!-- 모달 배경 -->
+	</header>
+	<!-- //헤더 -->
+
+	<!-- 본문 -->
+	<div class="content_wrap">
+
+		<!-- 프로필 -->
+		<div class="content">
+			<img src="../img/img/img_sub_myinfo.png" alt="" class="img_sub">
+			<div class="profile">
+				<ul>
+					<li class="tbl prof">
+						<span class="tit">Profile</span>
+						<table>
+							<caption>My Profile Modify</caption>
+							<colgroup>
+								<col style="width:143px;">
+								<col style="width:92px;">
+								<col>
+								<col style="width:92px;">
+								<col>
+							</colgroup>
+							<tbody>
+								<tr>
+									<td rowspan=5 class="img"><img src="../img/sample/sample_teacher_photo.png" alt="선생이름's Photo"></td>
+									<th scope="row">Sign ID</th>
+									<td>Carakim</td>
+									<th scope="row">PW</th>
+									<td>*********</td>
+								</tr>
+								<tr>
+									<th scope="row">Country</th>
+									<td>Canada</td>
+									<th scope="row">Band</th>
+									<td>Band</td>
+								</tr>
+								<tr>
+									<th scope="row">First Name</th>
+									<td>Sarah</td>
+									<th scope="row">Last Name</th>
+									<td>Lee</td>
+								</tr>
+								<tr>
+									<th scope="row"><label for="test001">Age</label></th>
+									<td><input type="text" id="test001"></td>
+									<th scope="row">Gender</th>
+									<td>Female</td>
+								</tr>
+								<tr>
+									<th scope="row"><label for="test002">Telephone</label></th>
+									<td><input type="text" id="test002"></td>
+									<th scope="row"><label for="test003">Cell phone</label></th>
+									<td><input type="text" id="test003"></td>
+								</tr>
+							</tbody>
+						</table>
+					</li>
+					<li class="mail">
+						<label for="test004"><span class="tit">E-mail</span></label>
+						<input type="text" id="test004">
+					</li>
+					<li class="adr">
+						<label for="test005"><span class="tit">Address</span></label>
+						<input type="text" id="test005">
+						<label for="test006"><small>Postal code</small></label>
+						<input type="text" id="test006">
+					</li>
+					<li class="cert">
+						<span class="tit">Certification</span>
+						<a href="#none">Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long.pdf</a>
+					</li>
+					<li class="edu">
+						<label for="test007"><span class="tit line">Educational Background</span></label>
+						<textarea id="test007" cols="30" rows="5" class="h137">Too much long...</textarea>
+					</li>
+					<li class="work">
+						<label for="test008"><span class="tit line">Work Experience</span></label>
+						<textarea id="test008" cols="30" rows="5" class="h137">Too much long...</textarea>
+					</li>
+				</ul>
+			</div>
+
+			<!-- 하단 버튼 영역 -->
+			<div class="btn_wrap">
+				<button type="submit" class="orange">Ok</button>
+				<a href="#none" class="grey">Cancel</a>
+			</div>
+			<!-- //하단 버튼 영역 -->
+
+		</div>
+		<!-- //프로필 -->
+
+		<a href="#top" class="top">Go to page top</a> <!-- 엘레베이터 -->
+	</div>
+	<!-- //본문 -->
+
+	<!-- 푸터 -->
+	<footer class="white">Copyright 2017. Lamp Education. All rights reserved.</footer>
+	<!-- //푸터 -->
+</div>
+</div>
+</body>
+</html>

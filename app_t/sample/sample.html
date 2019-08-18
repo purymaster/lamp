@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=1024">
+<title>선생님APP 코딩가이드</title>
+<link rel="stylesheet" href="../html/css/ui.css">
+<style>
+	.content_wrap {padding-top:75px; padding-bottom:40px; box-sizing:border-box;}
+	.guide_tit {line-height:40px; background:#26c5dd; font-size:18px; font-weight:700; color:#fff; text-align:center;}
+</style>
+<script src="../html/js/jquery-1.12.1.min.js"></script>
+<script src="../html/js/jquery-ui.js"></script>
+<script src="../html/js/jquery.ui.touch-punch.min.js"></script>
+<script src="../html/js/ui.js"></script>
+<script>
+	$(function(){
+		$(".slider").slider({
+			value:50,
+			orientation:"horizontal",
+			range:"min",
+			create:function(){
+				$(this).next(".status").find("span").text($(this).slider("value"));
+			},
+			slide:function(event,ui){
+				$(this).next(".status").find("span").text(ui.value);
+			}
+		});
+	});
+</script>
+</head>
+<body>
+<!-- 로딩 화면 -->
+<div class="loading">		
+	<img src="../html/img/img/img_logo.png" class="logo" alt="Lamp Education">
+	<img src="../html/img/img/img_loading.png" class="ing" alt="Loading...Please wait">
+</div>
+<!-- //로딩 화면 -->
+
+<div id="top" class="wrap sub">
+
+	<!-- 헤더 -->
+	<header>
+		<h1>Device Configuration</h1>
+		<span class="name">Teacher ID</span>
+		<!-- <a href="#none" class="home">Home</a> -->
+		<a href="#none" class="back">Back</a>
+		<button type="button" class="show">Show Menu</button>
+
+		<!-- 네비게이션 -->
+		<nav>
+			<div class="user_wrap">
+				<div class="img">
+					<img src="../html/img/sample/sample_teacher_photo.png" alt="선생이름's Photo">
+				</div>
+				<div class="user_info">
+					<p class="name">Emma Charlotte Duerre Watson</p>
+					<a href="#none" class="info">My Information</a>
+					<a href="#none" class="sign_out">Sign out</a>
+				</div>
+			</div>
+			<ul>
+				<li><a href="#none">Notice</a></li>
+				<li><a href="#none">Notice For Students</a></li>
+				<li><a href="#none">Class</a></li>
+				<li><a href="#none">HomeWork</a></li>
+				<li><a href="#none">Students List</a></li>
+				<li><a href="#none">Device Configration</a></li>
+			</ul>
+			<dl>
+				<dt>The latest version.</dt>
+				<dd>LAMP V1.0</dd>
+			</dl>
+			<!-- <a href="#none" class="btn orange go upg">Click Upgrade</a> --> <!-- 버전 업그레이드 필요시 생성 -->
+			<a href="#none" class="btn black go end">End of APP</a>
+			<button type="button" class="hide">Hide Menu</button>
+		</nav>
+		<!-- //네비게이션 -->
+
+		<div class="nav_bg"></div> <!-- 모달 배경 -->
+	</header>
+	<!-- //헤더 -->
+
+	<!-- 본문 -->
+	<div class="content_wrap">
+
+		<!-- 프로필 -->
+		<p class="guide_tit">Profile</p>
+		<div class="content">
+			<img src="../html/img/img/img_sub_myinfo.png" alt="" class="img_sub">
+			<div class="profile">
+				<ul>
+					<li class="tbl prof">
+						<span class="tit">Profile</span>
+						<table>
+							<caption>My Profile</caption>
+							<colgroup>
+								<col style="width:143px;">
+								<col style="width:92px;">
+								<col>
+								<col style="width:92px;">
+								<col>
+							</colgroup>
+							<tbody>
+								<tr>
+									<td rowspan=5 class="img"><img src="../html/img/sample/sample_teacher_photo.png" alt="선생이름's Photo"></td>
+									<th scope="row">Sign ID</th>
+									<td>Carakim</td>
+									<th scope="row">PW</th>
+									<td>*********</td>
+								</tr>
+								<tr>
+									<th scope="row">Country</th>
+									<td>Canada</td>
+									<th scope="row">Band</th>
+									<td>Band</td>
+								</tr>
+								<tr>
+									<th scope="row">First Name</th>
+									<td>Sarah</td>
+									<th scope="row">Last Name</th>
+									<td>Lee</td>
+								</tr>
+								<tr>
+									<th scope="row"><label for="test001">Age</label></th>
+									<td><input type="text" id="test001"></td>
+									<th scope="row"><label for="test002">Gender</label></th>
+									<td><input type="text" id="test002"></td>
+								</tr>
+								<tr>
+									<th scope="row">Telephone</th>
+									<td>1-999-999-9999</td>
+									<th scope="row">Cell phone</th>
+									<td>1-999-999-9999</td>
+								</tr>
+							</tbody>
+						</table>
+					</li>
+					<li class="adr">
+						<span class="tit">Address</span>
+						<span class="address">Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long</span>
+						<small>Postal code</small>
+						<span>99999999</span>	
+					</li>
+					<li class="mail">
+						<label for="test003"><span class="tit">E-mail</span></label>
+						<input type="text" id="test003">
+					</li>
+					<li class="adr">
+						<label for="test004"><span class="tit">Address</span></label>
+						<input type="text" id="test004">
+						<small>Postal code</small>
+						<input type="text" id="test005">
+					</li>
+					<li class="cert">
+						<span class="tit">Certification</span>
+						<a href="#none">Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long.pdf</a>
+					</li>
+					<li class="edu">
+						<label for="test006"><span class="tit line">Educational Background</span></label>
+						<textarea id="test006" cols="30" rows="5" class="h137">Too much long...</textarea>
+					</li>
+					<li class="work">
+						<span class="tit line">Work Experience</span>
+						<p>
+							Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long 
+						</p>
+					</li>
+				</ul>
+			</div>
+
+			<!-- 하단 버튼 영역 -->
+			<div class="btn_wrap">
+				<a href="#none">Link</a>
+				<a href="#none" class="orange">Link</a>
+				<button type="submit" class="grey">Button</button>
+			</div>
+			<!-- //하단 버튼 영역 -->
+
+		</div>
+		<!-- //프로필 -->
+
+		<!-- 학생 List -->
+		<p class="guide_tit">Student List</p>
+		<div class="content inner student">
+			<img src="../html/img/img/img_sub_list.png" alt="" class="img_sub">
+			<ul class="select cont top">
+				<li>
+					<a href="#none">Select Class</a>
+					<ul>
+						<li><a href="#none">Class 01</a></li>
+						<li><a href="#none">Class 02</a></li>
+						<li><a href="#none">Class 03</a></li>
+						<li><a href="#none">Class 04</a></li>
+						<li><a href="#none">Class 05</a></li>
+						<li><a href="#none">Class 06</a></li>
+						<li><a href="#none">Class 07</a></li>
+						<li><a href="#none">Class 08</a></li>
+						<li><a href="#none">Class 09</a></li>
+						<li><a href="#none">Class 10 None Scroll Limit</a></li>
+					</ul>
+				</li>
+			</ul>
+			<ul class="stu_list">
+				<li><a href="#none"><img src="../html/img/sample/sample_student_photo.png" alt="학생이름's Photo"><span>Tony</span></a></li>
+				<li><a href="#none"><span>Too much long Too much long Too much long</span></a></li>
+				<li><a href="#none"><span>Too much long Too much long Too much long</span></a></li>
+				<li><a href="#none"><span>Too much long Too much long Too much long</span></a></li>
+				<li><a href="#none"><span>Too much long Too much long Too much long</span></a></li>
+				<li><a href="#none"><span>Too much long Too much long Too much long</span></a></li>
+				<li><a href="#none"><span>Too much long Too much long Too much long</span></a></li>
+				<li><a href="#none"><span>Too much long Too much long Too much long</span></a></li>
+				<li><a href="#none"><span>Too much long Too much long Too much long</span></a></li>
+				<li><a href="#none"><span>Too much long Too much long Too much long</span></a></li>
+				<li><a href="#none"><span>Too much long Too much long Too much long</span></a></li>
+				<li><a href="#none"><span>Too much long Too much long Too much long</span></a></li>
+				<li><a href="#none"><span>Too much long Too much long Too much long</span></a></li>
+				<li><a href="#none"><span>Too much long Too much long Too much long</span></a></li>
+			</ul>
+		</div>
+		<!-- //학생 List -->
+
+		<!-- 게시물 List -->
+		<p class="guide_tit">Board List</p>
+		<div class="content board">
+			<img src="../html/img/img/img_sub_notice.png" alt="" class="img_sub">
+			<ul class="select cont top">
+				<li>
+					<a href="#none">Select Class</a>
+					<ul>
+						<li><a href="#none">Class 01</a></li>
+						<li><a href="#none">Class 02</a></li>
+						<li><a href="#none">Class 03</a></li>
+						<li><a href="#none">Class 04</a></li>
+						<li><a href="#none">Class 05</a></li>
+						<li><a href="#none">Class 06</a></li>
+						<li><a href="#none">Class 07</a></li>
+						<li><a href="#none">Class 08</a></li>
+						<li><a href="#none">Class 09</a></li>
+						<li><a href="#none">Class 10 None Scroll Limit</a></li>
+					</ul>
+				</li>
+			</ul>
+			<ul class="board_list">
+				<li>
+					<a href="#none">
+						<div class="tit">
+							<p class="fix">Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long</p> <!-- 필수 공지시 fix class 추가 -->
+							<img src="../html/img/bl/bl_attach.png" alt="File Attached"> <!-- 첨부파일 있는 게시물일 경우, 아이콘 추가 -->
+							<small>99/99/99</small>
+						</div>
+						<img src="../html/img/sample/sample_board_thumb.png" alt="" class="thumb"> <!-- 이미지가 첨부된 게시물일 경우, 썸네일 추가 -->
+						<p class="txt">Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long </p>
+					</a>
+				</li>
+				<li>
+					<a href="#none">
+						<div class="tit">
+							<p>Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long</p>
+							<small>99/99/99</small>
+						</div>
+						<p class="txt">Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long </p>
+					</a>
+				</li>
+				<li>
+					<a href="#none">
+						<div class="tit">
+							<p>Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long</p>
+							<small>99/99/99</small>
+						</div>
+						<p class="txt">Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long </p>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<!-- //게시물 List -->
+
+		<!-- 게시물 View -->
+		<p class="guide_tit">Board View</p>
+		<div class="content board">
+			<img src="../html/img/img/img_sub_notice.png" alt="" class="img_sub">
+			<ul class="select cont top">
+				<li>
+					<a href="#none">Select Class</a>
+					<ul>
+						<li><a href="#none">Class 01</a></li>
+						<li><a href="#none">Class 02</a></li>
+						<li><a href="#none">Class 03</a></li>
+						<li><a href="#none">Class 04</a></li>
+						<li><a href="#none">Class 05</a></li>
+						<li><a href="#none">Class 06</a></li>
+						<li><a href="#none">Class 07</a></li>
+						<li><a href="#none">Class 08</a></li>
+						<li><a href="#none">Class 09</a></li>
+						<li><a href="#none">Class 10 None Scroll Limit</a></li>
+					</ul>
+				</li>
+			</ul>
+			<div class="board_view">
+				<div class="tit">
+					<p>Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long </p>
+					<small>99/99/99</small>
+				</div>
+				<img src="../html/img/sample/sample_board_thumb.png" alt="대체텍스트">
+				<p class="txt">Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long </p>
+			</div>
+			<div class="download">
+				<p>Download <em>6</em> Attachments</p>
+				<ul>
+					<li><a href="#none">a.pdf</a></li>
+					<li><a href="#none">a.pdf</a></li>
+					<li><a href="#none">a.pdf</a></li>
+					<li><a href="#none">a.pdf</a></li>
+					<li><a href="#none">a.pdf</a></li>
+					<li><a href="#none">Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long .pdf</a></li>
+				</ul>
+				<a href="#none" class="save_all">All Save</a>
+			</div>
+		</div>
+		<!-- //게시물 View -->
+
+		<!-- 게시물 Write -->
+		<p class="guide_tit">Board Write</p>
+		<div class="content inner write">
+			<img src="../html/img/img/img_sub_notice.png" alt="" class="img_sub">
+			<ul class="select cont top">
+				<li>
+					<a href="#none">Select Class</a>
+					<ul>
+						<li><a href="#none">Class 01</a></li>
+						<li><a href="#none">Class 02</a></li>
+						<li><a href="#none">Class 03</a></li>
+						<li><a href="#none">Class 04</a></li>
+						<li><a href="#none">Class 05</a></li>
+						<li><a href="#none">Class 06</a></li>
+						<li><a href="#none">Class 07</a></li>
+						<li><a href="#none">Class 08</a></li>
+						<li><a href="#none">Class 09</a></li>
+						<li><a href="#none">Class 10 None Scroll Limit</a></li>
+					</ul>
+				</li>
+			</ul>
+			<div class="write_tit">
+				<div class="check">
+					<input type="checkbox" id="fix" name="test999">
+					<label for="fix">Required notice</label>
+				</div>
+				<input type="text" placeholder="Title" title="Title">
+			</div>
+			<textarea cols="30" rows="5" title="Contents" placeholder="Contents"></textarea>
+		</div>
+		<!-- //게시물 Write -->
+
+		<!-- 모달 제어(가이드용) -->
+		<p class="guide_tit">Modal</p>
+		<ul>
+			<li><a href="#none" onclick="show_modal('modal_1');">Show Modal_1</a></li>
+			<li><a href="#none" onclick="show_modal('modal_2');">Show Modal_2</a></li>
+			<li><a href="#none" onclick="show_modal('modal_3');">Show Modal_3</a></li>
+		</ul>
+		<!-- //모달 제어(가이드용) -->
+
+		<a href="#top" class="top">Go to page top</a> <!-- 엘레베이터 -->
+	</div>
+	<!-- //본문 -->
+
+	<!-- 모달 팝업 -->
+	<div id="modal_1" class="modal_wrap">
+		<div class="modal">
+			<p class="tit">Modal_1, Too much long Too much long Too much long Too much long Too much long </p>
+			<p class="txt">Do you want to check for update information?</p>
+			<div class="btn_wrap">
+				<a href="#none" class="orange">Ok</a>
+				<a href="#none" class="grey">Cancel</a>
+			</div>
+			<a href="#none" class="close">Close Popup</a>
+		</div>
+	</div>
+
+	<div id="modal_2" class="modal_wrap">
+		<div class="modal">
+			<p class="tit">Brightness</p>
+			<div class="control bright">
+				<div class="slider"></div> <!-- Jquery Slider -->
+				<p class="status">Brightness <em><span class="value">100</span>%</em></p>
+			</div>
+			<div class="btn_wrap">
+				<a href="#none" class="orange">Ok</a>
+				<a href="#none" class="grey">Cancel</a>
+			</div>
+			<a href="#none" class="close">Close Popup</a>
+		</div>
+	</div>
+
+	<div id="modal_3" class="modal_wrap">
+		<div class="modal">
+			<p class="tit">Volume</p>
+			<div class="control volume">
+				<div class="slider"></div> <!-- Jquery Slider -->
+				<p class="status">Volume <em><span class="value">100</span>%</em></p>
+			</div>
+			<div class="btn_wrap">
+				<a href="#none" class="orange">Ok</a>
+				<a href="#none" class="grey">Cancel</a>
+			</div>
+			<a href="#none" class="close">Close Popup</a>
+		</div>
+	</div>
+	<!-- //모달 팝업 -->
+
+	<!-- 푸터 -->
+	<footer class="white">Copyright 2017. Lamp Education. All rights reserved.</footer>
+	<!-- //푸터 -->
+</div>
+</div>
+</body>
+</html>

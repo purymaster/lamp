@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=1280">
+<title>LOGIN</title>
+<link rel="stylesheet" href="../css/common.css">
+<link rel="stylesheet" href="../css/mainUI.css">
+<script src="../js/jquery-1.12.1.min.js"></script>
+<script src="../js/mainUI.js"></script>
+<!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins"> -->
+</head>
+<body>
+
+<!-- 하위 브라우저 접속시 화면 -->
+<div class="update_browser">
+	<p>
+		Sorry, We don't support this browser.<br>
+		You need to update your web browser or use a different one.
+	</p>
+	<a href="https://www.microsoft.com/en-us/download/internet-explorer-11-for-windows-7-details.aspx">Update Internet Explorer</a>
+	<a href="https://www.google.com/chrome">Google Chrome</a>
+	<a href="https://www.mozilla.org/firefox/">Mozilla Firefox</a>
+</div>
+<!-- //하위 브라우저 접속시 화면 -->
+
+<!-- 로딩 화면 -->
+<div class="loading">
+	<img src="../img/img/img_loading.gif" alt="Loading, Please wait.">
+</div>
+<!-- //로딩 화면 -->
+
+<div class="login">
+	<div class="login_bg">
+		<div class="login_wrap">
+			<h1>
+				<img src="../img/img/img_loginlogo.png" alt="LAMP Education Korea Inc.">
+				<span>Contents Admin Portal Management System</span>
+			</h1>
+		</div>
+	</div>
+
+	<!-- 2017-09-20 로그인 폼 수정 --> 
+	<div class="login_wrap form">
+		<fieldset>
+			<legend>Login</legend>
+			<label for="login_id">ID</label>
+			<input type="text" id="login_id" title="LOGIN ID" placeholder="ID" maxlength="16">
+			<label for="login_pw">PW</label>
+			<input type="password" id="login_pw" title="LOGIN Password" placeholder="PW" maxlength="20">
+			<button type="submit">Sign In</button>
+		</fieldset>
+		<a href="#none" class="forget show_modal" data-n="modal_01">Forgot your password?</a>
+		<a href="#none" class="contact show_modal" data-n="modal_04">Contact us</a>
+	</div>
+	<ul class="join_type">
+		<li><a href="#none">Registration<br><em>For Teachers</em></a></li>
+		<li><a href="#none">Registration<br><em>For Students</em></a></li>
+	</ul>
+	<!-- //2017-09-20 로그인 폼 수정 -->
+
+</div>
+
+<!-- 모달 레이어 -->
+<div class="modal">
+	<div class="modal_wrap modal_01 w650">
+		<p class="modal_tit">Forgot Password</p>
+		<div class="modal_content">
+			<p class="msg">Please enter your email address below and we will send you an email to change your password.</p>
+			<input type="text" title="E-mail Address">
+			<div class="modal_btn">
+				<button type="submit" class="orange">Send E-mail</button>
+			</div>
+		</div>
+		<a href="#none" class="close hide_modal" data-n="modal_01">Hide Modal</a>
+	</div>
+	<div class="modal_back"></div>
+</div>
+
+<div class="modal">
+	<div class="modal_wrap modal_02 w850">
+		<p class="modal_tit">Teacher Registration</p> <!-- 2017-09-05 텍스트 수정 -->
+		<div class="modal_content">
+			<table class="regist">
+				<caption>Teacher Registration</caption>
+				<colgroup>
+					<col style="width:150px;">
+					<col style="width:225px;">
+					<col style="width:150px;">
+					<col style="width:225px;">
+				</colgroup>
+				<tbody>
+					<tr>
+						<td colspan="2" rowspan="5">
+							<div class="photo_upload other">
+								<div class="photo"></div>
+								<input type="file" id="photo" class="search_photo hidden">
+								<div class="photo_edit">
+									<p>( 3cm * 4cm ) <em>Only JPG</em></p>
+									<div class="photo_btn">
+										<label for="photo">Edit</label>
+										<button type="button">Delete</button>
+									</div>
+									<div class="select_box">
+										<label for="search_select">Select</label>
+										<select id="search_select" title="Select Country">
+											<option>Select</option>
+											<option>In business</option>
+											<option>Retire</option>
+										</select>
+									</div>
+								</div>
+							</div>
+						</td>
+						<th scope="row"><label for="test001">Sign In ID</label></th>
+						<td>
+							<div class="input_wrap div_itob">
+								<input type="text" id="test001">
+								<button type="button">Check</button>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row"><label for="test002">Password</label></th>
+						<td>
+							<div class="input_wrap div_itob">
+								<input type="password" id="test002" maxlength="20">
+								<a href="#none" class="show_modal modal_2nd" data-n="modal_03">Guide</a>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row"><label for="test003">Confirm Password</label></th>
+						<td><input type="password" id="test003" maxlength="20"></td>
+					</tr>
+					<tr>
+						<th scope="row"><label for="test004">Cell phone</label></th>
+						<td><input type="text" id="test004"></td>
+					</tr>
+					<tr>
+						<th scope="row"><label for="test006">Tele phone(home)</label></th>
+						<td><input type="text" id="test006"></td>
+					</tr>
+					<tr>
+						<th scope="row"><label for="test007">First Name</label></th>
+						<td><input type="text" id="test007"></td>
+						<th scope="row"><label for="test010">Last Name</label></th>
+						<td><input type="text" id="test010"></td>
+					</tr>
+					<tr>
+						<th scope="row"><label for="test009">Age</label></th>
+						<td><input type="text" id="test009"></td>
+						<th scope="row"><label for="test011">Gender</label></th>
+						<td>
+							<div class="select_box">
+								<label for="test011">Select</label>
+								<select id="test011" title="Select Gender">
+									<option>Select</option>
+									<option>Male</option>
+									<option>Female</option>
+								</select>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row"><label for="test012">E-mail</label></th>
+						<td colspan="3"><input type="text" id="test012"></td>
+					</tr>
+					<tr>
+						<th scope="row"><label for="test013">Postal Code and<br>Street Address</label></th>
+						<td colspan="3">
+							<div class="input_wrap div_3to1">
+								<input type="text" id="test013">
+								<input type="text" placeholder="Postal Code" title="Postal Code">
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row" rowspan="2" class="top"><label for="test014">IdentificationPlus</label></th>
+						<td colspan="3">
+							<div class="select_box">
+								<label for="test014">Your security questions</label>
+								<select id="test014" title="Select Your Question">
+									<option>Your security questions</option>
+									<option>What is your favorite bakery?</option>
+									<option>What is your oldest sibling's nickname?</option>
+									<option>What is your nickname?</option>
+									<option>What was the name of your high school?</option>
+									<option>What is the first name of your spouse's/Partner's youngest sibling?</option>
+								</select>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td colspan="3"><input type="text" title="Your Answer" placeholder="Answer"></td>
+					</tr>
+					<tr>
+						<th scope="row" class="top"><label for="test015">Certification</label></th>
+						<td colspan="3" class="text">
+							<div class="upload">
+								<input class="upload_name" disabled> <!-- 크로스브라우징을 위한 더미 -->
+								<input type="file" id="test015">
+								<label for="test015">SEARCH</label>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row" class="top"><label for="test016">Educational<br>background</label></th>
+						<td colspan="3" class="text"><textarea id="test016" cols="30" rows="5" class="h75"></textarea></td>
+					</tr>
+					<tr>
+						<th scope="row" class="top"><label for="test017">Work Experience</label></th>
+						<td colspan="3" class="text"><textarea id="test017" cols="30" rows="5" class="h100"></textarea></td>
+					</tr>
+				</tbody>
+			</table>
+			<div class="modal_btn">
+				<a href="#none" class="orange hide_modal" data-n="modal_02">Ok</a>
+			</div>
+		</div>
+		<a href="#none" class="close hide_modal" data-n="modal_02">Hide Modal</a>
+	</div>
+	<div class="modal_back"></div>
+</div>
+
+<div class="modal">
+	<div class="modal_wrap modal_03 w650">
+		<p class="modal_tit">Password Guide</p>
+		<div class="modal_content">
+			<p class="msg">Guides Password Secure-Level Check Program for managing customer's safe Password.</p>
+			<div class="guide_wrap">
+				<p class="guide_tit">Password Secure Level</p>
+				<table>
+					<caption>Password Secure Level</caption>
+					<colgroup>
+						<col style="width:170px;">
+						<col>
+					</colgroup>
+					<thead>
+						<tr>
+							<th scope="col">Secure Level</th>
+							<th scope="col">Description</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Unusable</td>
+							<td>Password does not meet the requirements</td>
+						</tr>
+						<tr>
+							<td>Weak</td>
+							<td>Password is not secure enough</td>
+						</tr>
+						<tr>
+							<td>Fair</td>
+							<td>Password is fairly secure</td>
+						</tr>
+						<tr>
+							<td>Strong</td>
+							<td>Password is very secure</td>
+						</tr>
+					</tbody>
+				</table>
+				<p class="guide_tit">Password Requirements</p>
+				<ul>
+					<li>Password must be a combination of 6~15 (uppercase/lowercase) letters, numbers and symbols without any spaces.</li>
+					<li>At least 3 more combinations required.</li>
+					<li>Usable symbols.</li>
+				</ul>
+				<p class="symbol">!?$%&*()@&#35;&#123;[|]&#125;^_~</p>
+				<p class="guide_tit">Not allowed to use as a Password</p>
+				<ul>
+					<li>Blank(space) cannot be allowed for Password.</li>
+					<li>No more than 4 same or consecutive letters and numbers for Password.</li>
+					<li>Your ID, telephone number, and registration number cannot be used as your Password.</li>
+					<li>Account Password cannot be the same as your sign-in password.</li>
+				</ul>
+			</div>
+		</div>
+		<a href="#none" class="close hide_modal" data-n="modal_03">Hide Modal</a>
+	</div>
+	<div class="modal_back"></div>
+</div>
+
+<div class="modal">
+	<div class="modal_wrap modal_04 w460">
+		<p class="modal_tit">Contact</p>
+		<div class="modal_content">
+			<table class="regist">
+				<caption>Contact Us Message Form</caption>
+				<colgroup>
+					<col style="width:100px;">
+					<col style="width:260px;">
+				</colgroup>
+				<tbody>
+					<tr>
+						<th scope="row"><label for="test999">Title</label></th>
+						<td><input type="text" id="test999"></td>
+					</tr>
+					<tr>
+						<th scope="row"><label for="test998">Name</label></th>
+						<td>
+							<div class="input_wrap div_2to2">
+								<input type="text" id="test998" title="First Name" placeholder="First Name">
+								<input type="text" title="Last Name" placeholder="Last Name">
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row"><label for="test997">E-mail</label></th>
+						<td><input type="text" id="test997"></td>
+					</tr>
+					<tr>
+						<th scope="row" class="top"><label for="test996">Contents</label></th>
+						<td><textarea id="test996" cols="30" rows="6"></textarea></td>
+					</tr>
+				</tbody>
+			</table>
+			<div class="modal_btn">
+				<button type="submit" class="orange">Ok</button>
+			</div>
+		</div>
+		<a href="#none" class="close hide_modal" data-n="modal_04">Hide Modal</a>
+	</div>
+	<div class="modal_back"></div>
+</div>
+<!-- //모달 레이어 -->

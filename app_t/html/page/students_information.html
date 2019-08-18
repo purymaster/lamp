@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=1024">
+<title>LAMP :: Students Information</title>
+<link rel="stylesheet" href="../css/ui.css">
+<script src="../js/jquery-1.12.1.min.js"></script>
+<script src="../js/ui.js"></script>
+</head>
+<body>
+<!-- 로딩 화면 -->
+<div class="loading">		
+	<img src="../img/img/img_logo.png" class="logo" alt="Lamp Education">
+	<img src="../img/img/img_loading.png" class="ing" alt="Loading...Please wait">
+</div>
+<!-- //로딩 화면 -->
+
+<div id="top" class="wrap sub">
+
+	<!-- 헤더 -->
+	<header>
+		<h1>Students Information</h1>
+		<span class="name">Teacher ID</span>
+		<a href="#none" class="back">Back</a>
+		<button type="button" class="show">Show Menu</button>
+
+		<!-- 네비게이션 -->
+		<nav>
+			<div class="user_wrap">
+				<div class="img">
+					<img src="../img/sample/sample_teacher_photo.png" alt="선생이름's Photo">
+				</div>
+				<div class="user_info">
+					<p class="name">Emma Charlotte Duerre Watson</p>
+					<a href="#none" class="info">My Information</a>
+					<a href="#none" class="sign_out">Sign out</a>
+				</div>
+			</div>
+			<ul>
+				<li><a href="#none">Notice</a></li>
+				<li><a href="#none">Notice For Students</a></li>
+				<li><a href="#none">Class</a></li>
+				<li><a href="#none">HomeWork</a></li>
+				<li><a href="#none">Students List</a></li>
+				<li><a href="#none">Device Configration</a></li>
+			</ul>
+			<dl>
+				<dt>Latest version.</dt>
+				<dd>LAMP V1.0</dd>
+			</dl>
+			<!-- <a href="#none" class="btn orange go upg">Click Upgrade</a> --> <!-- 버전 업그레이드 필요시 생성 -->
+			<a href="#none" class="btn black go end">End of APP</a>
+			<button type="button" class="hide">Hide Menu</button>
+		</nav>
+		<!-- //네비게이션 -->
+
+		<div class="nav_bg"></div> <!-- 모달 배경 -->
+	</header>
+	<!-- //헤더 -->
+
+	<!-- 본문 -->
+	<div class="content_wrap">
+
+		<!-- 프로필 -->
+		<div class="content">
+			<img src="../img/img/img_sub_stuinfo.png" alt="" class="img_sub">
+			<div class="profile">
+				<ul>
+					<li class="tbl prof">
+						<span class="tit">Profile</span>
+						<table>
+							<caption>Student Profile</caption>
+							<colgroup>
+								<col style="width:143px;">
+								<col style="width:92px;">
+								<col>
+								<col style="width:92px;">
+								<col>
+							</colgroup>
+							<tbody>
+								<tr>
+									<td rowspan=5 class="img student"><img src="../img/sample/sample_student_photo.png" alt="학생이름's Photo"></td>
+									<th scope="row">Country</th>
+									<td>Canada</td>
+									<th scope="row">Band</th>
+									<td>Band</td>
+								</tr>
+								<tr>
+									<th scope="row">First Name</th>
+									<td>Sarah</td>
+									<th scope="row">Last Name</th>
+									<td>Lee</td>
+								</tr>
+								<tr>
+									<th scope="row">Age</th>
+									<td>42</td>
+									<th scope="row">Gender</th>
+									<td>Female</td>
+								</tr>
+								<tr>
+									<th scope="row">Telephone</th>
+									<td colspan="3">1-999-999-9999</td>
+								</tr>
+								<tr>
+									<td colspan="4"><span class="hidden">No cell data</span></td>
+								</tr>
+							</tbody>
+						</table>
+					</li>
+					<li class="adr">
+						<span class="tit">Address</span>
+						<span class="address">Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long</span>
+						<small>Postal code</small>
+						<span>99999999</span>	
+					</li>
+					<li class="class">
+						<span class="tit line">Class</span>
+						<p>
+							1. Class A<br>
+							2. Class B<br>
+							3. Class Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long 
+						</p>
+					</li>
+					<li class="guard">
+						<span class="tit line">Guardian</span>
+						<table>
+							<caption>Student Profile</caption>
+							<colgroup>
+								<col style="width:92px;">
+								<col style="width:150px;">
+								<col style="width:92px;">
+								<col>
+							</colgroup>
+							<tbody>
+								<tr>
+									<th scope="row">Name</th>
+									<td>Emma Watson</td>
+									<th scope="row">Cell phone</th>
+									<td>9999-9999-9999</td>
+								</tr>
+								<tr>
+									<th scope="row">Relation</th>
+									<td>Father</td>
+									<th scope="row">E-mail</th>
+									<td><a href="mailto:father@gmail.com">fatherfatherfatherfather@gmail.com</a></td>
+								</tr>
+							</tbody>
+						</table>
+					</li>
+
+				</ul>
+			</div>
+
+			<!-- 하단 버튼 영역 -->
+			<div class="btn_wrap">
+				<a href="#none">Modify</a>
+			</div>
+			<!-- //하단 버튼 영역 -->
+
+		</div>
+		<!-- //프로필 -->
+		<a href="#top" class="top">Go to page top</a> <!-- 엘레베이터 -->
+
+	</div>
+	<!-- //본문 -->
+
+	<!-- 푸터 -->
+	<footer class="white">Copyright 2017. Lamp Education. All rights reserved.</footer>
+	<!-- //푸터 -->
+</div>
+</div>
+</body>
+</html>

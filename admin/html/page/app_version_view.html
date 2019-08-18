@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=1280">
+<title>LAMP :: App Management</title>
+<link rel="stylesheet" href="../css/common.css">
+<link rel="stylesheet" href="../css/mainUI.css">
+<script src="../js/jquery-1.12.1.min.js"></script>
+<script src="../js/mainUI.js"></script>
+</head>
+<body>
+
+<!-- 하위 브라우저 접속시 화면 -->
+<div class="update_browser">
+	<p>
+		Sorry, We don't support this browser.<br>
+		You need to update your web browser or use a different one.
+	</p>
+	<a href="https://www.microsoft.com/en-us/download/internet-explorer-11-for-windows-7-details.aspx">Update Internet Explorer</a>
+	<a href="https://www.google.com/chrome">Google Chrome</a>
+	<a href="https://www.mozilla.org/firefox/">Mozilla Firefox</a>
+</div>
+<!-- //하위 브라우저 접속시 화면 -->
+
+<!-- 로딩 화면 -->
+<div class="loading">
+	<img src="../img/img/img_loading.gif" alt="Loading, Please wait.">
+</div>
+<!-- //로딩 화면 -->
+
+<!-- 스킵 네비게이션 -->
+<div class="skip">
+	<a href="#content">Jump to main content</a>
+</div>
+<!-- //스킵 네비게이션 -->
+
+<div id="wrap">
+	
+	<!-- 머리글 영역 -->
+	<button type="button" class="show mobile">Show Menu</button>
+	<header>
+		<a href="#none">
+			<h1>
+				<img src="../img/img/img_headerlogo.png" alt="LAMP Education Korea Inc.">
+				<span>Contents Admin<small>Portal Management System</small></span>
+			</h1>
+		</a>
+		<div class="member">
+			<div class="member_wrap">
+				<div class="member_photo">
+					<img src="../img/sample/sample_headerphoto.png" alt="XXX's Photo"> <!-- [D]이미지에 맞는 alt값 부여 -->
+				</div>
+				<div class="member_info">
+					<span class="rank">Super Admin</span>
+					<span class="name">First Name<br>Last Name</span>
+					<div class="btn">
+						<a href="#none">Sign out</a>
+						<a href="#none">Modify</a>
+					</div>
+				</div>
+			</div>
+			<p>Final Connect Day<span>99/99/9999</span></p>
+		</div>
+		<div class="menu">
+			<nav>
+				<ul>
+					<li>
+						<a href="#none">Information</a>
+						<ul>
+							<li><a href="#none">Notice</a></li>
+							<li><a href="#none">News</a></li>
+							<li><a href="#none">Faq</a></li>
+							<li><a href="#none">QnA</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#none">Management</a>
+						<ul>
+							<li><a href="#none">Admin Manager</a></li>
+							<li><a href="#none">Class Manager</a></li>
+							<li><a href="#none">Teachers Manager</a></li>
+							<li><a href="#none">Device Manager</a></li>
+							<li><a href="#none">Students Manager</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#none">Teachers</a>
+						<ul>
+							<li><a href="#none">My Information</a></li>
+							<li><a href="#none">Notice for Students</a></li>
+							<li><a href="#none">Homework Notice</a></li>
+							<li><a href="#none">My Classes</a></li>
+							<li><a href="#none">My Students</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#none">Students</a>
+						<ul>
+							<li><a href="#none">My Information</a></li>
+							<li><a href="#none">Notice for Students</a></li>
+							<li><a href="#none">Homework Notice</a></li>
+							<li><a href="#none">My Classes</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#none">Resources</a>
+						<ul>
+							<li><a href="#none">Category Manager</a></li>
+							<li><a href="#none">Object Manager</a></li>
+						</ul>
+					</li>
+					<li class="no_depth"><a href="#none">Authoring Tool</a></li>
+				</ul>
+			</nav>
+			<ul class="menu_admin">
+				<li><a href="#none">Add Country/Band</a></li>
+				<li><a href="#none">Add Super Admin</a></li>
+				<li class="on"><a href="#none">App Management</a></li>
+			</ul>
+			<dl class="analysis">
+				<dt>All Teachers</dt>
+				<dd>99,999</dd>
+				<dt>Standby approval</dt>
+				<dd>99,999</dd>
+				<dt>Students</dt>
+				<dd>99,999</dd>
+			</dl>
+		</div>
+		<button type="button" class="hide mobile">Hide Menu</button>
+	</header>
+	<div class="nav_modal mobile"></div> <!-- 네비게이션 모달 -->
+	<!-- //머리글 영역 -->
+
+	<!-- 컨텐츠 영역 -->
+	<div id="content">
+		<h2 class="hidden">App Version Management</h2>
+		<ul class="breadcrumb">
+			<li>App Version Management</li>
+		</ul>
+
+		<!-- 게시판 뷰 -->
+		<table class="board_view">
+			<caption>App Version Board View</caption>
+			<colgroup>
+				<col style="width:170px;">
+				<col>
+				<col style="width:170px;">
+				<col style="width:210px;">
+			</colgroup>
+			<tbody>
+				<tr>
+					<th scope="row">Country</th>
+					<td>Canada</td>
+					<th scope="row" class="other">Band</th>
+					<td>Innuite</td>
+				</tr>
+				<tr>
+					<th scope="row">Type</th>
+					<td colspan="3">
+						<div class="select_wrap">
+							<div class="select_box disabled">
+								<label for="select_tribe3">User Group</label>
+								<select id="select_tribe3" title="Select User Group" disabled>
+									<option>User Group</option>
+									<option>Teacher</option>
+									<option>Student</option>
+								</select>
+							</div>
+							<div class="select_box disabled">
+								<label for="select_tribe4">UI Type</label>
+								<select id="select_tribe4" title="Select UI Type" disabled>
+									<option>UI Type</option>
+									<option>1</option>
+									<option>2</option>
+								</select>
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">Version</th>
+					<td colspan="3">
+						<div class="select_wrap">
+							<div class="select_box disabled">
+								<label for="select_tribe5">Major</label>
+								<select id="select_tribe5" title="Select Major Version" disabled>
+									<option>Major</option>
+									<option>1</option>
+									<option>2</option>
+								</select>
+							</div>
+							<div class="select_box disabled">
+								<label for="select_tribe6">Minor</label>
+								<select id="select_tribe6" title="Select Minor Version" disabled>
+									<option>Minor</option>
+									<option>1</option>
+									<option>2</option>
+								</select>
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">Writer</th>
+					<td>System admin</td>
+					<th scope="row" class="other">Date</th>
+					<td>99/99/9999</td>
+				</tr>
+				<tr>
+					<th scope="row">Contents</th>
+					<td class="text" colspan="3">
+						<p>Opening of language preservation management system</p>
+						<p>Opening of language preservation management system</p>
+						<p>Opening of language preservation management system</p>
+						<p>Opening of language preservation management system</p>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">Attached file</th>
+					<td colspan="3" class="file">
+						<div class="file_wrap">
+							<p class="download">Download <em>6</em> Attachments</p>
+							<ul>
+								<li><a href="#none">Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long.pdf</a></li>
+								<li><a href="#none">filename.zip</a></li>
+								<li><a href="#none">filename.zip</a></li>
+								<li><a href="#none">filename.zip</a></li>
+								<li><a href="#none">filename.zip</a></li>
+								<li><a href="#none">filename.zip</a></li>
+							</ul>
+							<button type="button">All Save</button>
+						</div>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<!-- //게시판 뷰 -->
+
+		<!-- 게시물 제어버튼 영역 -->
+		<div class="btn_wrap">
+			<a href="#none" class="fl blue">List</a>
+			<a href="#none" class="fr grey show_modal" data-n="modal_01">Delete</a>
+			<a href="#none" class="fr orange">Modify</a>
+		</div>
+		<!-- //게시물 제어버튼 영역 -->
+
+		<!-- 모달 레이어 -->
+		<div class="modal">
+			<div class="modal_wrap modal_01 w360">
+				<p class="modal_tit">Clear App Version</p>
+				<div class="modal_content">
+					<p class="msg">Are you sure you want to delete this App version column? Once deleted, it is difficult to recover.</p>
+					<div class="modal_btn small">
+						<a href="#none" class="orange">Ok</a>
+						<a href="#none" class="grey hide_modal" data-n="modal_01">Cancel</a>
+					</div>
+				</div>
+			</div>
+			<div class="modal_back"></div>
+		</div>
+		<!-- //모달 레이어 -->
+
+	</div>
+	<!-- //컨텐츠 영역 -->
+</div>
+</body>
+</html>

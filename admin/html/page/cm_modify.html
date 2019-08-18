@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=1280">
+<title>LAMP :: Class Manager</title>
+<link rel="stylesheet" href="../css/jquery-ui.min.css">
+<link rel="stylesheet" href="../css/common.css">
+<link rel="stylesheet" href="../css/mainUI.css">
+<script src="../js/jquery-1.12.1.min.js"></script>
+<script src="../js/jquery-ui.min.js"></script>
+<script src="../js/mainUI.js"></script>
+<script>
+	$(function(){
+		$(".datepicker").datepicker({
+			dateFormat: "mm-dd-yy"
+		});
+	});
+</script>
+</head>
+<body>
+
+<!-- 하위 브라우저 접속시 화면 -->
+<div class="update_browser">
+	<p>
+		Sorry, We don't support this browser.<br>
+		You need to update your web browser or use a different one.
+	</p>
+	<a href="https://www.microsoft.com/en-us/download/internet-explorer-11-for-windows-7-details.aspx">Update Internet Explorer</a>
+	<a href="https://www.google.com/chrome">Google Chrome</a>
+	<a href="https://www.mozilla.org/firefox/">Mozilla Firefox</a>
+</div>
+<!-- //하위 브라우저 접속시 화면 -->
+
+<!-- 로딩 화면 -->
+<div class="loading">
+	<img src="../img/img/img_loading.gif" alt="Loading, Please wait.">
+</div>
+<!-- //로딩 화면 -->
+
+<!-- 스킵 네비게이션 -->
+<div class="skip">
+	<a href="#content">Jump to main content</a>
+</div>
+<!-- //스킵 네비게이션 -->
+
+<div id="wrap">
+	
+	<!-- 머리글 영역 -->
+	<button type="button" class="show mobile">Show Menu</button>
+	<header>
+		<a href="#none">
+			<h1>
+				<img src="../img/img/img_headerlogo.png" alt="LAMP Education Korea Inc.">
+				<span>Contents Admin<small>Portal Management System</small></span>
+			</h1>
+		</a>
+		<div class="member">
+			<div class="member_wrap">
+				<div class="member_photo">
+					<img src="../img/sample/sample_headerphoto.png" alt="XXX's Photo"> <!-- [D]이미지에 맞는 alt값 부여 -->
+				</div>
+				<div class="member_info">
+					<span class="rank">Super Admin</span>
+					<span class="name">First Name<br>Last Name</span>
+					<div class="btn">
+						<a href="#none">Sign out</a>
+						<a href="#none">Modify</a>
+					</div>
+				</div>
+			</div>
+			<p>Final Connect Day<span>99/99/9999</span></p>
+		</div>
+		<div class="menu">
+			<nav>
+				<ul>
+					<li>
+						<a href="#none">Information</a>
+						<ul>
+							<li><a href="#none">Notice</a></li>
+							<li><a href="#none">News</a></li>
+							<li><a href="#none">Faq</a></li>
+							<li><a href="#none">QnA</a></li>
+						</ul>
+					</li>
+					<li class="on">
+						<a href="#none">Management</a>
+						<ul>
+							<li><a href="#none">Admin Manager</a></li>
+							<li class="on"><a href="#none">Class Manager</a></li>
+							<li><a href="#none">Teachers Manager</a></li>
+							<li><a href="#none">Device Manager</a></li>
+							<li><a href="#none">Students Manager</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#none">Teachers</a>
+						<ul>
+							<li><a href="#none">My Information</a></li>
+							<li><a href="#none">Notice for Students</a></li>
+							<li><a href="#none">Homework Notice</a></li>
+							<li><a href="#none">My Classes</a></li>
+							<li><a href="#none">My Students</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#none">Students</a>
+						<ul>
+							<li><a href="#none">My Information</a></li>
+							<li><a href="#none">Notice for Students</a></li>
+							<li><a href="#none">Homework Notice</a></li>
+							<li><a href="#none">My Classes</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#none">Resources</a>
+						<ul>
+							<li><a href="#none">Category Manager</a></li>
+							<li><a href="#none">Object Manager</a></li>
+						</ul>
+					</li>
+					<li class="no_depth"><a href="#none">Authoring Tool</a></li>
+				</ul>
+			</nav>
+			<!-- Superadmin 전용메뉴 -->
+			<!--
+			<ul class="menu_admin">
+				<li><a href="#none">Add Country/Band</a></li>
+				<li><a href="#none">Add Super Admin</a></li>
+				<li><a href="#none">App Management</a></li>
+			</ul>
+			-->
+			<!-- //Superadmin 전용메뉴 -->
+			<dl class="analysis">
+				<dt>All Teachers</dt>
+				<dd>99,999</dd>
+				<dt>Standby approval</dt>
+				<dd>99,999</dd>
+				<dt>Students</dt>
+				<dd>99,999</dd>
+			</dl>
+		</div>
+		<button type="button" class="hide mobile">Hide Menu</button>
+	</header>
+	<div class="nav_modal mobile"></div> <!-- 네비게이션 모달 -->
+	<!-- //머리글 영역 -->
+
+	<!-- 컨텐츠 영역 -->
+	<div id="content">
+		<h2 class="hidden">Class Manager</h2>
+		<ul class="breadcrumb">
+			<li>Home</li>
+			<li>Management</li>
+			<li>Class Manager</li>
+		</ul>
+
+		<!-- 게시판 뷰 -->
+		<table class="board_view modify create_table">
+			<caption>Class Manager Modify</caption>
+			<colgroup>
+			<col style="width:145px;">
+			<col style="width:150px;">
+			<col style="width:200px;">
+			<col style="width:170px;">
+			<col>
+			<col style="width:45px;">
+			</colgroup>
+			<tbody>
+				<tr>
+					<th scope="row"><label for="test001">Class Name</label></th>
+					<td colspan="5"><input type="text" id="test001"></td>
+				</tr>
+				<tr>
+					<th scope="row"><label for="test002">Default Image</label></th>
+					<td colspan="5">
+						<div class="upload img">
+							<input class="upload_name" disabled> <!-- 크로스브라우징을 위한 더미 -->
+							<input type="file" id="test002">
+							<label for="test002">SEARCH</label>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row"><label for="test000">Course Title</label></th>
+					<td colspan="5"><input type="text" id="test000"></td>
+				</tr>
+				<tr>
+					<th scope="row"><label for="test000">Date</label></th>
+					<td colspan="2">
+						<div class="period">
+							<input type="text" class="calendar datepicker">
+							<span>~</span>
+							<input type="text" class="calendar datepicker">
+						</div>
+					</td>
+					<th scope="row" class="other">Personnel</th>
+					<td colspan="2">
+						<div class="select_box personnel">
+							<label for="select_month">Select</label>
+							<select id="select_month" title="Select Month">
+								<option>5</option>
+								<option>10</option>
+								<option>15</option>
+								<option>20</option>
+								<option>25</option>
+								<option>30</option>
+							</select>
+						</div>
+					</td>
+				</tr>
+				<tr class="class">
+					<th scope="row">Month</th>
+					<td class="top">
+						<div class="select_box">
+							<label for="select_month">January</label>
+							<select id="select_month" title="Select Month">
+								<option>January</option>
+								<option>February</option>
+								<option>March</option>
+								<option>April</option>
+								<option>May</option>
+								<option>June</option>
+								<option>July</option>
+								<option>August</option>
+								<option>September</option>
+								<option>October</option>
+								<option>November</option>
+								<option>December</option>
+							</select>
+						</div>
+					</td>
+					<td colspan="3" class="inner_table">
+						<!-- 클래스 입력폼 -->
+						<table class="class inner_data">
+							<caption>Set Class</caption>
+							<colgroup>
+								<col style="width:115px";>
+								<col style="width:85px";>
+								<col style="width:115px";>
+								<col>
+								<col style="width:45px;">
+							</colgroup>
+							<tbody>
+								<tr>
+									<th scope="row">Week</th>
+									<td>
+										<div class="select_box">
+											<label for="select_week">1</label>
+											<select id="select_week" title="Select Week">
+												<option>1</option>
+												<option>2</option>
+												<option>3</option>
+												<option>4</option>
+												<option>5</option>
+											</select>
+										</div>
+									</td>
+									<th scope="row" class="other">Day</th>
+									<td>
+										<div class="check_date">
+											<input type="checkbox" id="lab000"><label for="lab000">Mon</label>
+											<input type="checkbox" id="lab001"><label for="lab001">Tue</label>
+											<input type="checkbox" id="lab002"><label for="lab002">Wed</label>
+											<input type="checkbox" id="lab003"><label for="lab003">Thur</label>
+											<input type="checkbox" id="lab004"><label for="lab004">Fri</label>
+										</div>
+									</td>
+									<td rowspan="2" class="btn">
+										<button type="button" class="del">Del</button>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row">Time</th>
+									<td colspan="3">
+										<div class="period">
+											<div class="select_box">
+												<label for="select_start">09:00 AM</label>
+												<select id="select_start" title="Select Start Time">
+													<option>09:00 AM</option>
+													<option>10:00 AM</option>
+													<option>11:00 AM</option>
+													<option>12:00 PM</option>
+													<option>13:00 PM</option>
+													<option>14:00 PM</option>
+													<option>15:00 PM</option>
+													<option>16:00 PM</option>
+													<option>17:00 PM</option>
+												</select>
+											</div>
+											<span>~</span>
+											<div class="select_box">
+												<label for="select_end">10:00 AM</label>
+												<select id="select_end" title="Select End Time">
+													<option>10:00 AM</option>
+													<option>11:00 AM</option>
+													<option>12:00 PM</option>
+													<option>13:00 PM</option>
+													<option>14:00 PM</option>
+													<option>15:00 PM</option>
+													<option>16:00 PM</option>
+													<option>17:00 PM</option>
+													<option>18:00 PM</option>
+												</select>
+											</div>
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<!-- //클래스 입력폼 -->
+					</td>
+					<td class="btn">
+						<button type="button" class="add">Add</button>
+					</td>
+				</tr>
+				<tr class="book">
+					<th scope="row"><label>Materials</label></th>
+					<td colspan="4" class="inner_table">
+						<!-- 파일 입력폼 -->
+						<table class="inner_data">
+							<caption>Upload File</caption>
+							<colgroup>
+								<col>
+								<col style="width:45px;">
+							</colgroup>
+							<tbody>
+								<tr>	
+									<td>
+										<div class="upload_wrap">
+											<div class="upload img">
+												<input class="upload_name" placeholder="Thumbnail Image" disabled> <!-- 크로스브라우징을 위한 더미 -->
+												<input type="file" id="file000">
+												<label for="file000">SEARCH</label>
+											</div>
+											<div class="upload">
+												<input class="upload_name" placeholder="File path" disabled> <!-- 크로스브라우징을 위한 더미 -->
+												<input type="file" id="file001">
+												<label for="file001">SEARCH</label>
+											</div>
+										</div>
+									</td>
+									<td class="btn">
+										<button type="button" class="del">Del</button>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<!-- //파일 입력폼 -->
+					</td>
+					<td class="btn">
+						<button type="button" class="add">Add</button>
+					</td>
+				</tr>
+				<tr class="input_cmt">
+					<th scope="row"><label for="test005">Summary</label></th>
+					<td colspan="5" class="text">
+						<textarea id="test005" cols="30" rows="5" class="h95"></textarea>
+					</td>
+				</tr>
+				<tr class="input_cmt">
+					<th scope="row"><label for="test006">Precautions</label></th>
+					<td colspan="5" class="text">
+						<textarea id="test006" cols="30" rows="5" class="h95"></textarea>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">Teachers</th>
+					<td colspan="5">
+						<div class="input_wrap teachers">
+							<input type="text" title="Teacher List" readonly>
+							<button type="button" class="show_modal" data-n="modal_01">Search</button>
+						</div>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<!-- //게시판 뷰 -->
+
+		<!-- 게시물 제어버튼 영역 -->
+		<div class="btn_wrap">
+			<a href="#none" class="fr grey">Cancel</a>
+			<button type="submit" class="fr orange">Modify</button>
+		</div>
+		<!-- //게시물 제어버튼 영역 -->
+
+		<!-- 모달 레이어 -->
+		<div class="modal">
+			<div class="modal_wrap modal_01 w650">
+				<p class="modal_tit">Class Teacher List</p>
+				<div class="modal_content">
+					<div class="list_wrap teacher">
+						<table class="board group img list">
+							<caption>Class Teacher List</caption>
+							<colgroup>
+								<col style="width:55px;">
+								<col style="width:55px;">
+								<col>
+								<col style="width:135px;">
+								<col style="width:135px;">
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col" rowspan="2">
+										<div class="check_single">
+											<input type="checkbox" id="device_01" name="article" class="select_all">
+											<label for="device_01"><span class="hidden">Select Article Number 99999</span></label>
+										</div>
+									</th>
+									<th scope="col" rowspan="2">No</th>
+									<th scope="col" rowspan="2">Picture</th>
+									<th scope="colgroup" colspan="2" class="blue">Name</th>
+								</tr>
+								<tr>
+									<th scope="col">First</th>
+									<th scope="col">Last</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>
+										<div class="check_single">
+											<input type="checkbox" id="device_all" name="article">
+											<label for="device_all"><span class="hidden">Select Article Number 99999</span></label>
+										</div>
+									</td>
+									<td>999</td>
+									<td class="thumb"><img src="../img/sample/sample_profilephoto.png" alt="XXX's photo"></td>
+									<td>Gildong</td>
+									<td>Hong</td>
+								</tr>
+								<tr>
+									<td>
+										<div class="check_single">
+											<input type="checkbox" id="device_02" name="article">
+											<label for="device_02"><span class="hidden">Select Article Number 4</span></label>
+										</div>
+									</td>
+									<td>4</td>
+									<td class="thumb"></td>
+									<td>Gildong</td>
+									<td>Hong</td>
+								</tr>
+								<tr>
+									<td>
+										<div class="check_single">
+											<input type="checkbox" id="device_03" name="article">
+											<label for="device_03"><span class="hidden">Select Article Number 3</span></label>
+										</div>
+									</td>
+									<td>3</td>
+									<td class="thumb"></td>
+									<td>Gildong</td>
+									<td>Hong</td>
+								</tr>
+								<tr>
+									<td>
+										<div class="check_single">
+											<input type="checkbox" id="device_04" name="article">
+											<label for="device_04"><span class="hidden">Select Article Number 2</span></label>
+										</div>
+									</td>
+									<td>2</td>
+									<td class="thumb"></td>
+									<td>Gildong</td>
+									<td>Hong</td>
+								</tr>
+								<tr>
+									<td>
+										<div class="check_single">
+											<input type="checkbox" id="device_05" name="article">
+											<label for="device_05"><span class="hidden">Select Article Number 1</span></label>
+										</div>
+									</td>
+									<td>1</td>
+									<td class="thumb"></td>
+									<td>Gildong</td>
+									<td>Hong</td>
+								</tr>
+							</tbody>
+						</table>
+						<a href="#none" class="close hide_modal" data-n="modal_01">Hide Modal</a>
+					</div>
+					<div class="modal_btn">
+						<a href="#none" class="orange">Ok</a>
+					</div>
+				</div>
+			</div>
+			<div class="modal_back"></div>
+		</div>
+		<!-- //모달 레이어 -->
+
+	</div>
+	<!-- //컨텐츠 영역 -->
+</div>
+</body>
+</html>

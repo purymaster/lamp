@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=1280">
+<title>LAMP :: My Class</title>
+<link rel="stylesheet" href="../css/common.css">
+<link rel="stylesheet" href="../css/mainUI.css">
+<script src="../js/jquery-1.12.1.min.js"></script>
+<script src="../js/mainUI.js"></script>
+</head>
+<body>
+
+<!-- 하위 브라우저 접속시 화면 -->
+<div class="update_browser">
+	<p>
+		Sorry, We don't support this browser.<br>
+		You need to update your web browser or use a different one.
+	</p>
+	<a href="https://www.microsoft.com/en-us/download/internet-explorer-11-for-windows-7-details.aspx">Update Internet Explorer</a>
+	<a href="https://www.google.com/chrome">Google Chrome</a>
+	<a href="https://www.mozilla.org/firefox/">Mozilla Firefox</a>
+</div>
+<!-- //하위 브라우저 접속시 화면 -->
+
+<!-- 로딩 화면 -->
+<div class="loading">
+	<img src="../img/img/img_loading.gif" alt="Loading, Please wait.">
+</div>
+<!-- //로딩 화면 -->
+
+<!-- 스킵 네비게이션 -->
+<div class="skip">
+	<a href="#content">Jump to main content</a>
+</div>
+<!-- //스킵 네비게이션 -->
+
+<div id="wrap">
+	
+	<!-- 머리글 영역 -->
+	<button type="button" class="show mobile">Show Menu</button>
+	<header>
+		<a href="#none">
+			<h1>
+				<img src="../img/img/img_headerlogo.png" alt="LAMP Education Korea Inc.">
+				<span>Contents Admin<small>Portal Management System</small></span>
+			</h1>
+		</a>
+		<div class="member">
+			<div class="member_wrap">
+				<div class="member_photo">
+					<img src="../img/sample/sample_headerphoto.png" alt="XXX's Photo"> <!-- [D]이미지에 맞는 alt값 부여 -->
+				</div>
+				<div class="member_info">
+					<span class="rank">Super Admin</span>
+					<span class="name">First Name<br>Last Name</span>
+					<div class="btn">
+						<a href="#none">Sign out</a>
+						<a href="#none">Modify</a>
+					</div>
+				</div>
+			</div>
+			<p>Final Connect Day<span>99/99/9999</span></p>
+		</div>
+		<div class="menu">
+			<nav>
+				<ul>
+					<li>
+						<a href="#none">Information</a>
+						<ul>
+							<li><a href="#none">Notice</a></li>
+							<li><a href="#none">News</a></li>
+							<li><a href="#none">Faq</a></li>
+							<li><a href="#none">QnA</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#none">Management</a>
+						<ul>
+							<li><a href="#none">Admin Manager</a></li>
+							<li><a href="#none">Class Manager</a></li>
+							<li><a href="#none">Teachers Manager</a></li>
+							<li><a href="#none">Device Manager</a></li>
+							<li><a href="#none">Students Manager</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#none">Teachers</a>
+						<ul>
+							<li><a href="#none">My Information</a></li>
+							<li><a href="#none">Notice for Students</a></li>
+							<li><a href="#none">Homework Notice</a></li>
+							<li><a href="#none">My Classes</a></li>
+							<li><a href="#none">My Students</a></li>
+						</ul>
+					</li>
+					<li class="on">
+						<a href="#none">Students</a>
+						<ul>
+							<li><a href="#none">My Information</a></li>
+							<li><a href="#none">Notice for Students</a></li>
+							<li><a href="#none">Homework Notice</a></li>
+							<li class="on"><a href="#none">My Classes</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#none">Resources</a>
+						<ul>
+							<li><a href="#none">Category Manager</a></li>
+							<li><a href="#none">Object Manager</a></li>
+						</ul>
+					</li>
+					<li class="no_depth"><a href="#none">Authoring Tool</a></li>
+				</ul>
+			</nav>
+			<!-- Superadmin 전용메뉴 -->
+			<!--
+			<ul class="menu_admin">
+				<li><a href="#none">Add Country/Band</a></li>
+				<li><a href="#none">Add Super Admin</a></li>
+				<li><a href="#none">App Management</a></li>
+			</ul>
+			-->
+			<!-- //Superadmin 전용메뉴 -->
+			<dl class="analysis">
+				<dt>All Teachers</dt>
+				<dd>99,999</dd>
+				<dt>Standby approval</dt>
+				<dd>99,999</dd>
+				<dt>Students</dt>
+				<dd>99,999</dd>
+			</dl>
+			<a href="#" class="withdraw">Withdrawal<br>from membership</a>
+		</div>
+		<button type="button" class="hide mobile">Hide Menu</button>
+	</header>
+	<div class="nav_modal mobile"></div> <!-- 네비게이션 모달 -->
+	<!-- //머리글 영역 -->
+
+	<!-- 컨텐츠 영역 -->
+	<div id="content">
+		<h2 class="hidden">My Class</h2>
+		<ul class="breadcrumb">
+			<li>Home</li>
+			<li>Students</li>
+			<li>My Classes</li>
+		</ul>
+
+		<!-- 게시판 뷰 -->
+		<table class="board_view student">
+			<caption>Class Information</caption>
+			<colgroup>
+				<col style="width:210px;">
+				<col style="width:355px;">
+				<col>
+			</colgroup>
+			<tbody>
+				<tr>
+					<td rowspan="2" class="img">
+						<img src="../img/sample/sample_textbook.png" alt="대체텍스트">
+					</td>
+					<td colspan="2">
+						<ul class="myinfo">
+							<li><span>Class Name</span>Conservation of language</li>
+							<li><span>Title</span>Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long </li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<dl>
+							<dt>Start date</dt>
+							<dd>99/99/99</dd>
+							<dt>Day</dt>
+							<dd>Mon, Tue, Wed, Thur, Fri</dd>
+							<dt>Personnel</dt>
+							<dd>5 people</dd>
+						</dl>
+					</td>
+					<td>
+						<dl>
+							<dt>End date</dt>
+							<dd>99/99/99</dd>
+							<dt>Time</dt>
+							<dd>99:99AM ~ 99:99PM</dd>
+							<dt>Teachers</dt>
+							<dd>Tony Enza waffa, alan</dd>
+						</dl>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row"><label>Teaching materials</label></th>
+					<td colspan="2">
+						<ul class="thumb">
+							<li>
+								<img src="../img/sample/sample_textbook.png" alt="대체텍스트">
+								<span>Too much long Too much long Too much long Too much long .zip</span>
+							</li>
+							<li><span>File name.zip</span></li>
+							<li><span>File name.zip</span></li>
+							<li><span>File name.zip</span></li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row"><label>Contents</label></th>
+					<td colspan="2">Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long </td>
+				</tr>
+				<tr>
+					<th scope="row"><label>Precautions</label></th>
+					<td colspan="2">Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long </td>
+				</tr>
+			</tbody>
+		</table>
+		<!-- //게시판 뷰 -->
+
+		<!-- 게시물 제어버튼 영역 -->
+		<div class="btn_wrap">
+			<a href="#none" class="fl blue">List</a>
+			<a href="#none" class="fr orange">Sign up for class</a>
+		</div>
+		<!-- //게시물 제어버튼 영역 -->
+
+		<!-- 모달 레이어 -->
+		<div class="modal">
+			<div class="modal_wrap modal_08 w470">
+				<p class="modal_tit">Resopnsible Teacher Information</p>
+				<div class="modal_content">
+					<div class="teacher_view">
+						<img src="../img/sample/sample_teacher_view.png" alt="XXX's Photo">
+					</div>
+					<table class="regist view">
+						<caption>Super Admin Detail</caption>
+						<colgroup>
+							<col style="width:170px;">
+							<col>
+						</colgroup>
+						<tbody>
+							<tr>
+								<th scope="row">First Name</th>
+								<td>Kara</td>
+							</tr>
+							<tr>
+								<th scope="row">Last Name</th>
+								<td>Kim</td>
+							</tr>
+							<tr>
+								<th scope="row">Age</th>
+								<td>42</td>
+							</tr>
+							<tr>
+								<th scope="row">Gender</th>
+								<td>Female</td>
+							</tr>
+							<tr>
+								<th scope="row">E-mail</th>
+								<td><a href="mailto:carakim@gmail.com" class="mail">carakim@gmail.com</a></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<a href="#none" class="close hide_modal" data-n="modal_08">Hide Modal</a>
+			</div>
+			<div class="modal_back"></div>
+		</div>
+
+		<div class="modal">
+			<div class="modal_wrap modal_09 w470">
+				<p class="modal_tit">Resopnsible Teacher Information</p>
+				<div class="modal_content">
+					<div class="teacher_view">
+						<img src="../img/sample/sample_teacher_view2.png" alt="XXX's Photo">
+					</div>
+					<table class="regist view">
+						<caption>Super Admin Detail</caption>
+						<colgroup>
+							<col style="width:170px;">
+							<col>
+						</colgroup>
+						<tbody>
+							<tr>
+								<th scope="row">First Name</th>
+								<td>Kara</td>
+							</tr>
+							<tr>
+								<th scope="row">Last Name</th>
+								<td>Kim</td>
+							</tr>
+							<tr>
+								<th scope="row">Age</th>
+								<td>42</td>
+							</tr>
+							<tr>
+								<th scope="row">Gender</th>
+								<td>Female</td>
+							</tr>
+							<tr>
+								<th scope="row">E-mail</th>
+								<td><a href="mailto:carakim@gmail.com" class="mail">carakim@gmail.com</a></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<a href="#none" class="close hide_modal" data-n="modal_09">Hide Modal</a>
+			</div>
+			<div class="modal_back"></div>
+		</div>
+		<!-- //모달 레이어 -->
+
+	</div>
+	<!-- //컨텐츠 영역 -->
+</div>
+</body>
+</html>

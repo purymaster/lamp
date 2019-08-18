@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=1280">
+<title>LAMP :: Teachers Manager</title>
+<link rel="stylesheet" href="../css/common.css">
+<link rel="stylesheet" href="../css/mainUI.css">
+<script src="../js/jquery-1.12.1.min.js"></script>
+<script src="../js/mainUI.js"></script>
+</head>
+<body>
+
+<!-- 하위 브라우저 접속시 화면 -->
+<div class="update_browser">
+	<p>
+		Sorry, We don't support this browser.<br>
+		You need to update your web browser or use a different one.
+	</p>
+	<a href="https://www.microsoft.com/en-us/download/internet-explorer-11-for-windows-7-details.aspx">Update Internet Explorer</a>
+	<a href="https://www.google.com/chrome">Google Chrome</a>
+	<a href="https://www.mozilla.org/firefox/">Mozilla Firefox</a>
+</div>
+<!-- //하위 브라우저 접속시 화면 -->
+
+<!-- 로딩 화면 -->
+<div class="loading">
+	<img src="../img/img/img_loading.gif" alt="Loading, Please wait.">
+</div>
+<!-- //로딩 화면 -->
+
+<!-- 스킵 네비게이션 -->
+<div class="skip">
+	<a href="#content">Jump to main content</a>
+</div>
+<!-- //스킵 네비게이션 -->
+
+<div id="wrap">
+	
+	<!-- 머리글 영역 -->
+	<button type="button" class="show mobile">Show Menu</button>
+	<header>
+		<a href="#none">
+			<h1>
+				<img src="../img/img/img_headerlogo.png" alt="LAMP Education Korea Inc.">
+				<span>Contents Admin<small>Portal Management System</small></span>
+			</h1>
+		</a>
+		<div class="member">
+			<div class="member_wrap">
+				<div class="member_photo">
+					<img src="../img/sample/sample_headerphoto.png" alt="XXX's Photo"> <!-- [D]이미지에 맞는 alt값 부여 -->
+				</div>
+				<div class="member_info">
+					<span class="rank">Super Admin</span>
+					<span class="name">First Name<br>Last Name</span>
+					<div class="btn">
+						<a href="#none">Sign out</a>
+						<a href="#none">Modify</a>
+					</div>
+				</div>
+			</div>
+			<p>Final Connect Day<span>99/99/9999</span></p>
+		</div>
+		<div class="menu">
+			<nav>
+				<ul>
+					<li>
+						<a href="#none">Information</a>
+						<ul>
+							<li><a href="#none">Notice</a></li>
+							<li><a href="#none">News</a></li>
+							<li><a href="#none">Faq</a></li>
+							<li><a href="#none">QnA</a></li>
+						</ul>
+					</li>
+					<li class="on">
+						<a href="#none">Management</a>
+						<ul>
+							<li><a href="#none">Admin Manager</a></li>
+							<li><a href="#none">Class Manager</a></li>
+							<li class="on"><a href="#none">Teachers Manager</a></li>
+							<li><a href="#none">Device Manager</a></li>
+							<li><a href="#none">Students Manager</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#none">Teachers</a>
+						<ul>
+							<li><a href="#none">My Information</a></li>
+							<li><a href="#none">Notice for Students</a></li>
+							<li><a href="#none">Homework Notice</a></li>
+							<li><a href="#none">My Classes</a></li>
+							<li><a href="#none">My Students</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#none">Students</a>
+						<ul>
+							<li><a href="#none">My Information</a></li>
+							<li><a href="#none">Notice for Students</a></li>
+							<li><a href="#none">Homework Notice</a></li>
+							<li><a href="#none">My Classes</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#none">Resources</a>
+						<ul>
+							<li><a href="#none">Category Manager</a></li>
+							<li><a href="#none">Object Manager</a></li>
+						</ul>
+					</li>
+					<li class="no_depth"><a href="#none">Authoring Tool</a></li>
+				</ul>
+			</nav>
+			<!-- Superadmin 전용메뉴 -->
+			<!--
+			<ul class="menu_admin">
+				<li><a href="#none">Add Country/Band</a></li>
+				<li><a href="#none">Add Super Admin</a></li>
+				<li><a href="#none">App Management</a></li>
+			</ul>
+			-->
+			<!-- //Superadmin 전용메뉴 -->
+			<dl class="analysis">
+				<dt>All Teachers</dt>
+				<dd>99,999</dd>
+				<dt>Standby approval</dt>
+				<dd>99,999</dd>
+				<dt>Students</dt>
+				<dd>99,999</dd>
+			</dl>
+		</div>
+		<button type="button" class="hide mobile">Hide Menu</button>
+	</header>
+	<div class="nav_modal mobile"></div> <!-- 네비게이션 모달 -->
+	<!-- //머리글 영역 -->
+
+	<!-- 컨텐츠 영역 -->
+	<div id="content">
+		<h2 class="hidden">Teachers Manager</h2>
+		<ul class="breadcrumb">
+			<li>Home</li>
+			<li>Management</li>
+			<li>Teachers Manager</li>
+		</ul>
+		<p class="info_txt">Click on the ID to go to the Details page</p>
+
+		<!-- 탭메뉴 -->
+		<ul class="tab_menu">
+			<li><a href="#none">Request List</a></li>
+			<li class="on"><a href="#none">Teachers Manager</a></li>
+		</ul>
+		<!-- //탭메뉴 -->
+
+		<!-- 게시판 리스트 -->
+		<table class="board group img">
+			<caption>Teacher List</caption>
+			<colgroup>
+				<col style="width:55px;">
+				<col style="width:55px;">
+				<col style="width:95px;">
+				<col style="width:105px;">
+				<col style="width:105px;">
+				<col style="width:55px;">
+				<col style="width:140px;">
+				<col style="width:160px;">
+				<col style="width:75px;">
+				<col style="width:100px;">
+			</colgroup>
+			<thead>
+				<tr>
+					<th scope="col" rowspan="2"><span class="hidden">Select Article</span></th>
+					<th scope="col" rowspan="2">No</th>
+					<th scope="col" rowspan="2">Pic</th>
+					<th scope="colgroup" colspan="2" class="blue">Name</th>
+					<th scope="col" rowspan="2">ID</th>
+					<th scope="col" rowspan="2">E-mail</th>
+					<th scope="col" rowspan="2">Cell phone</th>
+					<th scope="col" rowspan="2">Device<br>Assign</th>
+					<th scope="col" rowspan="2">Date</th>
+				</tr>
+				<tr>
+					<th scope="col">First</th>
+					<th scope="col">Last</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>
+						<div class="radio_single">
+							<input type="radio" id="article_01" name="article">
+							<label for="article_01"><span class="hidden">Select Article Number 99999</span></label>
+						</div>
+					</td>
+					<td>999</td>
+					<td class="thumb"><img src="../img/sample/sample_profilephoto.png" alt="대체텍스트"></td>
+					<td class="group">Jisuk</td>
+					<td>Kim</td>
+					<td><a href="#none" class="mail">carakim</a></td> <!-- 2017-09-18 이름에 링크 삭제 및 ID에 링크 추가 -->
+					<td><a href="mailto:carakim@gmail.com" class="mail">carakim@gmail.com</a></td>
+					<td>+82 010-7777-0000</td>
+					<td>Y</td>
+					<td>99/99/9999</td>
+				</tr>
+				<tr>
+					<td>
+						<div class="radio_single">
+							<input type="radio" id="article_02" name="article">
+							<label for="article_02"><span class="hidden">Select Article Number 1</span></label>
+						</div>
+					</td>
+					<td>1</td>
+					<td class="thumb"></td>
+					<td class="group">Jisuk</td>
+					<td>Kim</td>
+					<td><a href="#none" class="mail">carakim</a></td> <!-- 2017-09-18 이름에 링크 삭제 및 ID에 링크 추가 -->
+					<td><a href="mailto:carakim@gmail.com" class="mail">carakim@gmail.com</a></td>
+					<td>+82 010-7777-0000</td>
+					<td>N</td>
+					<td>99/99/9999</td>
+				</tr>
+			</tbody>
+		</table>
+		<!-- //게시판 리스트 -->
+
+		<!-- 게시물 제어버튼 영역 -->
+		<div class="btn_wrap">
+			<a href="#none" class="fl blue">Modify</a> <!-- 2017-08-31 Modify 연결 추가 -->
+			<a href="#none" class="fl grey show_modal" data-n="modal_01">Delete</a>
+			<a href="#none" class="fr orange">Create</a>
+		</div>
+		<!-- //게시물 제어버튼 영역 -->
+
+		<!-- 페이징 영역 -->
+		<div class="pagenation">
+			<div class="pager">
+				<a class="first" href="#">Move to First Page</a>
+				<a class="prev" href="#">Move to Previous Page</a>
+				<ul>
+					<li><span>1</span></li>
+					<li><a href="#none">2</a></li>
+					<li><a href="#none">3</a></li>
+					<li><a href="#none">4</a></li>
+					<li><a href="#none">5</a></li>
+					<li><a href="#none">6</a></li>
+					<li><a href="#none">7</a></li>
+					<li><a href="#none">8</a></li>
+					<li><a href="#none">9</a></li>
+					<li><a href="#none">10</a></li>
+					<li><a href="#none">999</a></li>
+				</ul>
+				<a class="next" href="#">Move to Next Page</a>
+				<a class="last" href="#">Move to Last Page</a>
+			</div>
+		</div>
+		<!-- //페이징 영역 -->
+
+		<!-- 게시물 검색창 -->
+		<div class="search_wrap">
+			<fieldset>
+				<legend>Article Search</legend>
+				<input type="text" title="search keyword input">
+				<button type="submit">Search</button>
+			</fieldset>
+		</div>
+		<!-- //게시물 검색창 -->
+
+		<!-- 모달 레이어 -->
+		<div class="modal">
+			<div class="modal_wrap modal_01 w360">
+				<p class="modal_tit">Clear Teacher</p>
+				<div class="modal_content">
+					<p class="msg">Are you sure you want to delete this post?</p>
+					<div class="modal_btn small">
+						<a href="#none" class="orange">Ok</a>
+						<a href="#none" class="grey hide_modal" data-n="modal_01">Cancel</a>
+					</div>
+				</div>
+			</div>
+			<div class="modal_back"></div>
+		</div>
+		<!-- //모달 레이어 -->
+
+	</div>
+	<!-- //컨텐츠 영역 -->
+</div>
+</body>
+</html>

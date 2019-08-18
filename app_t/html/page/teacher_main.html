@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=1024">
+<title>LAMP :: Main</title>
+<link rel="stylesheet" href="../css/ui.css">
+<script src="../js/jquery-1.12.1.min.js"></script>
+<script src="../js/jquery.bxslider.js"></script>
+<script src="../js/ui.js"></script>
+<script>
+	$(function(){
+		$(".notice .tab li:eq(0)").addClass("on"); /* 페이지 로딩시 첫번째 탭 활성화 */
+		slider = $(".bxslider").bxSlider({
+			nextSelector:'#tab_menu2',
+			prevSelector:'#tab_menu1',
+			nextText:'Notice for Students',
+			prevText:'Notice',
+			infiniteLoop:false,
+			pager:false,
+			onSlideBefore:function(){
+				var val = slider.getCurrentSlide();
+				$(".notice .tab li").removeClass("on");
+				$(".notice .tab li:eq("+val+")").addClass("on");
+				$(".notice .tab .more").hide();
+				$(".notice .tab > a:eq("+val+")").show();
+			}
+		});
+	});
+</script>
+</head>
+<body>
+
+<!-- 로딩 화면 -->
+<div class="loading">		
+	<img src="../img/img/img_logo.png" class="logo" alt="Lamp Education">
+	<img src="../img/img/img_loading.png" class="ing" alt="Loading...Please wait">
+</div>
+<!-- //로딩 화면 -->
+
+<div class="wrap main">
+	<header>
+		<h1>
+			<img src="../img/img/img_logo.png" alt="Lamp Education Logo">
+			<span>Lamp OnLine Education Class V1</span>
+		</h1>
+		<span class="name">Teacher ID</span>
+		<button type="button" class="show">Show Menu</button>
+		<nav>
+			
+			<div class="user_wrap">
+				<div class="img">
+					<img src="../img/sample/sample_teacher_photo.png" alt="선생이름's Photo">
+				</div>
+				<div class="user_info">
+					<p class="name">Emma Charlotte Duerre Watson</p>
+					<a href="#none" class="info">My Information</a>
+					<a href="#none" class="sign_out">Sign out</a>
+				</div>
+			</div>
+			<ul>
+				<li><a href="#none">Notice</a></li>
+				<li><a href="#none">Notice For Students</a></li>
+				<li><a href="#none">Class</a></li>
+				<li><a href="#none">HomeWork</a></li>
+				<li><a href="#none">Students List</a></li>
+				<li><a href="#none">Device Configration</a></li>
+			</ul>
+			<dl>
+				<dt>Latest version.</dt>
+				<dd>LAMP V1.0</dd>
+			</dl>
+			<!-- <a href="#none" class="btn orange go upg">Click Upgrade</a> --> <!-- 버전 업그레이드 필요시 생성 -->
+			<a href="#none" class="btn black go end">End of APP</a>
+			<button type="button" class="hide">Hide Menu</button>
+		</nav>
+		<div class="nav_bg"></div> <!-- 모달 배경 -->
+	</header>
+
+	<div class="content_wrap">
+		<div class="content">
+			<ul class="main_menu">
+				<li>
+					<a href="#none">
+						<span><em>Class</em></span>
+					</a>
+				</li>
+				<li>
+					<a href="#none">
+						<span><em>Student</em><br>List</span>
+					</a>
+				</li>
+				<li>
+					<a href="#none">
+						<span><em>Home</em><br>Work</span>
+					</a>
+				</li>
+				<li>
+					<a href="#none">
+						<span><em>Device</em><br>Configuration</span>
+					</a>
+				</li>
+			</ul>
+			<div class="notice">
+				<ul class="tab">
+					<li id="tab_menu1"></li> <!-- Bxslider 옵션에서 메뉴명 삽입 -->
+					<li id="tab_menu2"></li>
+					<a href="#none" class="more" onclick="alert('Go to Notice List Page');">More Notice List</a> <!-- Notice List 더보기 -->
+					<a href="#none" class="more" onclick="alert('Go to Notice for Students List Page');">More Notice for Students List</a> <!-- Notice for Students List 더보기 -->
+				</ul>
+				<ul class="notice_wrap bxslider">
+					<li>
+						<p class="hidden">Notice List</p> <!-- Notice List -->
+						<ul class="notice_list">
+							<li class="fix">
+								<a href="#none">
+									<p>Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long </p>
+									<span>99/99/99</span>
+								</a>
+							</li>
+							<li class="fix">
+								<a href="#none">
+									<p>Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long </p>
+									<span>99/99/99</span>
+								</a>
+							</li>
+							<li class="fix">
+								<a href="#none">
+									<p>Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long </p>
+									<span>99/99/99</span>
+								</a>
+							</li>
+							<li>
+								<a href="#none">
+									<p>Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long </p>
+									<span>99/99/99</span>
+								</a>
+							</li>
+							<li>
+								<a href="#none">
+									<p>Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long </p>
+									<span>99/99/99</span>
+								</a>
+							</li>
+							<li>
+								<a href="#none">
+									<p>Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long </p>
+									<span>99/99/99</span>
+								</a>
+							</li>
+							<li>
+								<a href="#none">
+									<p>Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long </p>
+									<span>99/99/99</span>
+								</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<p class="hidden">Notice for Students List</p> <!-- Notice for Students List -->
+						<ul class="notice_list">
+							<li class="fix">
+								<a href="#none">
+									<p>Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long </p>
+									<span>99/99/99</span>
+								</a>
+							</li>
+							<li class="fix">
+								<a href="#none">
+									<p>Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long </p>
+									<span>99/99/99</span>
+								</a>
+							</li>
+							<li class="fix">
+								<a href="#none">
+									<p>Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long </p>
+									<span>99/99/99</span>
+								</a>
+							</li>
+							<li>
+								<a href="#none">
+									<p>Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long </p>
+									<span>99/99/99</span>
+								</a>
+							</li>
+							<li>
+								<a href="#none">
+									<p>Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long </p>
+									<span>99/99/99</span>
+								</a>
+							</li>
+							<li>
+								<a href="#none">
+									<p>Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long </p>
+									<span>99/99/99</span>
+								</a>
+							</li>
+							<li>
+								<a href="#none">
+									<p>Too much long Too much long Too much long Too much long Too much long Too much long Too much long Too much long </p>
+									<span>99/99/99</span>
+								</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<footer>Copyright 2017. Lamp Education. All rights reserved.</footer>
+</div>
+
+</body>
+</html>
