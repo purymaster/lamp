@@ -77,7 +77,7 @@
 ~~~
 
 - 속성을 선언할 때는 그 쓰임새가 레이아웃과 관련이 큰 것부터 시작한다.
-- display(표시) / overflow(넘침) / float(흐름) / position(위치) / width & height(크기) / margin & padding(간격) / border(테두리) / background(배경) / font/color(글꼴) / animation / 기타
+- display(표시) / overflow(넘침) / float(흐름) / position(위치) / width & height(크기) / margin & padding(간격) / border(테두리) / background(배경) / font & color(글꼴) / animation / 기타
 
 ~~~
 .selector {display:block; visibility:visible; overflow:visible; float:none; position:static; top:0; left:0; width:0; height:0; line-height:0;
