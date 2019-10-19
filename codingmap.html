@@ -8,17 +8,15 @@
 <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
 <style>
-	a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{margin:0;padding:0;border:0;font-size:100%;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:after,blockquote:before,q:after,q:before{content:'';content:none}table{border-collapse:collapse;border-spacing:0}*{max-height:1000000px;font-family:'Noto Sans',AppleSDGothicNeo,DroidSansFallback,arial,sans-serif;color:#333;letter-spacing:-.025em;box-sizing:border-box}body,html{height:100%}header{position:fixed;top:0;left:0;width:100%;height:50px;border-bottom:1px solid #ccc;background:#fff;box-sizing:border-box}header h1{position:absolute;top:10px;left:10px}header h1 img{max-height:30px}nav ul{position:absolute;top:15px;right:0;text-align:center}nav ul li{display:inline-block;padding:0 10px;border-left:1px solid #ccc}nav ul li:first-child{border-left:0}nav ul li a{display:inline-block;line-height:20px;font-size:16px;font-weight:700;text-decoration:none}section{position:fixed;top:0;left:0;width:100%;height:100%;margin-top:50px}section iframe{width:100%;height:calc(100% - 50px)}.guide_wrap{padding:10px}.guide_wrap .tit{line-height:1.5;margin-bottom:5px;font-size:16px;font-weight:700}.guide_wrap a{text-decoration:none}.guide_wrap>ul{margin-bottom:15px}.guide_wrap>ul>li{line-height:1.5;padding-left:9px;text-indent:-9px;font-size:14px;color:#999}.guide_wrap>ul>li:before{content:"-";margin-right:5px}.directory{margin-bottom:15px;padding:10px;background:#eee}.directory em{display:inline-block;line-height:1.5;margin-bottom:5px;font-size:14px;font-style:normal}.directory ul li{line-height:1.5;font-size:12px;color:#333}.directory ul>li>ul li{padding-left:12px;text-indent:-12px;color:#666}.directory ul>li>ul li:before{content:"├";margin-right:5px}.directory ul>li>ul li:last-child:before{content:"└"}pre{line-height:1.5;font-size:12px;margin-bottom:10px}.warning{display:none;line-height:1.5;padding:5px 0;font-size:12px;background:red;color:#fff;text-align:center;word-break:keep-all}.map_wrap{padding:10px}.map_wrap .tit{line-height:1.5;font-size:16px;font-weight:700}.map_wrap .info{overflow:hidden;margin:10px 0 5px 0;font-size:12px}.map_wrap .info .process{overflow:hidden;float:left;line-height:20px}.map_wrap .info .process dd,.map_wrap .info .process dt{float:left;margin-right:5px}.map_wrap .info .process dd{color:red}.map_wrap .info .status{overflow:hidden;float:right}.map_wrap .info .status li{float:left;margin-left:5px}.map_wrap .info .status li em{margin-right:5px}table.list{width:100%;min-width:320px;border-top:1px solid #999;border-bottom:1px solid #999;font-size:0;table-layout:fixed;word-break:break-all}table.list td,table.list th{overflow:hidden;line-height:20px;padding:5px;border-top:1px solid #eee;border-left:1px solid #ccc;font-size:12px;text-overflow:ellipsis;white-space:nowrap}table.list th{border-left:1px solid #999;border-top:1px solid #999}table.list td a{text-decoration:none;color:#666}table.list tr.hover td,table.list tr.hover td a{background:#999;color:#fff}table.list tr.part td{border-top:1px solid #ccc}table.list tr td:first-child,table.list tr th:first-child{border-left:0}table.list tr:first-child td{border-top:1px solid #999}table.list th{background:#ccc;font-weight:700}table.list th.num{width:40px}table.list th.id{width:110px}table.list th.dev{width:50px}table.list th.date,table.list th.stat{width:50px}table.list th.memo{width:30%}table.list th.link{width:80px}table.list td{color:#666}table.list td.center{text-align:center}em.ico{display:inline-block;width:20px;line-height:20px;border-radius:5px;color:#fff;font-size:12px;font-style:normal;text-transform:uppercase;text-align:center}em.ico.standby{background:#666}em.ico.work{background:#1e90ff}em.ico.end{background:#32cd32}em.ico.modify{background:#ff1493}@media only screen and (max-width:1024px){header{text-align:center}header h1{position:static}header{height:auto;padding:10px 0;font-size:0}nav{overflow-x:auto;width:100%}nav ul{position:static;margin-top:10px;white-space:nowrap}nav ul li a{line-height:19px;font-size:14px}section{position:static;margin-top:80px}.guide_wrap>ul>li{padding-left:8px;text-indent:-8px;font-size:12px}.map_wrap{padding:0;padding-top:10px}.map_wrap .info{padding:5px}.map_wrap .tit{text-align:center}table.list,table.list tbody,table.list thead,table.list tr{display:block}table.list{border:0}table.list tr{border-top:1px solid #eee;padding:5px}table.list td{display:inline-block;margin-right:5px;padding:0 5px;border:0!important;border-radius:5px;color:#333}table.list.d3 td{max-width:calc(33.33% - 35px)}table.list.d4 td{max-width:calc(25% - 25px)}table.list td.nodata{margin:0;padding:0}table.list tr.hover td,table.list tr.hover td a{background:#fff;color:#666}table.list tr.part,table.list tr:first-child{border-top:1px solid #999}table.list tr:last-child{border-bottom:1px solid #999}table.list td:nth-last-of-type(2),table.list td:nth-last-of-type(3),table.list td:nth-last-of-type(5),table.list td:nth-last-of-type(6),table.list td:nth-of-type(1),table.list thead{position:absolute;top:-9999px;left:-9999px}table.list td:nth-of-type(2){background:#888!important;color:#fff!important;font-weight:700}table.list td:nth-of-type(3){background:#aaa!important}table.list td:nth-of-type(4){background:#ccc!important}table.list td:nth-of-type(5){background:#eee!important}table.list td:last-of-type,table.list td:nth-of-type(8){margin:0;padding:0}table.list td:last-of-type{float:right}}@media only screen and (max-width:767px){.warning{display:block}pre{display:none}}
+	a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{margin:0;padding:0;border:0;font-size:100%;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:after,blockquote:before,q:after,q:before{content:"";content:none}table{border-spacing:0;border-collapse:collapse}button{outline:0;cursor:pointer}*{box-sizing:border-box;max-height:1000000px;font-family:"Noto Sans",AppleSDGothicNeo,DroidSansFallback,arial,sans-serif;color:#333;letter-spacing:-.025em}body,html{height:100%}.map_wrap{padding:10px}.map_wrap .tit{font-size:16px;font-weight:700;line-height:1.5}.map_wrap .info{overflow:hidden;margin:10px 0 5px 0;font-size:12px}.map_wrap .info .process{overflow:hidden;float:left;line-height:20px}.map_wrap .info .process dd,.map_wrap .info .process dt{float:left;margin-right:5px}.map_wrap .info .process dd{color:red}.map_wrap .info .status{overflow:hidden;float:right}.map_wrap .info .status li{float:left;margin-left:3px}.map_wrap .info .status li em{margin-right:3px}table.list{width:100%;border-top:1px solid #999;border-bottom:1px solid #999;font-size:0;word-break:break-all;table-layout:fixed}table.list td,table.list th{overflow:hidden;padding:5px;border-top:1px solid #eee;border-left:1px solid #ccc;font-size:12px;line-height:20px;text-overflow:ellipsis;white-space:nowrap}table.list th{border-top:1px solid #999;border-left:1px solid #999}table.list td a{color:#666;text-decoration:none}table.list tr.hover td{background:#999;color:#fff}table.list tr.part td{border-top:1px solid #ccc}table.list tr td:first-child,table.list tr th:first-child{border-left:0}table.list tr:first-child td{border-top:1px solid #999}table.list th{background:#ccc;font-weight:700}table.list th.num{width:40px}table.list th.id{width:150px}table.list th.dev{width:50px}table.list th.date,table.list th.stat{width:50px}table.list th.memo{width:20%}table.list th.link{width:80px}table.list td{color:#666}table.list td.center{text-align:center}em.ico{display:inline-block;width:20px;border-radius:5px;font-size:12px;font-style:normal;line-height:20px;color:#fff;text-align:center;text-transform:uppercase}em.ico.standby{background:#666}em.ico.work{background:#1e90ff}em.ico.end{background:#32cd32}em.ico.modify{background:#ff1493}@media (max-width:1024px){header{text-align:center}header h1{position:static}header{height:auto;padding:10px 0;font-size:0}nav{overflow-x:auto;width:100%}nav ul{position:static;margin-top:10px;white-space:nowrap}nav ul li a{font-size:14px;line-height:19px}section{position:static;padding-top:80px;font-size:0}.guide_wrap>ul>li{padding-left:8px;font-size:12px;text-indent:-8px}.slide_wrap{position:static;height:auto;border:0;background:#fff}.map_wrap .info{padding:5px}.map_wrap .tit{text-align:center}table.list th.date,table.list th.dev,table.list th.id,table.list th.memo,table.list th.num,table.list tr td:nth-child(1),table.list tr td:nth-child(10),table.list tr td:nth-child(6),table.list tr td:nth-child(7),table.list tr td:nth-child(9){width:0;padding:0;border:0}table.list th.link{width:40px}table.list td a.mobile{display:none}table.list tbody tr td:nth-child(2),table.list thead tr th:nth-child(2){border-left:0}}@media (max-width:599px){table.list th.stat{width:40px}table.list td,table.list th{font-size:11px}}
 </style>
 <script>
 	$(function(){var t=$("table.list");t.find("tr:gt(0)").hover(function(){$(this).addClass("hover")},function(){$(this).removeClass("hover")}).each(function(t){$("td:eq(0)",this).text(t+1),""!=$("td:eq(1)",this).text()&&$(this).addClass("part")}).find("td").each(function(){""==$(this).text()&&$(this).addClass("nodata")}),$(".process dd").text(Math.ceil(t.find("em.end").length/t.find("tbody").children("tr").length*100)+"%")});
 </script>
-<style>
-	table.list th.id {width:160px;}
-</style>
+
 </head>
 <body>
-<p class="warning">현재 사용중인 디바이스는 페이지맵을 열람하기엔 너무 작습니다. 태블릿 이상의 디바이스를 권장합니다.</p>
+
 <div class="map_wrap">
 	<p class="tit">어드민포탈 페이지 목록</p>
 	<div class="info">
@@ -62,7 +60,7 @@
 				<td class="center"><em class="ico end">e</em></td>
 				<td class="center">9/5</td>
 				<td></td>
-				<td class="center"><a href="admin/html/page/sample.html" target="_blank" title="새창열림">링크이동</a></td>
+				<td class="center"><a href="admin/html/page/sample.html" target="_blank" title="새창열림">보기</a></td>
 			</tr>
 			<tr>
 				<td class="center"></td>
@@ -75,7 +73,7 @@
 				<td class="center"><em class="ico end">e</em></td>
 				<td class="center">9/5</td>
 				<td></td>
-				<td class="center"><a href="admin/html/page/mail.html" target="_blank" title="새창열림">링크이동</a></td>
+				<td class="center"><a href="admin/html/page/mail.html" target="_blank" title="새창열림">보기</a></td>
 			</tr>
 			<tr>
 				<td class="center"></td>
@@ -88,7 +86,7 @@
 				<td class="center"><em class="ico end">e</em></td>
 				<td class="center">9/5</td>
 				<td></td>
-				<td class="center"><a href="admin/html/page/sign_in.html" target="_blank" title="새창열림">링크이동</a></td>
+				<td class="center"><a href="admin/html/page/sign_in.html" target="_blank" title="새창열림">보기</a></td>
 			</tr>
 			<tr>
 				<td class="center"></td>
@@ -101,7 +99,7 @@
 				<td class="center"><em class="ico end">e</em></td>
 				<td class="center">9/25</td>
 				<td></td>
-				<td class="center"><a href="admin/html/page/join_form.html" target="_blank" title="새창열림">링크이동</a></td>
+				<td class="center"><a href="admin/html/page/join_form.html" target="_blank" title="새창열림">보기</a></td>
 			</tr>
 			<tr>
 				<td class="center"></td>
@@ -114,7 +112,7 @@
 				<td class="center"><em class="ico end">e</em></td>
 				<td class="center">9/25</td>
 				<td></td>
-				<td class="center"><a href="admin/html/page/join_form(students).html" target="_blank" title="새창열림">링크이동</a></td>
+				<td class="center"><a href="admin/html/page/join_form(students).html" target="_blank" title="새창열림">보기</a></td>
 			</tr>
 			<tr>
 				<td class="center"></td>
@@ -127,7 +125,7 @@
 				<td class="center"><em class="ico end">e</em></td>
 				<td class="center">9/1</td>
 				<td></td>
-				<td class="center"><a href="admin/html/page/pw_setting.html" target="_blank" title="새창열림">링크이동</a></td>
+				<td class="center"><a href="admin/html/page/pw_setting.html" target="_blank" title="새창열림">보기</a></td>
 			</tr>
 			<tr>
 				<td class="center"></td>
@@ -140,7 +138,7 @@
 				<td class="center"><em class="ico end">e</em></td>
 				<td class="center">8/21</td>
 				<td></td>
-				<td class="center"><a href="admin/html/page/country_list.html" target="_blank" title="새창열림">링크이동</a></td>
+				<td class="center"><a href="admin/html/page/country_list.html" target="_blank" title="새창열림">보기</a></td>
 			</tr>
 			<tr>
 				<td class="center"></td>
@@ -153,7 +151,7 @@
 				<td class="center"><em class="ico end">e</em></td>
 				<td class="center">9/18</td>
 				<td></td>
-				<td class="center"><a href="admin/html/page/super_list.html" target="_blank" title="새창열림">링크이동</a></td>
+				<td class="center"><a href="admin/html/page/super_list.html" target="_blank" title="새창열림">보기</a></td>
 			</tr>
 			<tr>
 				<td class="center"></td>
@@ -166,7 +164,7 @@
 				<td class="center"><em class="ico end">e</em></td>
 				<td class="center">9/19</td>
 				<td></td>
-				<td class="center"><a href="admin/html/page/app_version_list.html" target="_blank" title="새창열림">링크이동</a></td>
+				<td class="center"><a href="admin/html/page/app_version_list.html" target="_blank" title="새창열림">보기</a></td>
 			</tr>
 			<tr>
 				<td class="center"></td>
@@ -179,7 +177,7 @@
 				<td class="center"><em class="ico end">e</em></td>
 				<td class="center">8/21</td>
 				<td></td>
-				<td class="center"><a href="admin/html/page/app_version_view.html" target="_blank" title="새창열림">링크이동</a></td>
+				<td class="center"><a href="admin/html/page/app_version_view.html" target="_blank" title="새창열림">보기</a></td>
 			</tr>
 			<tr>
 				<td class="center"></td>
@@ -192,7 +190,7 @@
 				<td class="center"><em class="ico end">e</em></td>
 				<td class="center">8/21</td>
 				<td></td>
-				<td class="center"><a href="admin/html/page/app_version_write.html" target="_blank" title="새창열림">링크이동</a></td>
+				<td class="center"><a href="admin/html/page/app_version_write.html" target="_blank" title="새창열림">보기</a></td>
 			</tr>
 			<tr>
 				<td class="center"></td>
@@ -205,7 +203,7 @@
 				<td class="center"><em class="ico end">e</em></td>
 				<td class="center">8/21</td>
 				<td></td>
-				<td class="center"><a href="admin/html/page/app_version_modify.html" target="_blank" title="새창열림">링크이동</a></td>
+				<td class="center"><a href="admin/html/page/app_version_modify.html" target="_blank" title="새창열림">보기</a></td>
 			</tr>
 			<tr>
 				<td class="center"></td>
@@ -218,7 +216,7 @@
 				<td class="center"><em class="ico end">e</em></td>
 				<td class="center">9/4</td>
 				<td></td>
-				<td class="center"><a href="admin/html/page/notice_list.html" target="_blank" title="새창열림">링크이동</a></td>
+				<td class="center"><a href="admin/html/page/notice_list.html" target="_blank" title="새창열림">보기</a></td>
 			</tr>
 			<tr>
 				<td class="center"></td>
@@ -231,7 +229,7 @@
 				<td class="center"><em class="ico end">e</em></td>
 				<td class="center">8/14</td>
 				<td></td>
-				<td class="center"><a href="admin/html/page/notice_view.html" target="_blank" title="새창열림">링크이동</a></td>
+				<td class="center"><a href="admin/html/page/notice_view.html" target="_blank" title="새창열림">보기</a></td>
 			</tr>
 			<tr>
 				<td class="center"></td>
@@ -244,7 +242,7 @@
 				<td class="center"><em class="ico end">e</em></td>
 				<td class="center">9/4</td>
 				<td></td>
-				<td class="center"><a href="admin/html/page/notice_write.html" target="_blank" title="새창열림">링크이동</a></td>
+				<td class="center"><a href="admin/html/page/notice_write.html" target="_blank" title="새창열림">보기</a></td>
 			</tr>
 			<tr>
 				<td class="center"></td>
@@ -257,7 +255,7 @@
 				<td class="center"><em class="ico end">e</em></td>
 				<td class="center">9/4</td>
 				<td></td>
-				<td class="center"><a href="admin/html/page/notice_modify.html" target="_blank" title="새창열림">링크이동</a></td>
+				<td class="center"><a href="admin/html/page/notice_modify.html" target="_blank" title="새창열림">보기</a></td>
 			</tr>
 			<tr>
 				<td class="center"></td>
@@ -270,7 +268,7 @@
 				<td class="center"><em class="ico end">e</em></td>
 				<td class="center">9/4</td>
 				<td></td>
-				<td class="center"><a href="admin/html/page/news_list.html" target="_blank" title="새창열림">링크이동</a></td>
+				<td class="center"><a href="admin/html/page/news_list.html" target="_blank" title="새창열림">보기</a></td>
 			</tr>
 			<tr>
 				<td class="center"></td>
@@ -283,7 +281,7 @@
 				<td class="center"><em class="ico end">e</em></td>
 				<td class="center">8/16</td>
 				<td></td>
-				<td class="center"><a href="admin/html/page/news_view.html" target="_blank" title="새창열림">링크이동</a></td>
+				<td class="center"><a href="admin/html/page/news_view.html" target="_blank" title="새창열림">보기</a></td>
 			</tr>
 			<tr>
 				<td class="center"></td>
@@ -296,7 +294,7 @@
 				<td class="center"><em class="ico end">e</em></td>
 				<td class="center">9/4</td>
 				<td></td>
-				<td class="center"><a href="admin/html/page/news_write.html" target="_blank" title="새창열림">링크이동</a></td>
+				<td class="center"><a href="admin/html/page/news_write.html" target="_blank" title="새창열림">보기</a></td>
 			</tr>
 			<tr>
 				<td class="center"></td>
@@ -309,7 +307,7 @@
 				<td class="center"><em class="ico end">e</em></td>
 				<td class="center">9/4</td>
 				<td></td>
-				<td class="center"><a href="admin/html/page/news_modify.html" target="_blank" title="새창열림">링크이동</a></td>
+				<td class="center"><a href="admin/html/page/news_modify.html" target="_blank" title="새창열림">보기</a></td>
 			</tr>
 			<tr>
 				<td class="center"></td>
@@ -322,7 +320,7 @@
 				<td class="center"><em class="ico end">e</em></td>
 				<td class="center">8/18</td>
 				<td></td>
-				<td class="center"><a href="admin/html/page/faq_list.html" target="_blank" title="새창열림">링크이동</a></td>
+				<td class="center"><a href="admin/html/page/faq_list.html" target="_blank" title="새창열림">보기</a></td>
 			</tr>
 			<tr>
 				<td class="center"></td>
@@ -335,7 +333,7 @@
 				<td class="center"><em class="ico end">e</em></td>
 				<td class="center">8/18</td>
 				<td></td>
-				<td class="center"><a href="admin/html/page/faq_write.html" target="_blank" title="새창열림">링크이동</a></td>
+				<td class="center"><a href="admin/html/page/faq_write.html" target="_blank" title="새창열림">보기</a></td>
 			</tr>
 			<tr>
 				<td class="center"></td>
@@ -348,7 +346,7 @@
 				<td class="center"><em class="ico end">e</em></td>
 				<td class="center">8/18</td>
 				<td></td>
-				<td class="center"><a href="admin/html/page/faq_modify.html" target="_blank" title="새창열림">링크이동</a></td>
+				<td class="center"><a href="admin/html/page/faq_modify.html" target="_blank" title="새창열림">보기</a></td>
 			</tr>
 			<tr>
 				<td class="center"></td>
@@ -361,7 +359,7 @@
 				<td class="center"><em class="ico end">e</em></td>
 				<td class="center">8/17</td>
 				<td></td>
-				<td class="center"><a href="admin/html/page/qna_list.html" target="_blank" title="새창열림">링크이동</a></td>
+				<td class="center"><a href="admin/html/page/qna_list.html" target="_blank" title="새창열림">보기</a></td>
 			</tr>
 			<tr>
 				<td class="center"></td>
@@ -374,7 +372,7 @@
 				<td class="center"><em class="ico end">e</em></td>
 				<td class="center">8/17</td>
 				<td></td>
-				<td class="center"><a href="admin/html/page/qna_view.html" target="_blank" title="새창열림">링크이동</a></td>
+				<td class="center"><a href="admin/html/page/qna_view.html" target="_blank" title="새창열림">보기</a></td>
 			</tr>
 			<tr>
 				<td class="center"></td>
@@ -387,7 +385,7 @@
 				<td class="center"><em class="ico end">e</em></td>
 				<td class="center">8/17</td>
 				<td></td>
-				<td class="center"><a href="admin/html/page/qna_write.html" target="_blank" title="새창열림">링크이동</a></td>
+				<td class="center"><a href="admin/html/page/qna_write.html" target="_blank" title="새창열림">보기</a></td>
 			</tr>
 			<tr>
 				<td class="center"></td>
@@ -400,7 +398,7 @@
 				<td class="center"><em class="ico end">e</em></td>
 				<td class="center">8/17</td>
 				<td></td>
-				<td class="center"><a href="admin/html/page/qna_modify.html" target="_blank" title="새창열림">링크이동</a></td>
+				<td class="center"><a href="admin/html/page/qna_modify.html" target="_blank" title="새창열림">보기</a></td>
 			</tr>
 			<tr>
 				<td class="center"></td>
@@ -413,7 +411,7 @@
 				<td class="center"><em class="ico end">e</em></td>
 				<td class="center">8/22</td>
 				<td></td>
-				<td class="center"><a href="admin/html/page/am_create.html" target="_blank" title="새창열림">링크이동</a></td>
+				<td class="center"><a href="admin/html/page/am_create.html" target="_blank" title="새창열림">보기</a></td>
 			</tr>
 			<tr>
 				<td class="center"></td>
@@ -426,7 +424,7 @@
 				<td class="center"><em class="ico end">e</em></td>
 				<td class="center">8/22</td>
 				<td></td>
-				<td class="center"><a href="admin/html/page/am_list.html" target="_blank" title="새창열림">링크이동</a></td>
+				<td class="center"><a href="admin/html/page/am_list.html" target="_blank" title="새창열림">보기</a></td>
 			</tr>
 			<tr>
 				<td class="center"></td>
@@ -439,7 +437,7 @@
 				<td class="center"><em class="ico end">e</em></td>
 				<td class="center">9/4</td>
 				<td></td>
-				<td class="center"><a href="admin/html/page/am_view.html" target="_blank" title="새창열림">링크이동</a></td>
+				<td class="center"><a href="admin/html/page/am_view.html" target="_blank" title="새창열림">보기</a></td>
 			</tr>
 			<tr>
 				<td class="center"></td>
@@ -452,7 +450,7 @@
 				<td class="center"><em class="ico end">e</em></td>
 				<td class="center">9/4</td>
 				<td></td>
-				<td class="center"><a href="admin/html/page/am_modify.html" target="_blank" title="새창열림">링크이동</a></td>
+				<td class="center"><a href="admin/html/page/am_modify.html" target="_blank" title="새창열림">보기</a></td>
 			</tr>
 			<tr>
 				<td class="center"></td>
@@ -465,7 +463,7 @@
 				<td class="center"><em class="ico end">e</em></td>
 				<td class="center">9/4</td>
 				<td></td>
-				<td class="center"><a href="admin/html/page/am_modify_user.html" target="_blank" title="새창열림">링크이동</a></td>
+				<td class="center"><a href="admin/html/page/am_modify_user.html" target="_blank" title="새창열림">보기</a></td>
 			</tr>
 			<tr>
 				<td class="center"></td>
@@ -478,7 +476,7 @@
 				<td class="center"><em class="ico end">e</em></td>
 				<td class="center">8/25</td>
 				<td></td>
-				<td class="center"><a href="admin/html/page/cm_create.html" target="_blank" title="새창열림">링크이동</a></td>
+				<td class="center"><a href="admin/html/page/cm_create.html" target="_blank" title="새창열림">보기</a></td>
 			</tr>
 			<tr>
 				<td class="center"></td>
@@ -491,7 +489,7 @@
 				<td class="center"><em class="ico end">e</em></td>
 				<td class="center">9/22</td>
 				<td></td>
-				<td class="center"><a href="admin/html/page/cm_list.html" target="_blank" title="새창열림">링크이동</a></td>
+				<td class="center"><a href="admin/html/page/cm_list.html" target="_blank" title="새창열림">보기</a></td>
 			</tr>
 			<tr>
 				<td class="center"></td>
@@ -504,7 +502,7 @@
 				<td class="center"><em class="ico end">e</em></td>
 				<td class="center">9/25</td>
 				<td></td>
-				<td class="center"><a href="admin/html/page/cm_view.html" target="_blank" title="새창열림">링크이동</a></td>
+				<td class="center"><a href="admin/html/page/cm_view.html" target="_blank" title="새창열림">보기</a></td>
 			</tr>
 			<tr>
 				<td class="center"></td>
@@ -517,7 +515,7 @@
 				<td class="center"><em class="ico end">e</em></td>
 				<td class="center">9/22</td>
 				<td></td>
-				<td class="center"><a href="admin/html/page/cm_list_preparing.html" target="_blank" title="새창열림">링크이동</a></td>
+				<td class="center"><a href="admin/html/page/cm_list_preparing.html" target="_blank" title="새창열림">보기</a></td>
 			</tr>
 			<tr>
 				<td class="center"></td>
@@ -530,7 +528,7 @@
 				<td class="center"><em class="ico end">e</em></td>
 				<td class="center">9/25</td>
 				<td></td>
-				<td class="center"><a href="admin/html/page/cm_view_preparing.html" target="_blank" title="새창열림">링크이동</a></td>
+				<td class="center"><a href="admin/html/page/cm_view_preparing.html" target="_blank" title="새창열림">보기</a></td>
 			</tr>
 			<tr>
 				<td class="center"></td>
@@ -543,7 +541,7 @@
 				<td class="center"><em class="ico end">e</em></td>
 				<td class="center">8/25</td>
 				<td></td>
-				<td class="center"><a href="admin/html/page/cm_modify.html" target="_blank" title="새창열림">링크이동</a></td>
+				<td class="center"><a href="admin/html/page/cm_modify.html" target="_blank" title="새창열림">보기</a></td>
 			</tr>
 			<tr>
 				<td class="center"></td>
@@ -556,7 +554,7 @@
 				<td class="center"><em class="ico end">e</em></td>
 				<td class="center">8/31</td>
 				<td></td>
-				<td class="center"><a href="admin/html/page/tm_adr_list.html" target="_blank" title="새창열림">링크이동</a></td>
+				<td class="center"><a href="admin/html/page/tm_adr_list.html" target="_blank" title="새창열림">보기</a></td>
 			</tr>
 			<tr>
 				<td class="center"></td>
@@ -569,7 +567,7 @@
 				<td class="center"><em class="ico end">e</em></td>
 				<td class="center">8/23</td>
 				<td></td>
-				<td class="center"><a href="admin/html/page/tm_adr_view.html" target="_blank" title="새창열림">링크이동</a></td>
+				<td class="center"><a href="admin/html/page/tm_adr_view.html" target="_blank" title="새창열림">보기</a></td>
 			</tr>
 			<tr>
 				<td class="center"></td>
@@ -582,7 +580,7 @@
 				<td class="center"><em class="ico end">e</em></td>
 				<td class="center">8/31</td>
 				<td></td>
-				<td class="center"><a href="admin/html/page/tm_teachers_list.html" target="_blank" title="새창열림">링크이동</a></td>
+				<td class="center"><a href="admin/html/page/tm_teachers_list.html" target="_blank" title="새창열림">보기</a></td>
 			</tr>
 			<tr>
 				<td class="center"></td>
@@ -595,7 +593,7 @@
 				<td class="center"><em class="ico end">e</em></td>
 				<td class="center">8/31</td>
 				<td></td>
-				<td class="center"><a href="admin/html/page/tm_teachers_view.html" target="_blank" title="새창열림">링크이동</a></td>
+				<td class="center"><a href="admin/html/page/tm_teachers_view.html" target="_blank" title="새창열림">보기</a></td>
 			</tr>
 			<tr>
 				<td class="center"></td>
@@ -608,7 +606,7 @@
 				<td class="center"><em class="ico end">e</em></td>
 				<td class="center">8/23</td>
 				<td></td>
-				<td class="center"><a href="admin/html/page/device_list.html" target="_blank" title="새창열림">링크이동</a></td>
+				<td class="center"><a href="admin/html/page/device_list.html" target="_blank" title="새창열림">보기</a></td>
 			</tr>
 			<tr>
 				<td class="center"></td>
@@ -621,7 +619,7 @@
 				<td class="center"><em class="ico end">e</em></td>
 				<td class="center">9/6</td>
 				<td></td>
-				<td class="center"><a href="admin/html/page/sm_list.html" target="_blank" title="새창열림">링크이동</a></td>
+				<td class="center"><a href="admin/html/page/sm_list.html" target="_blank" title="새창열림">보기</a></td>
 			</tr>
 			<tr>
 				<td class="center"></td>
@@ -634,7 +632,7 @@
 				<td class="center"><em class="ico end">e</em></td>
 				<td class="center">9/6</td>
 				<td></td>
-				<td class="center"><a href="admin/html/page/sm_view.html" target="_blank" title="새창열림">링크이동</a></td>
+				<td class="center"><a href="admin/html/page/sm_view.html" target="_blank" title="새창열림">보기</a></td>
 			</tr>
 			<tr>
 				<td class="center"></td>
@@ -647,7 +645,7 @@
 				<td class="center"><em class="ico end">e</em></td>
 				<td class="center">9/26</td>
 				<td></td>
-				<td class="center"><a href="admin/html/page/sm_join.html" target="_blank" title="새창열림">링크이동</a></td>
+				<td class="center"><a href="admin/html/page/sm_join.html" target="_blank" title="새창열림">보기</a></td>
 			</tr>
 			<tr>
 				<td class="center"></td>
@@ -660,7 +658,7 @@
 				<td class="center"><em class="ico end">e</em></td>
 				<td class="center">9/26</td>
 				<td></td>
-				<td class="center"><a href="admin/html/page/sm_modify.html" target="_blank" title="새창열림">링크이동</a></td>
+				<td class="center"><a href="admin/html/page/sm_modify.html" target="_blank" title="새창열림">보기</a></td>
 			</tr>
 			<tr>
 				<td class="center"></td>
@@ -673,7 +671,7 @@
 				<td class="center"><em class="ico end">e</em></td>
 				<td class="center">8/28</td>
 				<td></td>
-				<td class="center"><a href="admin/html/page/my_info.html" target="_blank" title="새창열림">링크이동</a></td>
+				<td class="center"><a href="admin/html/page/my_info.html" target="_blank" title="새창열림">보기</a></td>
 			</tr>
 			<tr>
 				<td class="center"></td>
@@ -686,7 +684,7 @@
 				<td class="center"><em class="ico end">e</em></td>
 				<td class="center">8/28</td>
 				<td></td>
-				<td class="center"><a href="admin/html/page/my_info_modify.html" target="_blank" title="새창열림">링크이동</a></td>
+				<td class="center"><a href="admin/html/page/my_info_modify.html" target="_blank" title="새창열림">보기</a></td>
 			</tr>
 			<tr>
 				<td class="center"></td>
@@ -699,7 +697,7 @@
 				<td class="center"><em class="ico end">e</em></td>
 				<td class="center">8/29</td>
 				<td></td>
-				<td class="center"><a href="admin/html/page/s_notice_list.html" target="_blank" title="새창열림">링크이동</a></td>
+				<td class="center"><a href="admin/html/page/s_notice_list.html" target="_blank" title="새창열림">보기</a></td>
 			</tr>
 			<tr>
 				<td class="center"></td>
@@ -712,7 +710,7 @@
 				<td class="center"><em class="ico end">e</em></td>
 				<td class="center">8/29</td>
 				<td></td>
-				<td class="center"><a href="admin/html/page/s_notice_view.html" target="_blank" title="새창열림">링크이동</a></td>
+				<td class="center"><a href="admin/html/page/s_notice_view.html" target="_blank" title="새창열림">보기</a></td>
 			</tr>
 			<tr>
 				<td class="center"></td>
@@ -725,7 +723,7 @@
 				<td class="center"><em class="ico end">e</em></td>
 				<td class="center">8/29</td>
 				<td></td>
-				<td class="center"><a href="admin/html/page/s_notice_write.html" target="_blank" title="새창열림">링크이동</a></td>
+				<td class="center"><a href="admin/html/page/s_notice_write.html" target="_blank" title="새창열림">보기</a></td>
 			</tr>
 			<tr>
 				<td class="center"></td>
@@ -738,7 +736,7 @@
 				<td class="center"><em class="ico end">e</em></td>
 				<td class="center">8/29</td>
 				<td></td>
-				<td class="center"><a href="admin/html/page/s_notice_modify.html" target="_blank" title="새창열림">링크이동</a></td>
+				<td class="center"><a href="admin/html/page/s_notice_modify.html" target="_blank" title="새창열림">보기</a></td>
 			</tr>
 			<tr>
 				<td class="center"></td>
@@ -751,7 +749,7 @@
 				<td class="center"><em class="ico end">e</em></td>
 				<td class="center">8/30</td>
 				<td></td>
-				<td class="center"><a href="admin/html/page/h_notice_list.html" target="_blank" title="새창열림">링크이동</a></td>
+				<td class="center"><a href="admin/html/page/h_notice_list.html" target="_blank" title="새창열림">보기</a></td>
 			</tr>
 			<tr>
 				<td class="center"></td>
@@ -764,7 +762,7 @@
 				<td class="center"><em class="ico end">e</em></td>
 				<td class="center">8/30</td>
 				<td></td>
-				<td class="center"><a href="admin/html/page/h_notice_view.html" target="_blank" title="새창열림">링크이동</a></td>
+				<td class="center"><a href="admin/html/page/h_notice_view.html" target="_blank" title="새창열림">보기</a></td>
 			</tr>
 			<tr>
 				<td class="center"></td>
@@ -777,7 +775,7 @@
 				<td class="center"><em class="ico end">e</em></td>
 				<td class="center">8/30</td>
 				<td></td>
-				<td class="center"><a href="admin/html/page/h_notice_write.html" target="_blank" title="새창열림">링크이동</a></td>
+				<td class="center"><a href="admin/html/page/h_notice_write.html" target="_blank" title="새창열림">보기</a></td>
 			</tr>
 			<tr>
 				<td class="center"></td>
@@ -790,7 +788,7 @@
 				<td class="center"><em class="ico end">e</em></td>
 				<td class="center">8/30</td>
 				<td></td>
-				<td class="center"><a href="admin/html/page/h_notice_modify.html" target="_blank" title="새창열림">링크이동</a></td>
+				<td class="center"><a href="admin/html/page/h_notice_modify.html" target="_blank" title="새창열림">보기</a></td>
 			</tr>
 			<tr>
 				<td class="center"></td>
@@ -803,7 +801,7 @@
 				<td class="center"><em class="ico end">e</em></td>
 				<td class="center">9/22</td>
 				<td></td>
-				<td class="center"><a href="admin/html/page/m_class_list.html" target="_blank" title="새창열림">링크이동</a></td>
+				<td class="center"><a href="admin/html/page/m_class_list.html" target="_blank" title="새창열림">보기</a></td>
 			</tr>
 			<tr>
 				<td class="center"></td>
@@ -816,7 +814,7 @@
 				<td class="center"><em class="ico end">e</em></td>
 				<td class="center">9/22</td>
 				<td></td>
-				<td class="center"><a href="admin/html/page/m_class_list(Finished class).html" target="_blank" title="새창열림">링크이동</a></td>
+				<td class="center"><a href="admin/html/page/m_class_list(Finished class).html" target="_blank" title="새창열림">보기</a></td>
 			</tr>
 			<tr>
 				<td class="center"></td>
@@ -829,7 +827,7 @@
 				<td class="center"><em class="ico end">e</em></td>
 				<td class="center">9/25</td>
 				<td></td>
-				<td class="center"><a href="admin/html/page/m_class_view.html" target="_blank" title="새창열림">링크이동</a></td>
+				<td class="center"><a href="admin/html/page/m_class_view.html" target="_blank" title="새창열림">보기</a></td>
 			</tr>
 			<tr>
 				<td class="center"></td>
@@ -842,7 +840,7 @@
 				<td class="center"><em class="ico end">e</em></td>
 				<td class="center">9/22</td>
 				<td></td>
-				<td class="center"><a href="admin/html/page/m_class_st.html" target="_blank" title="새창열림">링크이동</a></td>
+				<td class="center"><a href="admin/html/page/m_class_st.html" target="_blank" title="새창열림">보기</a></td>
 			</tr>
 			<tr>
 				<td class="center"></td>
@@ -855,7 +853,7 @@
 				<td class="center"><em class="ico end">e</em></td>
 				<td class="center">9/22</td>
 				<td></td>
-				<td class="center"><a href="admin/html/page/m_class_st_info.html" target="_blank" title="새창열림">링크이동</a></td>
+				<td class="center"><a href="admin/html/page/m_class_st_info.html" target="_blank" title="새창열림">보기</a></td>
 			</tr>
 			<tr>
 				<td class="center"></td>
@@ -868,7 +866,7 @@
 				<td class="center"><em class="ico end">e</em></td>
 				<td class="center">8/31</td>
 				<td></td>
-				<td class="center"><a href="admin/html/page/m_class_modify.html" target="_blank" title="새창열림">링크이동</a></td>
+				<td class="center"><a href="admin/html/page/m_class_modify.html" target="_blank" title="새창열림">보기</a></td>
 			</tr>
 			<tr>
 				<td class="center"></td>
@@ -881,7 +879,7 @@
 				<td class="center"><em class="ico end">e</em></td>
 				<td class="center">9/26</td>
 				<td></td>
-				<td class="center"><a href="admin/html/page/m_st_list.html" target="_blank" title="새창열림">링크이동</a></td>
+				<td class="center"><a href="admin/html/page/m_st_list.html" target="_blank" title="새창열림">보기</a></td>
 			</tr>
 			<tr>
 				<td class="center"></td>
@@ -894,7 +892,7 @@
 				<td class="center"><em class="ico end">e</em></td>
 				<td class="center">9/22</td>
 				<td></td>
-				<td class="center"><a href="admin/html/page/ss_info.html" target="_blank" title="새창열림">링크이동</a></td>
+				<td class="center"><a href="admin/html/page/ss_info.html" target="_blank" title="새창열림">보기</a></td>
 			</tr>
 			<tr>
 				<td class="center"></td>
@@ -907,7 +905,7 @@
 				<td class="center"><em class="ico end">e</em></td>
 				<td class="center">9/25</td>
 				<td></td>
-				<td class="center"><a href="admin/html/page/join_modify(students).html" target="_blank" title="새창열림">링크이동</a></td>
+				<td class="center"><a href="admin/html/page/join_modify(students).html" target="_blank" title="새창열림">보기</a></td>
 			</tr>
 			<tr>
 				<td class="center"></td>
@@ -920,7 +918,7 @@
 				<td class="center"><em class="ico end">e</em></td>
 				<td class="center">9/19</td>
 				<td></td>
-				<td class="center"><a href="admin/html/page/ss_notice_list.html" target="_blank" title="새창열림">링크이동</a></td>
+				<td class="center"><a href="admin/html/page/ss_notice_list.html" target="_blank" title="새창열림">보기</a></td>
 			</tr>
 			<tr>
 				<td class="center"></td>
@@ -933,7 +931,7 @@
 				<td class="center"><em class="ico end">e</em></td>
 				<td class="center">9/19</td>
 				<td></td>
-				<td class="center"><a href="admin/html/page/ss_notice_view.html" target="_blank" title="새창열림">링크이동</a></td>
+				<td class="center"><a href="admin/html/page/ss_notice_view.html" target="_blank" title="새창열림">보기</a></td>
 			</tr>
 			<tr>
 				<td class="center"></td>
@@ -946,7 +944,7 @@
 				<td class="center"><em class="ico end">e</em></td>
 				<td class="center">9/19</td>
 				<td></td>
-				<td class="center"><a href="admin/html/page/ss_hnotice_list.html" target="_blank" title="새창열림">링크이동</a></td>
+				<td class="center"><a href="admin/html/page/ss_hnotice_list.html" target="_blank" title="새창열림">보기</a></td>
 			</tr>
 			<tr>
 				<td class="center"></td>
@@ -959,7 +957,7 @@
 				<td class="center"><em class="ico end">e</em></td>
 				<td class="center">9/19</td>
 				<td></td>
-				<td class="center"><a href="admin/html/page/ss_hnotice_view.html" target="_blank" title="새창열림">링크이동</a></td>
+				<td class="center"><a href="admin/html/page/ss_hnotice_view.html" target="_blank" title="새창열림">보기</a></td>
 			</tr>
 			<tr>
 				<td class="center"></td>
@@ -972,7 +970,7 @@
 				<td class="center"><em class="ico end">e</em></td>
 				<td class="center">9/19</td>
 				<td></td>
-				<td class="center"><a href="admin/html/page/ss_class_list.html" target="_blank" title="새창열림">링크이동</a></td>
+				<td class="center"><a href="admin/html/page/ss_class_list.html" target="_blank" title="새창열림">보기</a></td>
 			</tr>
 			<tr>
 				<td class="center"></td>
@@ -985,7 +983,7 @@
 				<td class="center"><em class="ico end">e</em></td>
 				<td class="center">9/19</td>
 				<td></td>
-				<td class="center"><a href="admin/html/page/ss_class_view.html" target="_blank" title="새창열림">링크이동</a></td>
+				<td class="center"><a href="admin/html/page/ss_class_view.html" target="_blank" title="새창열림">보기</a></td>
 			</tr>
 			<tr>
 				<td class="center"></td>
@@ -998,7 +996,7 @@
 				<td class="center"><em class="ico end">e</em></td>
 				<td class="center">9/4</td>
 				<td></td>
-				<td class="center"><a href="admin/html/page/rm_create.html" target="_blank" title="새창열림">링크이동</a></td>
+				<td class="center"><a href="admin/html/page/rm_create.html" target="_blank" title="새창열림">보기</a></td>
 			</tr>
 			<tr>
 				<td class="center"></td>
@@ -1011,7 +1009,7 @@
 				<td class="center"><em class="ico end">e</em></td>
 				<td class="center">9/5</td>
 				<td></td>
-				<td class="center"><a href="admin/html/page/om_create_list.html" target="_blank" title="새창열림">링크이동</a></td>
+				<td class="center"><a href="admin/html/page/om_create_list.html" target="_blank" title="새창열림">보기</a></td>
 			</tr>
 			<tr>
 				<td class="center"></td>
@@ -1024,7 +1022,7 @@
 				<td class="center"><em class="ico end">e</em></td>
 				<td class="center">9/6</td>
 				<td></td>
-				<td class="center"><a href="admin/html/page/om_search_list.html" target="_blank" title="새창열림">링크이동</a></td>
+				<td class="center"><a href="admin/html/page/om_search_list.html" target="_blank" title="새창열림">보기</a></td>
 			</tr>
 			<tr>
 				<td class="center"></td>
@@ -1037,7 +1035,7 @@
 				<td class="center"><em class="ico end">e</em></td>
 				<td class="center">9/6</td>
 				<td></td>
-				<td class="center"><a href="admin/html/page/om_search_details.html" target="_blank" title="새창열림">링크이동</a></td>
+				<td class="center"><a href="admin/html/page/om_search_details.html" target="_blank" title="새창열림">보기</a></td>
 			</tr>
 			<tr>
 				<td class="center"></td>
@@ -1050,7 +1048,7 @@
 				<td class="center"><em class="ico end">e</em></td>
 				<td class="center">9/7</td>
 				<td></td>
-				<td class="center"><a href="admin/html/page/om_search_detailed.html" target="_blank" title="새창열림">링크이동</a></td>
+				<td class="center"><a href="admin/html/page/om_search_detailed.html" target="_blank" title="새창열림">보기</a></td>
 			</tr>
 			<tr>
 				<td class="center"></td>
@@ -1063,7 +1061,7 @@
 				<td class="center"><em class="ico end">e</em></td>
 				<td class="center">9/1</td>
 				<td></td>
-				<td class="center"><a href="admin/html/page/error_404.html" target="_blank" title="새창열림">링크이동</a></td>
+				<td class="center"><a href="admin/html/page/error_404.html" target="_blank" title="새창열림">보기</a></td>
 			</tr>
 			<tr>
 				<td class="center"></td>
@@ -1076,7 +1074,7 @@
 				<td class="center"><em class="ico end">e</em></td>
 				<td class="center">9/1</td>
 				<td></td>
-				<td class="center"><a href="admin/html/page/error_500.html" target="_blank" title="새창열림">링크이동</a></td>
+				<td class="center"><a href="admin/html/page/error_500.html" target="_blank" title="새창열림">보기</a></td>
 			</tr>
 			<tr>
 				<td class="center"></td>
@@ -1089,7 +1087,7 @@
 				<td class="center"><em class="ico end">e</em></td>
 				<td class="center">9/8</td>
 				<td></td>
-				<td class="center"><a href="admin/html/page/pw_reset.html" target="_blank" title="새창열림">링크이동</a></td>
+				<td class="center"><a href="admin/html/page/pw_reset.html" target="_blank" title="새창열림">보기</a></td>
 			</tr>
 			<tr>
 				<td class="center"></td>
@@ -1102,7 +1100,7 @@
 				<td class="center"><em class="ico end">e</em></td>
 				<td class="center">9/8</td>
 				<td></td>
-				<td class="center"><a href="admin/html/page/pw_change.html" target="_blank" title="새창열림">링크이동</a></td>
+				<td class="center"><a href="admin/html/page/pw_change.html" target="_blank" title="새창열림">보기</a></td>
 			</tr>
 			<tr>
 				<td class="center"></td>
@@ -1115,7 +1113,7 @@
 				<td class="center"><em class="ico end">e</em></td>
 				<td class="center">9/8</td>
 				<td></td>
-				<td class="center"><a href="admin/html/page/em_teacher_register.html" target="_blank" title="새창열림">링크이동</a></td>
+				<td class="center"><a href="admin/html/page/em_teacher_register.html" target="_blank" title="새창열림">보기</a></td>
 			</tr>
 			<tr>
 				<td class="center"></td>
@@ -1128,7 +1126,7 @@
 				<td class="center"><em class="ico end">e</em></td>
 				<td class="center">9/8</td>
 				<td></td>
-				<td class="center"><a href="admin/html/page/em_teacher_register_admin.html" target="_blank" title="새창열림">링크이동</a></td>
+				<td class="center"><a href="admin/html/page/em_teacher_register_admin.html" target="_blank" title="새창열림">보기</a></td>
 			</tr>
 			<tr>
 				<td class="center"></td>
@@ -1141,7 +1139,7 @@
 				<td class="center"><em class="ico end">e</em></td>
 				<td class="center">9/8</td>
 				<td></td>
-				<td class="center"><a href="admin/html/page/em_rejection.html" target="_blank" title="새창열림">링크이동</a></td>
+				<td class="center"><a href="admin/html/page/em_rejection.html" target="_blank" title="새창열림">보기</a></td>
 			</tr>
 		</tbody>
 	</table>
@@ -1187,7 +1185,7 @@
 				<td class="center"><em class="ico end">e</em></td>
 				<td class="center">9/18</td>
 				<td></td>
-				<td class="center"><a href="app_s/html/page/sample.html" target="_blank" title="새창열림">링크이동</a></td>
+				<td class="center"><a href="app_s/html/page/sample.html" target="_blank" title="새창열림">보기</a></td>
 			</tr>
 			<tr>
 				<td class="center"></td>
@@ -1199,7 +1197,7 @@
 				<td class="center"><em class="ico end">e</em></td>
 				<td class="center">9/18</td>
 				<td></td>
-				<td class="center"><a href="app_s/html/page/splash.html" target="_blank" title="새창열림">링크이동</a></td>
+				<td class="center"><a href="app_s/html/page/splash.html" target="_blank" title="새창열림">보기</a></td>
 			</tr>
 			<tr>
 				<td class="center"></td>
@@ -1211,7 +1209,7 @@
 				<td class="center"><em class="ico end">e</em></td>
 				<td class="center">9/18</td>
 				<td></td>
-				<td class="center"><a href="app_s/html/page/loading.html" target="_blank" title="새창열림">링크이동</a></td>
+				<td class="center"><a href="app_s/html/page/loading.html" target="_blank" title="새창열림">보기</a></td>
 			</tr>
 			<tr>
 				<td class="center"></td>
@@ -1223,7 +1221,7 @@
 				<td class="center"><em class="ico end">e</em></td>
 				<td class="center">9/18</td>
 				<td></td>
-				<td class="center"><a href="app_s/html/page/student_main.html" target="_blank" title="새창열림">링크이동</a></td>
+				<td class="center"><a href="app_s/html/page/student_main.html" target="_blank" title="새창열림">보기</a></td>
 			</tr>
 			<tr>
 				<td class="center"></td>
@@ -1235,7 +1233,7 @@
 				<td class="center"><em class="ico end">e</em></td>
 				<td class="center">9/19</td>
 				<td></td>
-				<td class="center"><a href="app_s/html/page/students_notice_list.html" target="_blank" title="새창열림">링크이동</a></td>
+				<td class="center"><a href="app_s/html/page/students_notice_list.html" target="_blank" title="새창열림">보기</a></td>
 			</tr>
 			<tr>
 				<td class="center"></td>
@@ -1247,7 +1245,7 @@
 				<td class="center"><em class="ico end">e</em></td>
 				<td class="center">9/19</td>
 				<td></td>
-				<td class="center"><a href="app_s/html/page/students_notice_detail.html" target="_blank" title="새창열림">링크이동</a></td>
+				<td class="center"><a href="app_s/html/page/students_notice_detail.html" target="_blank" title="새창열림">보기</a></td>
 			</tr>
 			<tr>
 				<td class="center"></td>
@@ -1259,7 +1257,7 @@
 				<td class="center"><em class="ico end">e</em></td>
 				<td class="center">9/19</td>
 				<td></td>
-				<td class="center"><a href="app_s/html/page/homework.html" target="_blank" title="새창열림">링크이동</a></td>
+				<td class="center"><a href="app_s/html/page/homework.html" target="_blank" title="새창열림">보기</a></td>
 			</tr>
 			<tr>
 				<td class="center"></td>
@@ -1271,7 +1269,7 @@
 				<td class="center"><em class="ico end">e</em></td>
 				<td class="center">9/19</td>
 				<td></td>
-				<td class="center"><a href="app_s/html/page/homework_none.html" target="_blank" title="새창열림">링크이동</a></td>
+				<td class="center"><a href="app_s/html/page/homework_none.html" target="_blank" title="새창열림">보기</a></td>
 			</tr>
 			<tr>
 				<td class="center"></td>
@@ -1283,7 +1281,7 @@
 				<td class="center"><em class="ico end">e</em></td>
 				<td class="center">9/19</td>
 				<td></td>
-				<td class="center"><a href="app_s/html/page/homework_list.html" target="_blank" title="새창열림">링크이동</a></td>
+				<td class="center"><a href="app_s/html/page/homework_list.html" target="_blank" title="새창열림">보기</a></td>
 			</tr>
 			<tr>
 				<td class="center"></td>
@@ -1295,7 +1293,7 @@
 				<td class="center"><em class="ico end">e</em></td>
 				<td class="center">9/19</td>
 				<td></td>
-				<td class="center"><a href="app_s/html/page/homework_view.html" target="_blank" title="새창열림">링크이동</a></td>
+				<td class="center"><a href="app_s/html/page/homework_view.html" target="_blank" title="새창열림">보기</a></td>
 			</tr>
 			<tr>
 				<td class="center"></td>
@@ -1307,7 +1305,7 @@
 				<td class="center"><em class="ico end">e</em></td>
 				<td class="center">9/21</td>
 				<td></td>
-				<td class="center"><a href="app_s/html/page/ss_information.html" target="_blank" title="새창열림">링크이동</a></td>
+				<td class="center"><a href="app_s/html/page/ss_information.html" target="_blank" title="새창열림">보기</a></td>
 			</tr>
 			<tr>
 				<td class="center"></td>
@@ -1319,7 +1317,7 @@
 				<td class="center"><em class="ico end">e</em></td>
 				<td class="center">9/21</td>
 				<td></td>
-				<td class="center"><a href="app_s/html/page/ss_information_modify.html" target="_blank" title="새창열림">링크이동</a></td>
+				<td class="center"><a href="app_s/html/page/ss_information_modify.html" target="_blank" title="새창열림">보기</a></td>
 			</tr>
 			<tr>
 				<td class="center"></td>
@@ -1331,7 +1329,7 @@
 				<td class="center"><em class="ico end">e</em></td>
 				<td class="center">9/20</td>
 				<td></td>
-				<td class="center"><a href="app_s/html/page/device_configuration.html" target="_blank" title="새창열림">링크이동</a></td>
+				<td class="center"><a href="app_s/html/page/device_configuration.html" target="_blank" title="새창열림">보기</a></td>
 			</tr>
 		</tbody>
 	</table>
@@ -1377,7 +1375,7 @@
 				<td class="center"><em class="ico end">e</em></td>
 				<td class="center">9/11</td>
 				<td></td>
-				<td class="center"><a href="app_t/html/page/sample.html" target="_blank" title="새창열림">링크이동</a></td>
+				<td class="center"><a href="app_t/html/page/sample.html" target="_blank" title="새창열림">보기</a></td>
 			</tr>
 			<tr>
 				<td class="center"></td>
@@ -1389,7 +1387,7 @@
 				<td class="center"><em class="ico end">e</em></td>
 				<td class="center">9/11</td>
 				<td></td>
-				<td class="center"><a href="app_t/html/page/start_app.html" target="_blank" title="새창열림">링크이동</a></td>
+				<td class="center"><a href="app_t/html/page/start_app.html" target="_blank" title="새창열림">보기</a></td>
 			</tr>
 			<tr>
 				<td class="center"></td>
@@ -1401,7 +1399,7 @@
 				<td class="center"><em class="ico end">e</em></td>
 				<td class="center">9/11</td>
 				<td></td>
-				<td class="center"><a href="app_t/html/page/splash.html" target="_blank" title="새창열림">링크이동</a></td>
+				<td class="center"><a href="app_t/html/page/splash.html" target="_blank" title="새창열림">보기</a></td>
 			</tr>
 			<tr>
 				<td class="center"></td>
@@ -1413,7 +1411,7 @@
 				<td class="center"><em class="ico end">e</em></td>
 				<td class="center">9/11</td>
 				<td></td>
-				<td class="center"><a href="app_t/html/page/loading.html" target="_blank" title="새창열림">링크이동</a></td>
+				<td class="center"><a href="app_t/html/page/loading.html" target="_blank" title="새창열림">보기</a></td>
 			</tr>
 			<tr>
 				<td class="center"></td>
@@ -1425,7 +1423,7 @@
 				<td class="center"><em class="ico end">e</em></td>
 				<td class="center">9/11</td>
 				<td></td>
-				<td class="center"><a href="app_t/html/page/sign_in.html" target="_blank" title="새창열림">링크이동</a></td>
+				<td class="center"><a href="app_t/html/page/sign_in.html" target="_blank" title="새창열림">보기</a></td>
 			</tr>
 			<tr>
 				<td class="center"></td>
@@ -1437,7 +1435,7 @@
 				<td class="center"><em class="ico end">e</em></td>
 				<td class="center">9/12</td>
 				<td></td>
-				<td class="center"><a href="app_t/html/page/teacher_main.html" target="_blank" title="새창열림">링크이동</a></td>
+				<td class="center"><a href="app_t/html/page/teacher_main.html" target="_blank" title="새창열림">보기</a></td>
 			</tr>
 			<tr>
 				<td class="center"></td>
@@ -1449,7 +1447,7 @@
 				<td class="center"><em class="ico end">e</em></td>
 				<td class="center">9/12</td>
 				<td></td>
-				<td class="center"><a href="app_t/html/page/information_view.html" target="_blank" title="새창열림">링크이동</a></td>
+				<td class="center"><a href="app_t/html/page/information_view.html" target="_blank" title="새창열림">보기</a></td>
 			</tr>
 			<tr>
 				<td class="center"></td>
@@ -1461,7 +1459,7 @@
 				<td class="center"><em class="ico end">e</em></td>
 				<td class="center">9/12</td>
 				<td></td>
-				<td class="center"><a href="app_t/html/page/information_modify.html" target="_blank" title="새창열림">링크이동</a></td>
+				<td class="center"><a href="app_t/html/page/information_modify.html" target="_blank" title="새창열림">보기</a></td>
 			</tr>
 			<tr>
 				<td class="center"></td>
@@ -1473,7 +1471,7 @@
 				<td class="center"><em class="ico end">e</em></td>
 				<td class="center">9/13</td>
 				<td></td>
-				<td class="center"><a href="app_t/html/page/notice_list.html" target="_blank" title="새창열림">링크이동</a></td>
+				<td class="center"><a href="app_t/html/page/notice_list.html" target="_blank" title="새창열림">보기</a></td>
 			</tr>
 			<tr>
 				<td class="center"></td>
@@ -1485,7 +1483,7 @@
 				<td class="center"><em class="ico end">e</em></td>
 				<td class="center">9/13</td>
 				<td></td>
-				<td class="center"><a href="app_t/html/page/notice_detail.html" target="_blank" title="새창열림">링크이동</a></td>
+				<td class="center"><a href="app_t/html/page/notice_detail.html" target="_blank" title="새창열림">보기</a></td>
 			</tr>
 			<tr>
 				<td class="center"></td>
@@ -1497,7 +1495,7 @@
 				<td class="center"><em class="ico end">e</em></td>
 				<td class="center">9/13</td>
 				<td></td>
-				<td class="center"><a href="app_t/html/page/notice_students_list.html" target="_blank" title="새창열림">링크이동</a></td>
+				<td class="center"><a href="app_t/html/page/notice_students_list.html" target="_blank" title="새창열림">보기</a></td>
 			</tr>
 			<tr>
 				<td class="center"></td>
@@ -1509,7 +1507,7 @@
 				<td class="center"><em class="ico end">e</em></td>
 				<td class="center">9/13</td>
 				<td></td>
-				<td class="center"><a href="app_t/html/page/notice_students_view.html" target="_blank" title="새창열림">링크이동</a></td>
+				<td class="center"><a href="app_t/html/page/notice_students_view.html" target="_blank" title="새창열림">보기</a></td>
 			</tr>
 			<tr>
 				<td class="center"></td>
@@ -1521,7 +1519,7 @@
 				<td class="center"><em class="ico end">e</em></td>
 				<td class="center">9/13</td>
 				<td></td>
-				<td class="center"><a href="app_t/html/page/notice_students_write.html" target="_blank" title="새창열림">링크이동</a></td>
+				<td class="center"><a href="app_t/html/page/notice_students_write.html" target="_blank" title="새창열림">보기</a></td>
 			</tr>
 			<tr>
 				<td class="center"></td>
@@ -1533,7 +1531,7 @@
 				<td class="center"><em class="ico end">e</em></td>
 				<td class="center">9/13</td>
 				<td></td>
-				<td class="center"><a href="app_t/html/page/notice_students_modify.html" target="_blank" title="새창열림">링크이동</a></td>
+				<td class="center"><a href="app_t/html/page/notice_students_modify.html" target="_blank" title="새창열림">보기</a></td>
 			</tr>
 			<tr>
 				<td class="center"></td>
@@ -1545,7 +1543,7 @@
 				<td class="center"><em class="ico end">e</em></td>
 				<td class="center">9/12</td>
 				<td></td>
-				<td class="center"><a href="app_t/html/page/students_list.html" target="_blank" title="새창열림">링크이동</a></td>
+				<td class="center"><a href="app_t/html/page/students_list.html" target="_blank" title="새창열림">보기</a></td>
 			</tr>
 			<tr>
 				<td class="center"></td>
@@ -1557,7 +1555,7 @@
 				<td class="center"><em class="ico end">e</em></td>
 				<td class="center">9/12</td>
 				<td></td>
-				<td class="center"><a href="app_t/html/page/students_information.html" target="_blank" title="새창열림">링크이동</a></td>
+				<td class="center"><a href="app_t/html/page/students_information.html" target="_blank" title="새창열림">보기</a></td>
 			</tr>
 			<tr>
 				<td class="center"></td>
@@ -1569,7 +1567,7 @@
 				<td class="center"><em class="ico end">e</em></td>
 				<td class="center">9/14</td>
 				<td></td>
-				<td class="center"><a href="app_t/html/page/homework_list.html" target="_blank" title="새창열림">링크이동</a></td>
+				<td class="center"><a href="app_t/html/page/homework_list.html" target="_blank" title="새창열림">보기</a></td>
 			</tr>
 			<tr>
 				<td class="center"></td>
@@ -1581,7 +1579,7 @@
 				<td class="center"><em class="ico end">e</em></td>
 				<td class="center">9/14</td>
 				<td></td>
-				<td class="center"><a href="app_t/html/page/homework_view.html" target="_blank" title="새창열림">링크이동</a></td>
+				<td class="center"><a href="app_t/html/page/homework_view.html" target="_blank" title="새창열림">보기</a></td>
 			</tr>
 			<tr>
 				<td class="center"></td>
@@ -1593,7 +1591,7 @@
 				<td class="center"><em class="ico end">e</em></td>
 				<td class="center">9/14</td>
 				<td></td>
-				<td class="center"><a href="app_t/html/page/homework_write.html" target="_blank" title="새창열림">링크이동</a></td>
+				<td class="center"><a href="app_t/html/page/homework_write.html" target="_blank" title="새창열림">보기</a></td>
 			</tr>
 			<tr>
 				<td class="center"></td>
@@ -1605,7 +1603,7 @@
 				<td class="center"><em class="ico end">e</em></td>
 				<td class="center">9/14</td>
 				<td></td>
-				<td class="center"><a href="app_t/html/page/homework_modify.html" target="_blank" title="새창열림">링크이동</a></td>
+				<td class="center"><a href="app_t/html/page/homework_modify.html" target="_blank" title="새창열림">보기</a></td>
 			</tr>
 			<tr>
 				<td class="center"></td>
@@ -1617,7 +1615,7 @@
 				<td class="center"><em class="ico end">e</em></td>
 				<td class="center">9/15</td>
 				<td></td>
-				<td class="center"><a href="app_t/html/page/device_configuration.html" target="_blank" title="새창열림">링크이동</a></td>
+				<td class="center"><a href="app_t/html/page/device_configuration.html" target="_blank" title="새창열림">보기</a></td>
 			</tr>
 		</tbody>
 	</table>
